@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LinuxHWtest/src/Test.c&apos; to &apos;Switch_Led_Uart_Button_Test.c&apos;" description="Rename resource &apos;Test.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/Test.c" name="Switch_Led_Uart_Button_Test.c" stamp="1701693002974" updateReferences="true"/>
+</session>
