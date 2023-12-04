@@ -1,0 +1,114 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+
+// Device IDs and Channel Definitions
+#define SWITCH_DEVICE_ID XPAR_AXI_GPIO_SWITCH_DEVICE_ID
+#define LED_DEVICE_ID XPAR_AXI_GPIO_LEDS_DEVICE_ID
+#define BUTTON_DEVICE_ID XPAR_AXI_GPIO_BUTTONS_DEVICE_ID
+#define RGB_LED_DEVICE_ID XPAR_AXI_GPIO_RGB_DEVICE_ID
+#define SEVEN_SEG_DEVICE_ID XPAR_AXI_GPIO_SEVEN_DEVICE_ID
+#define ANODE_DEVICE_ID XPAR_AXI_GPIO_ANODES_DEVICE_ID
+
+#define SWITCH_CHANNEL 1
+#define LED_CHANNEL 1
+#define BUTTON_CHANNEL 1
+#define RGB_LED_CHANNEL 1
+#define SEVEN_SEG_CHANNEL 1
+#define ANODE_CHANNEL 1
+
+#define NUM_SWITCHES 16
+#define NUM_BUTTONS 4
+#define NUM_RGB_LEDS 3
+#define NUM_SEVEN_SEGMENTS 8
+
+XGpio SwitchGpio, LedGpio, ButtonGpio, RgbLedGpio, SevenSegGpio, AnodeGpio;
+
+int InitializeGpio(XGpio *GpioInstance, u16 DeviceId, u32 DirectionMask, u8 Channel) {
+    int Status = XGpio_Initialize(GpioInstance, DeviceId);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(GpioInstance, Channel, DirectionMask);
+    return XST_SUCCESS;
+}
+
+void DisplayOnSevenSegment(u32 data, u8 anode) {
+    XGpio_DiscreteWrite(&AnodeGpio, ANODE_CHANNEL, ~(1 << anode));
+    XGpio_DiscreteWrite(&SevenSegGpio, SEVEN_SEG_CHANNEL, data);
+}
+
+void ProcessSwitchesAndControlLeds() {
+    u32 previousSwitchData = 0;
+    while (1) {
+        u32 currentSwitchData = XGpio_DiscreteRead(&SwitchGpio, SWITCH_CHANNEL);
+        if (currentSwitchData != previousSwitchData) {
+            for (int i = 0; i < NUM_SWITCHES; i++) {
+                u32 mask = 1 << i;
+                if ((currentSwitchData & mask) != (previousSwitchData & mask)) {
+                    xil_printf("Switch %d turned %s\r\n", i, (currentSwitchData & mask) ? "ON" : "OFF");
+                }
+            }
+            XGpio_DiscreteWrite(&LedGpio, LED_CHANNEL, currentSwitchData);
+            previousSwitchData = currentSwitchData;
+        }
+    }
+}
+
+void ProcessButtonsRgbAndSevenSeg() {
+    u32 previousButtonData = 0;
+    while (1) {
+        u32 currentButtonData = XGpio_DiscreteRead(&ButtonGpio, BUTTON_CHANNEL);
+        if (currentButtonData != previousButtonData) {
+            XGpio_DiscreteWrite(&RgbLedGpio, RGB_LED_CHANNEL, currentButtonData);
+            DisplayOnSevenSegment(currentButtonData, 0); // Display on first seven-segment
+            previousButtonData = currentButtonData;
+        }
+    }
+}
+
+int main() {
+    xil_printf("Switch, Button, RGB, and Seven-Segment Test\r\n");
+
+    // Initialize Switch GPIO
+    if (InitializeGpio(&SwitchGpio, SWITCH_DEVICE_ID, 0xFFFFFFFF, SWITCH_CHANNEL) != XST_SUCCESS) {
+        xil_printf("Switch GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize LED GPIO
+    if (InitializeGpio(&LedGpio, LED_DEVICE_ID, 0x00000000, LED_CHANNEL) != XST_SUCCESS) {
+        xil_printf("LED GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize Button GPIO
+    if (InitializeGpio(&ButtonGpio, BUTTON_DEVICE_ID, 0xFFFFFFFF, BUTTON_CHANNEL) != XST_SUCCESS) {
+        xil_printf("Button GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize RGB LED GPIO
+    if (InitializeGpio(&RgbLedGpio, RGB_LED_DEVICE_ID, 0x00000000, RGB_LED_CHANNEL) != XST_SUCCESS) {
+        xil_printf("RGB LED GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize Seven Segment GPIO
+    if (InitializeGpio(&SevenSegGpio, SEVEN_SEG_DEVICE_ID, 0x00000000, SEVEN_SEG_CHANNEL) != XST_SUCCESS) {
+        xil_printf("Seven Segment GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Initialize Anode GPIO
+    if (InitializeGpio(&AnodeGpio, ANODE_DEVICE_ID, 0x00000000, ANODE_CHANNEL) != XST_SUCCESS) {
+        xil_printf("Anode GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Create tasks or threads for each functionality
+    ProcessSwitchesAndControlLeds();
+    ProcessButtonsRgbAndSevenSeg();
+
+    return 0;
+}

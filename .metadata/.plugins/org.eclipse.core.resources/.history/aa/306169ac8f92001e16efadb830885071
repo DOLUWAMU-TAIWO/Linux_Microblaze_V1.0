@@ -1,0 +1,55 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+
+// Peripheral setup
+XGpio GpioLed, GpioSwitch;
+XUartLite UartLite;
+
+int main() {
+    int status;
+    u32 switch_data, led_data;
+
+    // Initialize LED GPIO
+    status = XGpio_Initialize(&GpioLed, XPAR_AXI_GPIO_LEDS_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("LED GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(&GpioLed, 1, 0x0); // Set all LEDs as output
+
+    // Initialize Switch GPIO
+    status = XGpio_Initialize(&GpioSwitch, XPAR_AXI_GPIO_SWITCH_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("Switch GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(&GpioSwitch, 1, 0xFFFFFFFF); // Set all switches as input
+
+    // Initialize UART
+    status = XUartLite_Initialize(&UartLite, XPAR_AXI_UARTLITE_0_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Peripherals Initialized Successfully\r\n");
+
+    while (1) {
+        // Read switch state
+        switch_data = XGpio_DiscreteRead(&GpioSwitch, 1);
+
+        // Update LEDs to match switch state
+        led_data = switch_data;
+        XGpio_DiscreteWrite(&GpioLed, 1, led_data);
+
+        // Print switch state over UART
+        xil_printf("Switch State: %x\r\n", switch_data);
+
+        // Simple debounce delay
+        for (int i = 0; i < 1000000; i++);
+    }
+
+    return XST_SUCCESS;
+}

@@ -1,0 +1,110 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+
+// GPIO device IDs
+#define SWITCH_DEVICE_ID XPAR_AXI_GPIO_SWITCHES_DEVICE_ID
+#define LED_DEVICE_ID XPAR_AXI_GPIO_LED_DEVICE_ID
+#define BUTTON_DEVICE_ID XPAR_AXI_GPIO_BUTTONS_DEVICE_ID
+#define RGB_LED_DEVICE_ID XPAR_AXI_GPIO_RGB_DEVICE_ID
+#define SEVEN_SEG_DEVICE_ID XPAR_AXI_GPIO_SEVEN_DEVICE_ID
+#define ANODE_DEVICE_ID XPAR_AXI_GPIO_ANODES_DEVICE_ID
+
+// GPIO channel definitions
+#define SWITCH_CHANNEL 1
+#define LED_CHANNEL 1
+#define BUTTON_CHANNEL 1
+#define RGB_LED_CHANNEL 1
+#define SEVEN_SEG_CHANNEL 1
+#define ANODE_CHANNEL 1
+
+// Number of switches and buttons
+#define NUM_SWITCHES 16
+#define NUM_BUTTONS 5
+
+// GPIO instances
+XGpio SwitchGpio, LedGpio, ButtonGpio, RgbLedGpio, SevenSegGpio, AnodeGpio;
+
+// Function prototypes
+int InitializeGpio(XGpio *GpioInstance, u16 DeviceId, u32 DirectionMask, u8 Channel);
+void DisplayOnSevenSegment(u8 data, u8 anode);
+void ProcessSwitchesAndControlLeds();
+void ProcessButtonsRgbAndSevenSeg();
+
+int main() {
+    xil_printf("System Test: Switches, Buttons, RGB LED, and Seven-Segment Display\r\n");
+
+    // Initialize all GPIO instances
+    if (InitializeGpio(&SwitchGpio, SWITCH_DEVICE_ID, 0xFFFFFFFF, SWITCH_CHANNEL) != XST_SUCCESS ||
+        InitializeGpio(&LedGpio, LED_DEVICE_ID, 0x00000000, LED_CHANNEL) != XST_SUCCESS ||
+        InitializeGpio(&ButtonGpio, BUTTON_DEVICE_ID, 0xFFFFFFFF, BUTTON_CHANNEL) != XST_SUCCESS ||
+        InitializeGpio(&RgbLedGpio, RGB_LED_DEVICE_ID, 0x00000000, RGB_LED_CHANNEL) != XST_SUCCESS ||
+        InitializeGpio(&SevenSegGpio, SEVEN_SEG_DEVICE_ID, 0x00000000, SEVEN_SEG_CHANNEL) != XST_SUCCESS ||
+        InitializeGpio(&AnodeGpio, ANODE_DEVICE_ID, 0x00000000, ANODE_CHANNEL) != XST_SUCCESS) {
+        xil_printf("GPIO Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+
+    // Main loop
+    u32 previousSwitchData = 0;
+    u32 previousButtonData = 0;
+
+    while (1) {
+        ProcessSwitchesAndControlLeds(&previousSwitchData);
+        ProcessButtonsRgbAndSevenSeg(&previousButtonData);
+    }
+
+    return 0;
+}
+
+int InitializeGpio(XGpio *GpioInstance, u16 DeviceId, u32 DirectionMask, u8 Channel) {
+    int Status = XGpio_Initialize(GpioInstance, DeviceId);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(GpioInstance, Channel, DirectionMask);
+    return XST_SUCCESS;
+}
+
+void DisplayOnSevenSegment(u8 data, u8 anode) {
+    // Assume 'data' is the encoded value for the seven-segment display
+    // 'anode' selects which seven-segment display to activate
+    XGpio_DiscreteWrite(&SevenSegGpio, SEVEN_SEG_CHANNEL, data);
+    XGpio_DiscreteWrite(&AnodeGpio, ANODE_CHANNEL, anode);
+}
+
+void ProcessSwitchesAndControlLeds(u32 *previousSwitchData) {
+    u32 currentSwitchData = XGpio_DiscreteRead(&SwitchGpio, SWITCH_CHANNEL);
+    if (currentSwitchData != *previousSwitchData) {
+        XGpio_DiscreteWrite(&LedGpio, LED_CHANNEL, currentSwitchData);
+        for (int i = 0; i < NUM_SWITCHES; i++) {
+            u32 mask = 1 << i;
+            if ((currentSwitchData & mask) != (*previousSwitchData & mask)) {
+                xil_printf("Switch %d turned %s\r\n", i, (currentSwitchData & mask) ? "ON" : "OFF");
+            }
+        }
+        *previousSwitchData = currentSwitchData;
+    }
+}
+
+void ProcessButtonsRgbAndSevenSeg(u32 *previousButtonData) {
+    u32 currentButtonData = XGpio_DiscreteRead(&ButtonGpio, BUTTON_CHANNEL);
+    if (currentButtonData != *previousButtonData) {
+        XGpio_DiscreteWrite(&RgbLedGpio, RGB_LED_CHANNEL, currentButtonData);
+        // Assume the function 'EncodeForSevenSeg' encodes the button data for the seven-segment display
+        u8 sevenSegData = EncodeForSevenSeg(currentButtonData);
+        DisplayOnSevenSegment(sevenSegData, 0x01); // Update with correct anode selection
+        *previousButtonData = currentButtonData;
+    }
+}
+
+// Define the 'EncodeForSevenSeg' function based on your seven-segment display's encoding
+u8 EncodeForSevenSeg(u32 buttonData) {
+    // Example encoding, modify as per your display configuration
+    switch (buttonData) {
+        case 1: return 0b00111111; // Display "0"
+        case 2: return 0b00000110; // Display "1"
+        // Add cases for other button combinations
+        default: return 0;
+    }
+}
