@@ -1,0 +1,67 @@
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+
+// Parameters for the peripherals
+#define BUTTONS_DEVICE_ID XPAR_AXI_GPIO_BUTTON_DEVICE_ID
+#define SEVEN_SEGMENT_DEVICE_ID XPAR_AXI_GPIO_SEVEN_DEVICE_ID
+
+XGpio ButtonInst, SevenSegmentInst;
+
+void InitializeSevenSegment(XGpio *InstancePtr, u16 DeviceId);
+void UpdateSevenSegment(u32 number);
+void Print(char *str);
+
+int main() {
+    int Status;
+    u32 button_data, seven_segment_value = 0;
+
+    // Initialize Button
+    Status = XGpio_Initialize(&ButtonInst, BUTTONS_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("Button Initialization Failed\r\n");
+        return XST_FAILURE;
+    }
+    XGpio_SetDataDirection(&ButtonInst, 1, 0xFF); // Set all buttons as input
+
+    // Initialize Seven Segment
+    InitializeSevenSegment(&SevenSegmentInst, SEVEN_SEGMENT_DEVICE_ID);
+
+    while (1) {
+        button_data = XGpio_DiscreteRead(&ButtonInst, 1);
+
+        if (button_data != 0) { // Check if any button is pressed
+            seven_segment_value = (seven_segment_value + 1) % 10; // Just a simple counter for demo
+            UpdateSevenSegment(seven_segment_value);
+
+            xil_printf("Button press detected: Updating seven segment to display %d\r\n", seven_segment_value);
+        }
+
+        for (int i = 0; i < 1000000; i++); // Delay loop to debounce button press
+    }
+
+    return XST_SUCCESS;
+}
+
+void InitializeSevenSegment(XGpio *InstancePtr, u16 DeviceId) {
+    int Status = XGpio_Initialize(InstancePtr, DeviceId);
+    if (Status != XST_SUCCESS) {
+        xil_printf("7-Segment Display Initialization Failed\r\n");
+    }
+    XGpio_SetDataDirection(InstancePtr, 1, 0x00); // Set all to output
+}
+
+void UpdateSevenSegment(u32 number) {
+    // Assuming that '0' will turn off all segments and '1' to '9' will display the corresponding number
+    // This depends on how your seven segment is wired to the GPIO
+    // You need to define the mapping from 'number' to the segments
+    u32 segment_value = /* Your mapping here */;
+    XGpio_DiscreteWrite(&SevenSegmentInst, 1, segment_value);
+}
+
+void Print(char *str) {
+    while (*str) {
+        XUartLite_SendByte(XPAR_UARTLITE_BASEADDR, *str++);
+    }
+}

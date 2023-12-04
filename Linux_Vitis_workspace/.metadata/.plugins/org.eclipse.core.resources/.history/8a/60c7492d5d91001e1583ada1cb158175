@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+#include "xuartlite.h"
+
+#define GPIO_DEVICE_ID XPAR_AXI_GPIO_SEVEN_DEVICE_ID
+#define UART_DEVICE_ID XPAR_AXI_UARTLITE_0_DEVICE_ID
+
+// Segment patterns for the characters 'd', 'o', 'l', and 'u' with inverted logic
+#define CHAR_D 0b10011101 // 'd'
+#define CHAR_O 0b10000001 // 'o'
+#define CHAR_L 0b11111001 // 'l'
+#define CHAR_U 0b11000001 // 'u'
+
+XGpio Gpio;
+XUartLite UartLite;
+
+int InitializeUartLite(u16 DeviceId);
+int InitializeGpio(u16 DeviceId);
+
+int main() {
+    int Status;
+
+    xil_printf("Initializing UART...\r\n");
+    Status = InitializeUartLite(UART_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("UART initialization failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Initializing GPIO for seven-segment...\r\n");
+    Status = InitializeGpio(GPIO_DEVICE_ID);
+    if (Status != XST_SUCCESS) {
+        xil_printf("GPIO initialization failed\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("Displaying 'dolu' on seven-segment...\r\n");
+    XGpio_DiscreteWrite(&Gpio, 1, CHAR_D);
+    XGpio_DiscreteWrite(&Gpio, 2, CHAR_O);
+    XGpio_DiscreteWrite(&Gpio, 3, CHAR_L);
+    XGpio_DiscreteWrite(&Gpio, 4, CHAR_U);
+
+    return 0;
+}
+
+int InitializeUartLite(u16 DeviceId) {
+    int Status;
+
+    Status = XUartLite_Initialize(&UartLite, DeviceId);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    XUartLite_ResetFifos(&UartLite);
+
+    return XST_SUCCESS;
+}
+
+int InitializeGpio(u16 DeviceId) {
+    int Status;
+
+    Status = XGpio_Initialize(&Gpio, DeviceId);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    // Assuming channel 1 is connected to the segments of the first 4 seven-segment displays
+    XGpio_SetDataDirection(&Gpio, 1, 0x00); // Set all pins of channel 1 as output
+
+    return XST_SUCCESS;
+}
