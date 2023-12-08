@@ -7,3 +7,9 @@ timestamp=[2023-12-04 13:28:01], mode=BUILD, duration=0:00:01.362, duration_ms=1
 timestamp=[2023-12-04 13:29:06], mode=BUILD, duration=0:00:01.260, duration_ms=1260, data={name=LinuxHWtest, configuration=Debug, clean_build=false}
 timestamp=[2023-12-04 13:31:07], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=LinuxHWtest, configuration=Debug, clean_build=true}
 timestamp=[2023-12-04 13:31:07], mode=BUILD, duration=0:00:00.762, duration_ms=762, data={name=LinuxHWtest, configuration=Debug, clean_build=false}
+timestamp=[2023-12-07 21:14:40], mode=WORKBENCH_START, duration=0:00:10.831, duration_ms=10831, data={}
+timestamp=[2023-12-07 21:14:41], mode=WORKBENCH_UI_INIT, duration=0:00:00.949, duration_ms=949, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=LinuxHWtest,LinuxHWtest_system,Linux_bd_wrapper,RemoteSystemsTempFiles}
+timestamp=[2023-12-07 21:14:42], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.013, duration_ms=13, data={}
+timestamp=[2023-12-07 21:15:04], mode=PLATFORM_GENERATION, duration=0:00:11.446, duration_ms=11446, data={name=Linux_bd_wrapper}
+timestamp=[2023-12-07 21:15:06], mode=BUILD, duration=0:00:01.472, duration_ms=1472, data={name=LinuxHWtest, configuration=Debug, clean_build=false}
+timestamp=[2023-12-07 21:15:07], mode=BUILD, duration=0:00:00.393, duration_ms=393, data={name=LinuxHWtest_system, configuration=Debug, clean_build=false}

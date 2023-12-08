@@ -1,22 +1,21 @@
-13:31:07 **** Incremental Build of configuration Debug for project LinuxHWtest ****
+21:15:04 **** Incremental Build of configuration Debug for project LinuxHWtest ****
 make all 
 'Building file: ../src/Switch_Led_Uart_Button_Test.c'
 'Invoking: MicroBlaze g++ compiler'
 mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Switch_Led_Uart_Button_Test.o" -IC:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Switch_Led_Uart_Button_Test.d" -MT"src/Switch_Led_Uart_Button_Test.o" -o "src/Switch_Led_Uart_Button_Test.o" "../src/Switch_Led_Uart_Button_Test.c"
 'Finished building: ../src/Switch_Led_Uart_Button_Test.c'
 ' '
-'Building file: ../src/Timer_TEST.c'
-'Invoking: MicroBlaze g++ compiler'
-mb-g++ -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/Timer_TEST.o" -IC:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/Timer_TEST.d" -MT"src/Timer_TEST.o" -o "src/Timer_TEST.o" "../src/Timer_TEST.c"
-'Finished building: ../src/Timer_TEST.c'
-' '
 'Building target: LinuxHWtest.elf'
 'Invoking: MicroBlaze g++ linker'
-mb-g++ -Wl,-T -Wl,../src/lscript.ld -LC:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "LinuxHWtest.elf"  ./src/Switch_Led_Uart_Button_Test.o ./src/Timer_TEST.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
-c:/xilinx/vitis/2022.2/gnu/microblaze/nt/x86_64-oesdk-mingw32/usr/bin/microblaze-xilinx-elf/../../libexec/microblaze-xilinx-elf/gcc/microblaze-xilinx-elf/11.2.0/real-ld.exe: ./src/Timer_TEST.o: in function `main':
-C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Linux_Vitis_Test_Workspace\LinuxHWtest\Debug/../src/Timer_TEST.c:12: multiple definition of `main'; ./src/Switch_Led_Uart_Button_Test.o:C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Linux_Vitis_Test_Workspace\LinuxHWtest\Debug/../src/Switch_Led_Uart_Button_Test.c:79: first defined here
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:50: LinuxHWtest.elf] Error 1
+mb-g++ -Wl,-T -Wl,../src/lscript.ld -LC:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "LinuxHWtest.elf"  ./src/Switch_Led_Uart_Button_Test.o   -Wl,--start-group,-lxil,-lgcc,-lc,-lstdc++,--end-group
+'Finished building target: LinuxHWtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size LinuxHWtest.elf  |tee "LinuxHWtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   8032	    528	   3184	  11744	   2de0	LinuxHWtest.elf
+'Finished building: LinuxHWtest.elf.size'
+' '
 
-13:31:07 Build Finished (took 751ms)
+21:15:06 Build Finished (took 1s.445ms)
 

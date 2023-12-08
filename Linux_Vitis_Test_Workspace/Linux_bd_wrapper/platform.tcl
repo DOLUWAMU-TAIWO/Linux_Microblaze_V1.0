@@ -18,3 +18,4 @@ platform generate -domains
 platform active {Linux_bd_wrapper}
 platform generate -quick
 platform generate
+platform generate -domains standalone_microblaze_0 

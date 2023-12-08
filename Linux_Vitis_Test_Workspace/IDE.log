@@ -101,3 +101,55 @@ con
 13:29:35 INFO  : Launch script is exported to file 'C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Linux_Vitis_Test_Workspace\LinuxHWtest_system\_ide\scripts\debugger_linuxhwtest-default.tcl'
 13:31:07 INFO  : Checking for BSP changes to sync application flags for project 'LinuxHWtest'...
 13:31:34 INFO  : Disconnected from the channel tcfchan#3.
+21:14:37 DEBUG : Logs will be stored at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/IDE.log'.
+21:14:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Linux_Vitis_Test_Workspace\temp_xsdb_launch_script.tcl
+21:14:42 ERROR : Error encountered while initializing user repository paths
+Reason: No Platforms Found.
+
+
+21:14:42 INFO  : Platform repository initialization has completed.
+21:14:43 INFO  : XSCT server has started successfully.
+21:14:43 INFO  : Successfully done setting XSCT server connection channel  
+21:14:43 INFO  : Registering command handlers for Vitis TCF services
+21:14:49 INFO  : plnx-install-location is set to ''
+21:14:49 INFO  : Successfully done setting workspace for the tool. 
+21:14:49 INFO  : Successfully done query RDI_DATADIR 
+21:15:03 INFO  : Result from executing command 'getProjects': Linux_bd_wrapper
+21:15:03 INFO  : Result from executing command 'getPlatforms': 
+21:15:04 INFO  : Checking for BSP changes to sync application flags for project 'LinuxHWtest'...
+21:16:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:14 INFO  : Jtag cable 'Digilent Nexys A7 -100T 210292B61CF1A' is selected.
+21:16:14 INFO  : 'jtag frequency' command is executed.
+21:16:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}' command is executed.
+21:16:16 INFO  : Device configured successfully with "C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/LinuxHWtest/_ide/bitstream/Linux_bd_wrapper.bit"
+21:16:16 INFO  : Context for processor 'microblaze_0' is selected.
+21:16:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa'.
+21:16:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:16:16 INFO  : Context for processor 'microblaze_0' is selected.
+21:16:16 INFO  : System reset is completed.
+21:16:19 INFO  : 'after 3000' command is executed.
+21:16:19 INFO  : Context for processor 'microblaze_0' is selected.
+21:16:19 INFO  : The application 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/LinuxHWtest/Debug/LinuxHWtest.elf' is downloaded to processor 'microblaze_0'.
+21:16:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}
+fpga -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/LinuxHWtest/_ide/bitstream/Linux_bd_wrapper.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Vitis_Test_Workspace/LinuxHWtest/Debug/LinuxHWtest.elf
+----------------End of Script----------------
+
+21:16:20 INFO  : Context for processor 'microblaze_0' is selected.
+21:16:20 INFO  : 'con' command is executed.
+21:16:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:16:20 INFO  : Launch script is exported to file 'C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Linux_Vitis_Test_Workspace\LinuxHWtest_system\_ide\scripts\debugger_linuxhwtest-default.tcl'
+21:22:39 INFO  : Disconnected from the channel tcfchan#2.
