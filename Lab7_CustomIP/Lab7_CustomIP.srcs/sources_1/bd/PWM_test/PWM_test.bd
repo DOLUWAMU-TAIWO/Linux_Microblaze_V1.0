@@ -1,0 +1,24 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xc7a100tcsg324-1",
+      "gen_directory": "../../../../Lab7_CustomIP.gen/sources_1/bd/PWM_test",
+      "name": "PWM_test",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2022.2"
+    },
+    "design_tree": {
+      "PMW_0": ""
+    },
+    "components": {
+      "PMW_0": {
+        "vlnv": "DOLU:user:PMW:1.0",
+        "xci_name": "PWM_test_PMW_0_0",
+        "xci_path": "ip\\PWM_test_PMW_0_0\\PWM_test_PMW_0_0.xci",
+        "inst_hier_path": "PMW_0"
+      }
+    }
+  }
+}
