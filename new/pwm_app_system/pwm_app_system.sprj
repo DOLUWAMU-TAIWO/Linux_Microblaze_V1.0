@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ASCII"?>
+<systemproject:SystemProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" xmlns:systemproject="http://www.xilinx.com/systemproject" name="pwm_app_system" platform="C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/export/PWM_test_wrapper/PWM_test_wrapper.xpfm" platformUID="xilinx:nexys-a7-100t::0.0(custom)" sysConfig="PWM_test_wrapper" runtime="cpp" rootFSLocation="" linuxImage="" sysroot="">
+  <configuration name="Debug" id="com.xilinx.sdx.system.managedbuilder.debugConfiguration.149619722">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="pwm_app" domainName="standalone_microblaze_0" domainPrettyName="standalone_microblaze_0" appBuildConfig="Debug"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+  <configuration name="Release" id="com.xilinx.sdx.system.managedbuilder.releaseConfiguration.894094095">
+    <configBuildOptions xsi:type="systemproject:SystemOptions">
+      <applications name="pwm_app" domainName="standalone_microblaze_0" domainPrettyName="standalone_microblaze_0" appBuildConfig="Release"/>
+      <options xsi:type="sdkproject:SdkOptions" generateSdCard="true"/>
+    </configBuildOptions>
+  </configuration>
+</systemproject:SystemProject>

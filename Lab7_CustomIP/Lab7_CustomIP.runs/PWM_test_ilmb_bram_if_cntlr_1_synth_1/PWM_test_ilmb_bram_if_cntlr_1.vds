@@ -1,0 +1,28 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 19 20:10:11 2023
+# Process ID: 21260
+# Current directory: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1
+# Command line: vivado.exe -log PWM_test_ilmb_bram_if_cntlr_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source PWM_test_ilmb_bram_if_cntlr_1.tcl
+# Log file: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1.vds
+# Journal file: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1\vivado.jou
+# Running On: CN010, OS: Windows, CPU Frequency: 2370 MHz, CPU Physical cores: 6, Host memory: 7916 MB
+#-----------------------------------------------------------
+source PWM_test_ilmb_bram_if_cntlr_1.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.879 ; gain = 80.426
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip 
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: PWM_test_ilmb_bram_if_cntlr_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry f438dae92b7551d8 to dir: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip/2022.2/f/4/f438dae92b7551d8/PWM_test_dlmb_bram_if_cntlr_1.dcp to C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip/2022.2/f/4/f438dae92b7551d8/PWM_test_dlmb_bram_if_cntlr_1_sim_netlist.v to C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip/2022.2/f/4/f438dae92b7551d8/PWM_test_dlmb_bram_if_cntlr_1_sim_netlist.vhdl to C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip/2022.2/f/4/f438dae92b7551d8/PWM_test_dlmb_bram_if_cntlr_1_stub.v to C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/ip/2022.2/f/4/f438dae92b7551d8/PWM_test_dlmb_bram_if_cntlr_1_stub.vhdl to C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.runs/PWM_test_ilmb_bram_if_cntlr_1_synth_1/PWM_test_ilmb_bram_if_cntlr_1_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP PWM_test_ilmb_bram_if_cntlr_1, cache-ID = f438dae92b7551d8.
+INFO: [Common 17-206] Exiting Vivado at Tue Dec 19 20:10:20 2023...

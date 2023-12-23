@@ -1,0 +1,9 @@
+02:21:34 DEBUG : Logs will be stored at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/workspace/IDE.log'.
+02:21:37 INFO  : Platform repository initialization has completed.
+02:21:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\workspace\temp_xsdb_launch_script.tcl
+02:21:37 INFO  : Registering command handlers for Vitis TCF services
+02:21:40 INFO  : XSCT server has started successfully.
+02:21:40 INFO  : plnx-install-location is set to ''
+02:21:40 INFO  : Successfully done setting XSCT server connection channel  
+02:21:40 INFO  : Successfully done query RDI_DATADIR 
+02:21:40 INFO  : Successfully done setting workspace for the tool. 

@@ -1,0 +1,21 @@
+vhdl xil_defaultlib  \
+"../../../bd/PWM_test/ip/PWM_test_util_ds_buf_0_0/util_ds_buf.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_util_ds_buf_0_0/sim/PWM_test_util_ds_buf_0_0.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_axi_uartlite_0_0/sim/PWM_test_axi_uartlite_0_0.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_axi_gpio_0_5/sim/PWM_test_axi_gpio_0_5.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_microblaze_0_2/sim/PWM_test_microblaze_0_2.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_dlmb_v10_1/sim/PWM_test_dlmb_v10_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_ilmb_v10_1/sim/PWM_test_ilmb_v10_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_dlmb_bram_if_cntlr_1/sim/PWM_test_dlmb_bram_if_cntlr_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_ilmb_bram_if_cntlr_1/sim/PWM_test_ilmb_bram_if_cntlr_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_microblaze_0_axi_intc_1/sim/PWM_test_microblaze_0_axi_intc_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_mdm_1_1/sim/PWM_test_mdm_1_1.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_rst_mig_7series_0_81M_1/sim/PWM_test_rst_mig_7series_0_81M_1.vhd" \
+"../../../bd/PWM_test/ipshared/c9a0/hdl/PMW_v1_0_S00_AXI.vhd" \
+"../../../bd/PWM_test/ipshared/c9a0/hdl/PMW_v1_0.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_PMW_0_2/sim/PWM_test_PMW_0_2.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_axi_gpio_0_6/sim/PWM_test_axi_gpio_0_6.vhd" \
+"../../../bd/PWM_test/ip/PWM_test_axi_gpio_1_0/sim/PWM_test_axi_gpio_1_0.vhd" \
+"../../../bd/PWM_test/sim/PWM_test.vhd" \
+
+nosort

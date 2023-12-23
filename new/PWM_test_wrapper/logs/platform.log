@@ -1,0 +1,853 @@
+TRACE::2023-12-19.22:10:34::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:34::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:34::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:34::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:34::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:34::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:34::SCWPlatform::Do not have an existing db opened. 
+TRACE::2023-12-19.22:10:34::SCWPlatform::Opened new HwDB with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:34::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2023-12-19.22:10:34::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper"
+		}]
+}
+TRACE::2023-12-19.22:10:34::SCWPlatform::Boot application domains not present, creating them
+TRACE::2023-12-19.22:10:34::SCWPlatform::Pure FPGA device, no boot application will be created.
+TRACE::2023-12-19.22:10:34::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper"
+		}]
+}
+TRACE::2023-12-19.22:10:34::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper"
+		}]
+}
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:35::SCWDomain::checking for install qemu data   : 
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:35::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:35::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:35::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2023-12-19.22:10:35::SCWMssOS::No sw design opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::mss does not exists at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::Creating sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::Adding the swdes entry, created swdb C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::updating the scw layer changes to swdes at   C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::Writing mss at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:35::SCWMssOS::Completed writing the mss file at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2023-12-19.22:10:35::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2023-12-19.22:10:35::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2023-12-19.22:10:35::SCWMssOS::Completed writing the mss file at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2023-12-19.22:10:35::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2023-12-19.22:10:36::SCWMssOS::Saving the mss changes C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::Adding the swdes entry, mss present, able to open swdb C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2023-12-19.22:10:36::SCWMssOS::Writing the mss file completed C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::Commit changes completed.
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:36::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:36::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:36::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:36::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:36::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:36::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"023e08e24bbb2607ad94775937c2a317",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-12-19.22:10:36::SCWPlatform::Started generating the artifacts platform PWM_test_wrapper
+TRACE::2023-12-19.22:10:36::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-12-19.22:10:36::SCWPlatform::Started generating the artifacts for system configuration PWM_test_wrapper
+LOG::2023-12-19.22:10:36::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2023-12-19.22:10:36::SCWSystem::Not a boot domain 
+LOG::2023-12-19.22:10:36::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2023-12-19.22:10:36::SCWDomain::Generating domain artifcats
+TRACE::2023-12-19.22:10:36::SCWMssOS::Generating standalone artifcats
+TRACE::2023-12-19.22:10:36::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:36::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:36::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:36::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:36::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::Completed writing the mss file at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2023-12-19.22:10:36::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:36::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-12-19.22:10:36::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-12-19.22:10:36::SCWDomain::Skipping the build for domain :  standalone_microblaze_0
+TRACE::2023-12-19.22:10:36::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-12-19.22:10:36::SCWMssOS::Copying to export directory.
+TRACE::2023-12-19.22:10:37::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-12-19.22:10:37::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-12-19.22:10:37::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2023-12-19.22:10:37::SCWSystem::Completed Processing the sysconfig PWM_test_wrapper
+LOG::2023-12-19.22:10:37::SCWPlatform::Completed generating the artifacts for system configuration PWM_test_wrapper
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started preparing the platform 
+TRACE::2023-12-19.22:10:37::SCWSystem::Writing the bif file for system config PWM_test_wrapper
+TRACE::2023-12-19.22:10:37::SCWSystem::dir created 
+TRACE::2023-12-19.22:10:37::SCWSystem::Writing the bif 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started writing the spfm file 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Completed generating the platform
+TRACE::2023-12-19.22:10:37::SCWMssOS::Saving the mss changes C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Commit changes completed.
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"023e08e24bbb2607ad94775937c2a317",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-12-19.22:10:37::SCWPlatform::updated the xpfm file.
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Saving the mss changes C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Commit changes completed.
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"023e08e24bbb2607ad94775937c2a317",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Saving the mss changes C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Commit changes completed.
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"023e08e24bbb2607ad94775937c2a317",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2023-12-19.22:10:37::SCWPlatform::Started generating the artifacts platform PWM_test_wrapper
+TRACE::2023-12-19.22:10:37::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-12-19.22:10:37::SCWPlatform::Started generating the artifacts for system configuration PWM_test_wrapper
+LOG::2023-12-19.22:10:37::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2023-12-19.22:10:37::SCWDomain::Generating domain artifcats
+TRACE::2023-12-19.22:10:37::SCWMssOS::Generating standalone artifcats
+TRACE::2023-12-19.22:10:37::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Completed writing the mss file at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2023-12-19.22:10:37::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-12-19.22:10:37::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-12-19.22:10:37::SCWDomain::Building the domain as part of full build :  standalone_microblaze_0
+TRACE::2023-12-19.22:10:37::SCWMssOS::skipping the bsp build ... 
+TRACE::2023-12-19.22:10:37::SCWMssOS::Copying to export directory.
+TRACE::2023-12-19.22:10:37::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2023-12-19.22:10:37::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2023-12-19.22:10:37::SCWSystem::Completed Processing the domain standalone_microblaze_0
+LOG::2023-12-19.22:10:37::SCWSystem::Completed Processing the sysconfig PWM_test_wrapper
+LOG::2023-12-19.22:10:37::SCWPlatform::Completed generating the artifacts for system configuration PWM_test_wrapper
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started preparing the platform 
+TRACE::2023-12-19.22:10:37::SCWSystem::Writing the bif file for system config PWM_test_wrapper
+TRACE::2023-12-19.22:10:37::SCWSystem::dir created 
+TRACE::2023-12-19.22:10:37::SCWSystem::Writing the bif 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started writing the spfm file 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Started writing the xpfm file 
+TRACE::2023-12-19.22:10:37::SCWPlatform::Completed generating the platform
+TRACE::2023-12-19.22:10:37::SCWMssOS::Saving the mss changes C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2023-12-19.22:10:37::SCWMssOS::Commit changes completed.
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:10:37::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:10:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:10:37::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:10:37::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:10:37::SCWWriter::formatted JSON is {
+	"platformName":	"PWM_test_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"PWM_test_wrapper",
+	"platHandOff":	"C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/PWM_test_wrapper.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"PWM_test_wrapper",
+	"systems":	[{
+			"systemName":	"PWM_test_wrapper",
+			"systemDesc":	"PWM_test_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"PWM_test_wrapper",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"023e08e24bbb2607ad94775937c2a317",
+					"compatibleApp":	"hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2023-12-19.22:10:37::SCWPlatform::updated the xpfm file.
+LOG::2023-12-19.22:11:17::SCWPlatform::Started generating the artifacts platform PWM_test_wrapper
+TRACE::2023-12-19.22:11:17::SCWPlatform::Sanity checking of platform is completed
+LOG::2023-12-19.22:11:17::SCWPlatform::Started generating the artifacts for system configuration PWM_test_wrapper
+LOG::2023-12-19.22:11:17::SCWSystem::Checking the domain standalone_microblaze_0
+LOG::2023-12-19.22:11:17::SCWSystem::Not a boot domain 
+LOG::2023-12-19.22:11:17::SCWSystem::Started Processing the domain standalone_microblaze_0
+TRACE::2023-12-19.22:11:17::SCWDomain::Generating domain artifcats
+TRACE::2023-12-19.22:11:17::SCWMssOS::Generating standalone artifcats
+TRACE::2023-12-19.22:11:17::SCWMssOS:: Copying the user libraries. 
+TRACE::2023-12-19.22:11:17::SCWPlatform::Trying to open the hw design at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:11:17::SCWPlatform::DSA given C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:11:17::SCWPlatform::DSA absoulate path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:11:17::SCWPlatform::DSA directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw
+TRACE::2023-12-19.22:11:17::SCWPlatform:: Platform Path C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/hw/PWM_test_wrapper.xsa
+TRACE::2023-12-19.22:11:17::SCWPlatform:: Unique name xilinx:nexys-a7-100t::0.0
+TRACE::2023-12-19.22:11:17::SCWPlatform::Trying to set the existing hwdb with name PWM_test_wrapper_0
+TRACE::2023-12-19.22:11:17::SCWPlatform::Opened existing hwdb PWM_test_wrapper_0
+TRACE::2023-12-19.22:11:17::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2023-12-19.22:11:17::SCWMssOS::Checking the sw design at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:11:17::SCWMssOS::DEBUG:  swdes dump  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2023-12-19.22:11:17::SCWMssOS::Sw design exists and opened at  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:11:17::SCWMssOS::Completed writing the mss file at C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp
+TRACE::2023-12-19.22:11:17::SCWMssOS::Mss edits present, copying mssfile into export location C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2023-12-19.22:11:17::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2023-12-19.22:11:17::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2023-12-19.22:11:17::SCWDomain::Building the domain as part of full build :  standalone_microblaze_0
+TRACE::2023-12-19.22:11:17::SCWMssOS::doing bsp build ... 
+TRACE::2023-12-19.22:11:17::SCWMssOS::System Command Ran  C: & cd  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/new/PWM_test_wrapper/microblaze_0/standalone_microblaze_0/bsp & make 
+TRACE::2023-12-19.22:11:17::SCWMssOS::make --no-print-directory seq_libs
+
+TRACE::2023-12-19.22:11:17::SCWMssOS::"Running Make include in microblaze_0/libsrc/bram_v4_8/src"
+
+TRACE::2023-12-19.22:11:17::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2023-12-19.22:11:17::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+TRACE::2023-12-19.22:11:17::SCWMssOS::-Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2023-12-19.22:11:18::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+TRACE::2023-12-19.22:11:18::SCWMssOS::-Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::"Running Make include in microblaze_0/libsrc/gpio_v4_9/src"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+TRACE::2023-12-19.22:11:18::SCWMssOS::R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall 
+TRACE::2023-12-19.22:11:18::SCWMssOS::-Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::"Running Make include in microblaze_0/libsrc/intc_v3_15/src"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+TRACE::2023-12-19.22:11:18::SCWMssOS::ER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall
+TRACE::2023-12-19.22:11:18::SCWMssOS:: -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::"Running Make include in microblaze_0/libsrc/PMW_v1_0/src"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::make -C microblaze_0/libsrc/PMW_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER
+TRACE::2023-12-19.22:11:18::SCWMssOS::_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -
+TRACE::2023-12-19.22:11:18::SCWMssOS::Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::"Running Make include in microblaze_0/libsrc/standalone_v8_0/src"
+
+TRACE::2023-12-19.22:11:18::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+TRACE::2023-12-19.22:11:18::SCWMssOS::OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections 
+TRACE::2023-12-19.22:11:18::SCWMssOS::-Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:19::SCWMssOS::"Running Make include in microblaze_0/libsrc/uartlite_v3_7/src"
+
+TRACE::2023-12-19.22:11:19::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+TRACE::2023-12-19.22:11:19::SCWMssOS::PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -W
+TRACE::2023-12-19.22:11:19::SCWMssOS::all -Wextra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:19::SCWMssOS::"Running Make libs in microblaze_0/libsrc/PMW_v1_0/src"
+
+TRACE::2023-12-19.22:11:19::SCWMssOS::make -C microblaze_0/libsrc/PMW_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILER_FL
+TRACE::2023-12-19.22:11:19::SCWMssOS::AGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wex
+TRACE::2023-12-19.22:11:19::SCWMssOS::tra -fno-tree-loop-distribute-patterns"
+
+TRACE::2023-12-19.22:11:19::SCWMssOS::"Compiling PMW..."
+
+ERROR::2023-12-19.22:11:19::SCWMssOS::Failed to build  the bsp sources for domain - standalone_microblaze_0
+ERROR::2023-12-19.22:11:19::SCWSystem::Error in Processing the domain standalone_microblaze_0

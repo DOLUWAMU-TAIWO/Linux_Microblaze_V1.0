@@ -416,10 +416,10 @@
         "inst_hier_path": "microblaze_0",
         "parameters": {
           "C_CACHE_BYTE_SIZE": {
-            "value": "32768"
+            "value": "65536"
           },
           "C_DCACHE_BYTE_SIZE": {
-            "value": "32768"
+            "value": "65536"
           },
           "C_DEBUG_ENABLED": {
             "value": "1"
@@ -437,7 +437,7 @@
             "value": "1"
           },
           "G_TEMPLATE_LIST": {
-            "value": "10"
+            "value": "4"
           }
         },
         "interface_ports": {

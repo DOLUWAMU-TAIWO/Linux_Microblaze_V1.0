@@ -1,0 +1,271 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Dec 19 18:51:05 2023
+# Process ID: 19784
+# Current directory: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16972 C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\Lab7_CustomIP\Lab7_CustomIP.xpr
+# Log file: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/vivado.log
+# Journal file: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP\vivado.jou
+# Running On: CN010, OS: Windows, CPU Frequency: 2370 MHz, CPU Physical cores: 6, Host memory: 7916 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.xpr
+update_compile_order -fileset sources_1
+set_property target_language VHDL [current_project]
+set_property dataflow_viewer_settings "min_width=16"   [current_fileset]
+open_bd_design {C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd}
+delete_bd_objs [get_bd_cells PMW_0]
+add_files -fileset constrs_1 -norecurse C:/Users/doluwamu.kaye/Downloads/Nexys-A7-100T-Master.xdc
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "PWM_test" 
+endgroup
+undo
+startgroup
+create_bd_cell -type ip -vlnv DOLU:user:PMW:1.0 PMW_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:mig_7series:4.2 mig_7series_0
+apply_board_connection -board_interface "ddr2_sdram" -ip_intf "mig_7series_0/mig_ddr_interface" -diagram "PWM_test" 
+endgroup
+delete_bd_objs [get_bd_nets clk_ref_i_1] [get_bd_ports clk_ref_i]
+connect_bd_net [get_bd_pins mig_7series_0/ui_addn_clk_0] [get_bd_pins mig_7series_0/clk_ref_i]
+delete_bd_objs [get_bd_cells PMW_0]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {reset ( Reset ) } Manual_Source {New External Port (ACTIVE_LOW)}}  [get_bd_pins mig_7series_0/sys_rst]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:util_ds_buf:2.2 util_ds_buf_0
+endgroup
+delete_bd_objs [get_bd_nets mig_7series_0_ui_addn_clk_0]
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {114.829} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {200.00} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {5.000} \
+  CONFIG.PRIM_SOURCE {No_buffer} \
+  CONFIG.RESET_PORT {resetn} \
+  CONFIG.RESET_TYPE {ACTIVE_LOW} \
+] [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_ports sys_clk_i] [get_bd_pins clk_wiz_0/clk_in1]
+delete_bd_objs [get_bd_nets sys_clk_i_1]
+set_property CONFIG.C_BUF_TYPE {BUFG} [get_bd_cells util_ds_buf_0]
+connect_bd_net [get_bd_ports sys_clk_i] [get_bd_pins util_ds_buf_0/BUFG_I]
+connect_bd_net [get_bd_pins util_ds_buf_0/BUFG_O] [get_bd_pins clk_wiz_0/clk_in1]
+connect_bd_net [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins mig_7series_0/clk_ref_i]
+connect_bd_net [get_bd_ports reset] [get_bd_pins clk_wiz_0/resetn]
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/util_ds_buf_0/BUFG_O (100 MHz)} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins mig_7series_0/sys_clk_i]
+validate_bd_design
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {1} axi_periph {Enabled} cache {32KB} clk {/mig_7series_0/ui_clk (81 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {Application}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0/M_AXI_IC} Slave {/microblaze_0_axi_intc/s_axi} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_IC]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+apply_board_connection -board_interface "usb_uart" -ip_intf "axi_uartlite_0/UART" -diagram "PWM_test" 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "led_16bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_leds [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_leds/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_leds/S_AXI]
+apply_board_connection -board_interface "dip_switches_16bits" -ip_intf "/axi_gpio_leds/GPIO2" -diagram "PWM_test" 
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "dip_switches_16bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_switch [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_switch/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_switch/S_AXI]
+undo
+undo
+undo
+undo
+undo
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "led_16bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_led [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_led/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_led/S_AXI]
+apply_board_connection -board_interface "dip_switches_16bits" -ip_intf "/axi_gpio_led/GPIO2" -diagram "PWM_test" 
+undo
+undo
+undo
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "dip_switches_16bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_led [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_led/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_led/S_AXI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "led_16bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_switch [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_switch/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_switch/S_AXI]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "push_buttons_5bits" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+set_property name axi_gpio_buttons [get_bd_cells axi_gpio_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_buttons/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_buttons/S_AXI]
+regenerate_bd_layout
+regenerate_bd_layout
+validate_bd_design
+startgroup
+endgroup
+validate_bd_design -force
+startgroup
+set_property -dict [list \
+  CONFIG.C_CACHE_BYTE_SIZE {65536} \
+  CONFIG.C_DCACHE_BYTE_SIZE {65536} \
+  CONFIG.C_I_AXI {1} \
+] [get_bd_cells microblaze_0]
+endgroup
+validate_bd_design
+delete_bd_objs [get_bd_intf_nets microblaze_0_interrupt] [get_bd_intf_nets microblaze_0_ilmb_1] [get_bd_intf_nets microblaze_0_axi_dp] [get_bd_intf_nets microblaze_0_debug] [get_bd_intf_nets microblaze_0_M_AXI_DC] [get_bd_intf_nets microblaze_0_dlmb_1] [get_bd_intf_nets microblaze_0_M_AXI_IC] [get_bd_cells microblaze_0]
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {1} axi_periph {Enabled} cache {32KB} clk {/mig_7series_0/ui_clk (81 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M03_AXI] [get_bd_intf_nets microblaze_0_intc_axi] [get_bd_intf_nets microblaze_0_axi_periph_M01_AXI] [get_bd_intf_nets microblaze_0_axi_periph_M04_AXI] [get_bd_cells microblaze_0_axi_periph]
+delete_bd_objs [get_bd_nets mig_7series_0_ui_clk_sync_rst] [get_bd_nets rst_mig_7series_0_81M_mb_reset] [get_bd_nets mdm_1_debug_sys_rst] [get_bd_nets mig_7series_0_mmcm_locked] [get_bd_nets rst_mig_7series_0_81M_bus_struct_reset] [get_bd_cells rst_mig_7series_0_81M]
+delete_bd_objs [get_bd_nets microblaze_0_intr] [get_bd_cells microblaze_0_axi_intc]
+delete_bd_objs [get_bd_cells mdm_1]
+delete_bd_objs [get_bd_nets axi_uartlite_0_interrupt] [get_bd_cells microblaze_0_xlconcat]
+delete_bd_objs [get_bd_intf_nets axi_smc_M00_AXI] [get_bd_cells axi_smc]
+delete_bd_objs [get_bd_cells microblaze_0_local_memory]
+delete_bd_objs [get_bd_cells microblaze_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:microblaze:11.0 microblaze_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:microblaze -config { axi_intc {1} axi_periph {Enabled} cache {16KB} clk {/mig_7series_0/ui_clk (81 MHz)} cores {1} debug_module {Debug Only} ecc {None} local_mem {32KB} preset {None}}  [get_bd_cells microblaze_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_buttons/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_buttons/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_led/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_led/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_switch/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_switch/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_uartlite_0/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0/M_AXI_DC} Slave {/microblaze_0_axi_intc/s_axi} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_DC]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0/M_AXI_IC} Slave {/microblaze_0_axi_intc/s_axi} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins microblaze_0/M_AXI_IC]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {/mig_7series_0/ui_clk (81 MHz)} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Cached)} Slave {/mig_7series_0/S_AXI} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins mig_7series_0/S_AXI]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+startgroup
+create_bd_cell -type ip -vlnv DOLU:user:PMW:1.0 PMW_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/PMW_0/S00_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins PMW_0/S00_AXI]
+startgroup
+create_bd_port -dir O PWM0
+connect_bd_net [get_bd_pins /PMW_0/PWM0] [get_bd_ports PWM0]
+endgroup
+startgroup
+create_bd_port -dir O PWM1
+connect_bd_net [get_bd_pins /PMW_0/PWM1] [get_bd_ports PWM1]
+endgroup
+startgroup
+create_bd_port -dir O PWM2
+connect_bd_net [get_bd_pins /PMW_0/PWM2] [get_bd_ports PWM2]
+endgroup
+startgroup
+create_bd_port -dir O PWM3
+connect_bd_net [get_bd_pins /PMW_0/PWM3] [get_bd_ports PWM3]
+endgroup
+regenerate_bd_layout
+validate_bd_design
+write_bd_layout -format pdf -orientation portrait C:/Users/doluwamu.kaye/Downloads/PWM_test.pdf
+delete_bd_objs [get_bd_intf_nets axi_gpio_0_GPIO] [get_bd_intf_nets microblaze_0_axi_periph_M02_AXI] [get_bd_cells axi_gpio_led]
+delete_bd_objs [get_bd_intf_ports dip_switches_16bits]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+apply_board_connection -board_interface "rgb_led" -ip_intf "axi_gpio_0/GPIO" -diagram "PWM_test" 
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_0/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+delete_bd_objs [get_bd_intf_nets microblaze_0_axi_periph_M03_AXI] [get_bd_intf_nets axi_gpio_0_GPIO1] [get_bd_cells axi_gpio_switch]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+apply_board_connection -board_interface "dip_switches_16bits" -ip_intf "axi_gpio_1/GPIO" -diagram "PWM_test" 
+endgroup
+delete_bd_objs [get_bd_intf_ports led_16bits]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/mig_7series_0/ui_clk (81 MHz)} Clk_slave {Auto} Clk_xbar {/mig_7series_0/ui_clk (81 MHz)} Master {/microblaze_0 (Periph)} Slave {/axi_gpio_1/S_AXI} ddr_seg {Auto} intc_ip {/microblaze_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI]
+set_property name axi_gpio_switches [get_bd_cells axi_gpio_0]
+regenerate_bd_layout
+validate_bd_design
+make_wrapper -files [get_files C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd] -top
+add_files -norecurse c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.gen/sources_1/bd/PWM_test/hdl/PWM_test_wrapper.vhd
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+open_bd_design {C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd}
+ipx::edit_ip_in_project -upgrade true -name PMW_v1_0_project -directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.tmp/PMW_v1_0_project c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project Lab7_CustomIP
+current_project PMW_v1_0_project
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv DOLU:user:PMW:1.0 [get_ips  PWM_test_PMW_0_2] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips PWM_test_PMW_0_2] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd]
+catch { config_ip_cache -export [get_ips -all PWM_test_PMW_0_2] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_6] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_us_0] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_us_1] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_us_2] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_0] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_0] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_1] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_1] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_2] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_2] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_3] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_3] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_4] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_4] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_ds_5] }
+catch { config_ip_cache -export [get_ips -all PWM_test_auto_pc_5] }
+export_ip_user_files -of_objects [get_files C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd]
+launch_runs PWM_test_mig_7series_0_1_synth_1 PWM_test_PMW_0_2_synth_1 -jobs 3
+wait_on_run PWM_test_mig_7series_0_1_synth_1
+wait_on_run PWM_test_PMW_0_2_synth_1
+export_simulation -of_objects [get_files C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd] -directory C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.ip_user_files -ipstatic_source_dir C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/compile_simlib/modelsim} {questa=C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/compile_simlib/questa} {riviera=C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/compile_simlib/riviera} {activehdl=C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets clk_wiz_0_clk_out1] [get_bd_cells clk_wiz_0]
+connect_bd_net [get_bd_pins mig_7series_0/ui_addn_clk_0] [get_bd_pins mig_7series_0/clk_ref_i]
+delete_bd_objs [get_bd_nets util_ds_buf_0_BUFG_O] [get_bd_nets sys_clk_i_1] [get_bd_cells util_ds_buf_0]
+connect_bd_net [get_bd_ports sys_clk_i] [get_bd_pins mig_7series_0/sys_clk_i]
+validate_bd_design
+connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins microblaze_0_xlconcat/In0]
+validate_bd_design
+make_wrapper -files [get_files C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/Lab7_CustomIP.srcs/sources_1/bd/PWM_test/PWM_test.bd] -top
+reset_run synth_1
+reset_run PWM_test_mig_7series_0_1_synth_1
+reset_run PWM_test_microblaze_0_axi_intc_1_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper.xsa
+write_hw_platform -fixed -include_bit -force -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Lab7_CustomIP/PWM_test_wrapper_new.xsa
