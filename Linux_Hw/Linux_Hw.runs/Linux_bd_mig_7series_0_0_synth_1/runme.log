@@ -10,7 +10,12 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source Linux_bd_mig_7series_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 381.730 ; gain = 41.215
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 418.465 ; gain = 81.355
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.cache/ip 
 Command: synth_design -top Linux_bd_mig_7series_0_0 -part xc7a100tcsg324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
@@ -18,7 +23,7 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13260
+INFO: [Synth 8-7075] Helper process launched with PID 11728
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-10515] begin/end is required for generate-for in this mode of Verilog [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/controller/mig_7series_v4_2_arb_row_col.v:253]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_sel_po_incdec', assumed default net type 'wire' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/Linux_bd_mig_7series_0_0_mig.v:1188]
@@ -27,7 +32,7 @@ INFO: [Synth 8-11241] undeclared symbol 'dbg_po_f_stg23_sel', assumed default ne
 INFO: [Synth 8-11241] undeclared symbol 'dbg_po_f_dec', assumed default net type 'wire' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/Linux_bd_mig_7series_0_0_mig.v:1194]
 INFO: [Synth 8-11241] undeclared symbol 'dbg_poc', assumed default net type 'wire' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/Linux_bd_mig_7series_0_0_mig.v:1321]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1242.312 ; gain = 410.930
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1277.973 ; gain = 408.871
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Linux_bd_mig_7series_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/Linux_bd_mig_7series_0_0.v:71]
 INFO: [Synth 8-6157] synthesizing module 'Linux_bd_mig_7series_0_0_mig' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/Linux_bd_mig_7series_0_0_mig.v:74]
@@ -798,18 +803,18 @@ WARNING: [Synth 8-7129] Port calib_device_temp[5] in module mig_7series_v4_2_ddr
 WARNING: [Synth 8-7129] Port calib_device_temp[4] in module mig_7series_v4_2_ddr_phy_tempmon is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1526.801 ; gain = 695.418
+Finished RTL Elaboration : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1563.453 ; gain = 694.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1526.801 ; gain = 695.418
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1563.453 ; gain = 694.352
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1526.801 ; gain = 695.418
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1563.453 ; gain = 694.352
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.618 . Memory (MB): peak = 1532.613 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.506 . Memory (MB): peak = 1566.664 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 88 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_Linux_bd_mig_7series_0_0_mig/u_ddr2_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -830,7 +835,7 @@ Finished Parsing XDC File [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microbl
 INFO: [Timing 38-2] Deriving generated clocks
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1638.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1679.234 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 47 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -838,18 +843,18 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   IOBUF_INTERMDISABLE => IOBUF_INTERMDISABLE (IBUF_INTERMDISABLE, OBUFT): 16 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 28 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.291 . Memory (MB): peak = 1638.867 ; gain = 0.012
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.268 . Memory (MB): peak = 1679.336 ; gain = 0.102
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1638.867 ; gain = 807.484
+Finished Constraint Validation : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1679.336 ; gain = 810.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1638.867 ; gain = 807.484
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1679.336 ; gain = 810.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -858,7 +863,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_n[0]. (constraint file  c
 Applied set_property IO_BUFFER_TYPE = NONE for ddr2_ck_p[0]. (constraint file  c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/constraints/Linux_bd_mig_7series_0_0.xdc, line 28).
 Applied set_property KEEP = true for sys_rst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1638.867 ; gain = 807.484
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:37 . Memory (MB): peak = 1679.336 ; gain = 810.234
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'xadc_supplied_temperature.tempmon_state_reg' in module 'mig_7series_v4_2_tempmon'
 INFO: [Synth 8-802] inferred FSM for state register 'fine_adj_state_r_reg' in module 'mig_7series_v4_2_ddr_phy_dqs_found_cal_hr'
@@ -951,7 +956,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'tempmon_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'mig_7series_v4_2_axi_mc_r_channel'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:52 . Memory (MB): peak = 1638.867 ; gain = 807.484
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:48 . Memory (MB): peak = 1679.336 ; gain = 810.234
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1101,7 +1106,7 @@ WARNING: [Synth 8-3936] Found unconnected internal register 'oclkdelay_start_dly
 WARNING: [Synth 8-3936] Found unconnected internal register 'wrcal_start_dly_r_reg' and it is trimmed from '15' to '14' bits. [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/rtl/phy/mig_7series_v4_2_ddr_phy_init.v:1230]
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_cal1_state_r_reg[33]) is unused and will be removed from module mig_7series_v4_2_ddr_phy_rdlvl.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:00 ; elapsed = 00:02:04 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:51 ; elapsed = 00:01:56 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1137,13 +1142,13 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-3321] set_false_path : Empty through list for constraint at line 364 of c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/constraints/Linux_bd_mig_7series_0_0.xdc. [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/constraints/Linux_bd_mig_7series_0_0.xdc:364]
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:06 ; elapsed = 00:02:10 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:58 ; elapsed = 00:02:03 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:07 ; elapsed = 00:02:11 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Timing Optimization : Time (s): cpu = 00:01:58 ; elapsed = 00:02:04 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1168,7 +1173,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:11 ; elapsed = 00:02:16 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:08 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1186,37 +1191,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:19 ; elapsed = 00:02:23 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished IO Insertion : Time (s): cpu = 00:02:10 ; elapsed = 00:02:15 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:19 ; elapsed = 00:02:23 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:10 ; elapsed = 00:02:15 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:20 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:11 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:20 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:11 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:20 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:20 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1308,19 +1313,19 @@ Report Cell Usage:
 |43    |OBUFT                 |     2|
 +------+----------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:20 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:51 ; elapsed = 00:02:15 . Memory (MB): peak = 1711.594 ; gain = 768.145
-Synthesis Optimization Complete : Time (s): cpu = 00:02:21 ; elapsed = 00:02:25 . Memory (MB): peak = 1711.594 ; gain = 880.211
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:46 ; elapsed = 00:02:07 . Memory (MB): peak = 1751.152 ; gain = 766.168
+Synthesis Optimization Complete : Time (s): cpu = 00:02:12 ; elapsed = 00:02:17 . Memory (MB): peak = 1751.152 ; gain = 882.051
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.298 . Memory (MB): peak = 1711.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.295 . Memory (MB): peak = 1751.152 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 300 Unisim elements for replacement
 WARNING: [Netlist 29-432] The IBUFG primitive 'u_Linux_bd_mig_7series_0_0_mig/u_ddr2_clk_ibuf/se_input_clk.u_ibufg_sys_clk' has been retargeted to an IBUF primitive only. No BUFG will be added. If a global buffer is intended, please instantiate an available global clock primitive from the current architecture.
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 2 inverter(s) to 16 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1711.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1751.152 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 119 instances were transformed.
   IBUFG => IBUF: 1 instance 
@@ -1332,10 +1337,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 
 Synth Design complete, checksum: af689d54
 INFO: [Common 17-83] Releasing license: Synthesis
-247 Infos, 296 Warnings, 0 Critical Warnings and 0 Errors encountered.
+250 Infos, 297 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:29 ; elapsed = 00:02:35 . Memory (MB): peak = 1711.594 ; gain = 1266.566
+synth_design: Time (s): cpu = 00:02:20 ; elapsed = 00:02:27 . Memory (MB): peak = 1751.152 ; gain = 1268.281
 INFO: [Coretcl 2-1174] Renamed 87 cell refs.
 INFO: [Common 17-1381] The checkpoint 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/Linux_bd_mig_7series_0_0_synth_1/Linux_bd_mig_7series_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Linux_bd_mig_7series_0_0_utilization_synth.rpt -pb Linux_bd_mig_7series_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 10:56:04 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 24 20:33:55 2023...

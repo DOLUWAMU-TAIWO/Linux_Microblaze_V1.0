@@ -2,8 +2,8 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Dec  4 10:56:08 2023
-# Process ID: 13480
+# Start of session at: Sun Dec 24 20:34:00 2023
+# Process ID: 10456
 # Current directory: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1
 # Command line: vivado.exe -log Linux_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Linux_bd_wrapper.tcl
 # Log file: C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/Linux_bd_wrapper.vds
@@ -11,53 +11,61 @@
 # Running On: CN010, OS: Windows, CPU Frequency: 2370 MHz, CPU Physical cores: 6, Host memory: 7916 MB
 #-----------------------------------------------------------
 source Linux_bd_wrapper.tcl -notrace
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 417.086 ; gain = 92.883
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 468.562 ; gain = 81.992
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.cache/ip 
+add_files: Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 507.895 ; gain = 58.660
+Command: read_checkpoint -auto_incremental -incremental C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/utils_1/imports/synth_1/Linux_bd_wrapper.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/utils_1/imports/synth_1/Linux_bd_wrapper.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top Linux_bd_wrapper -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4740
+INFO: [Synth 8-7075] Helper process launched with PID 4852
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1289.039 ; gain = 406.871
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1330.352 ; gain = 407.629
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_wrapper' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:50]
-INFO: [Synth 8-3491] module 'Linux_bd' declared at 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3668' bound to instance 'Linux_bd_i' of component 'Linux_bd' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_wrapper' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:50]
+INFO: [Synth 8-3491] module 'Linux_bd' declared at 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3668' bound to instance 'Linux_bd_i' of component 'Linux_bd' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:130]
 INFO: [Synth 8-638] synthesizing module 'Linux_bd' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3722]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_1' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_anodes' of component 'Linux_bd_axi_gpio_0_1' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4893]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_1' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_3' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_3_stub.vhdl:5' bound to instance 'axi_gpio_buttons' of component 'Linux_bd_axi_gpio_0_3' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4916]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_3' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_3_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_4' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_4_stub.vhdl:5' bound to instance 'axi_gpio_leds' of component 'Linux_bd_axi_gpio_0_4' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4940]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_4' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_4_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_2' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_rgb' of component 'Linux_bd_axi_gpio_0_2' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4963]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_2' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_2_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_seven' of component 'Linux_bd_axi_gpio_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4986]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_5' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_5_stub.vhdl:5' bound to instance 'axi_gpio_switch' of component 'Linux_bd_axi_gpio_0_5' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5009]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_5' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_gpio_0_5_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_iic_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_temp' of component 'Linux_bd_axi_iic_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5033]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_iic_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_iic_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_quad_spi_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_quad_spi_0_0_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'Linux_bd_axi_quad_spi_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5063]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_quad_spi_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_quad_spi_0_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_smc_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Linux_bd_axi_smc_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5106]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_smc_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_smc_0_stub.vhdl:94]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_timer_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Linux_bd_axi_timer_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5192]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_timer_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_timer_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'Linux_bd_axi_uartlite_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'Linux_bd_axi_uartlite_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5221]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_uartlite_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'Linux_bd_mdm_1_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'Linux_bd_mdm_1_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5246]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_mdm_1_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_mdm_1_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'Linux_bd_microblaze_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'Linux_bd_microblaze_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5259]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_microblaze_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_microblaze_0_0_stub.vhdl:156]
-INFO: [Synth 8-3491] module 'Linux_bd_microblaze_0_axi_intc_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_microblaze_0_axi_intc_0_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'Linux_bd_microblaze_0_axi_intc_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5438]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_microblaze_0_axi_intc_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_microblaze_0_axi_intc_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_1' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_1_stub.vhdl:5' bound to instance 'axi_gpio_anodes' of component 'Linux_bd_axi_gpio_0_1' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4893]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_1' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_3' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_3_stub.vhdl:5' bound to instance 'axi_gpio_buttons' of component 'Linux_bd_axi_gpio_0_3' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4916]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_3' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_3_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_4' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_4_stub.vhdl:5' bound to instance 'axi_gpio_leds' of component 'Linux_bd_axi_gpio_0_4' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4940]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_4' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_4_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_2' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_2_stub.vhdl:5' bound to instance 'axi_gpio_rgb' of component 'Linux_bd_axi_gpio_0_2' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4963]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_2' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_2_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_seven' of component 'Linux_bd_axi_gpio_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:4986]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_gpio_0_5' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_5_stub.vhdl:5' bound to instance 'axi_gpio_switch' of component 'Linux_bd_axi_gpio_0_5' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5009]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_gpio_0_5' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_gpio_0_5_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_iic_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_iic_0_0_stub.vhdl:5' bound to instance 'axi_iic_temp' of component 'Linux_bd_axi_iic_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5033]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_iic_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_iic_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_quad_spi_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_quad_spi_0_0_stub.vhdl:5' bound to instance 'axi_quad_spi_0' of component 'Linux_bd_axi_quad_spi_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5063]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_quad_spi_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_quad_spi_0_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_smc_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'Linux_bd_axi_smc_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5106]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_smc_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_smc_0_stub.vhdl:94]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_timer_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_timer_0_0_stub.vhdl:5' bound to instance 'axi_timer_0' of component 'Linux_bd_axi_timer_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5192]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_timer_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_timer_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'Linux_bd_axi_uartlite_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'Linux_bd_axi_uartlite_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5221]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_axi_uartlite_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'Linux_bd_mdm_1_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_mdm_1_0_stub.vhdl:5' bound to instance 'mdm_1' of component 'Linux_bd_mdm_1_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5246]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_mdm_1_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_mdm_1_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Linux_bd_microblaze_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_microblaze_0_0_stub.vhdl:5' bound to instance 'microblaze_0' of component 'Linux_bd_microblaze_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5259]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_microblaze_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_microblaze_0_0_stub.vhdl:156]
+INFO: [Synth 8-3491] module 'Linux_bd_microblaze_0_axi_intc_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_microblaze_0_axi_intc_0_stub.vhdl:5' bound to instance 'microblaze_0_axi_intc' of component 'Linux_bd_microblaze_0_axi_intc_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5438]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_microblaze_0_axi_intc_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_microblaze_0_axi_intc_0_stub.vhdl:36]
 INFO: [Synth 8-638] synthesizing module 'Linux_bd_microblaze_0_axi_periph_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:2163]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1E610H2' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:57]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1E610H2' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:57]
@@ -85,20 +93,20 @@ INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_LMIF38' [c:/Users/dolu
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_LMIF38' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1730]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_194IX39' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1841]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_194IX39' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1841]
-INFO: [Synth 8-3491] module 'Linux_bd_xbar_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Linux_bd_xbar_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3431]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_xbar_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'Linux_bd_xbar_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'Linux_bd_xbar_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3431]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_xbar_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'Linux_bd_microblaze_0_axi_periph_0' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:2163]
 INFO: [Synth 8-638] synthesizing module 'microblaze_0_local_memory_imp_RE73KY' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1151]
-INFO: [Synth 8-3491] module 'Linux_bd_dlmb_bram_if_cntlr_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'Linux_bd_dlmb_bram_if_cntlr_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1365]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_dlmb_bram_if_cntlr_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_dlmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_dlmb_v10_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'Linux_bd_dlmb_v10_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1419]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_dlmb_v10_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_dlmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'Linux_bd_ilmb_bram_if_cntlr_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'Linux_bd_ilmb_bram_if_cntlr_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1447]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_ilmb_bram_if_cntlr_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_ilmb_bram_if_cntlr_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'Linux_bd_ilmb_v10_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'Linux_bd_ilmb_v10_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1501]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_ilmb_v10_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_ilmb_v10_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'Linux_bd_lmb_bram_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'Linux_bd_lmb_bram_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1529]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_lmb_bram_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_lmb_bram_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'Linux_bd_dlmb_bram_if_cntlr_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_dlmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'dlmb_bram_if_cntlr' of component 'Linux_bd_dlmb_bram_if_cntlr_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1365]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_dlmb_bram_if_cntlr_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_dlmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_dlmb_v10_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_dlmb_v10_0_stub.vhdl:5' bound to instance 'dlmb_v10' of component 'Linux_bd_dlmb_v10_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1419]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_dlmb_v10_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_dlmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'Linux_bd_ilmb_bram_if_cntlr_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_ilmb_bram_if_cntlr_0_stub.vhdl:5' bound to instance 'ilmb_bram_if_cntlr' of component 'Linux_bd_ilmb_bram_if_cntlr_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1447]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_ilmb_bram_if_cntlr_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_ilmb_bram_if_cntlr_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'Linux_bd_ilmb_v10_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_ilmb_v10_0_stub.vhdl:5' bound to instance 'ilmb_v10' of component 'Linux_bd_ilmb_v10_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1501]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_ilmb_v10_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_ilmb_v10_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'Linux_bd_lmb_bram_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_lmb_bram_0_stub.vhdl:5' bound to instance 'lmb_bram' of component 'Linux_bd_lmb_bram_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1529]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_lmb_bram_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_lmb_bram_0_stub.vhdl:27]
 INFO: [Synth 8-256] done synthesizing module 'microblaze_0_local_memory_imp_RE73KY' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:1151]
 INFO: [Synth 8-3491] module 'Linux_bd_microblaze_0_xlconcat_0' declared at 'c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_xlconcat_0/synth/Linux_bd_microblaze_0_xlconcat_0.v:53' bound to instance 'microblaze_0_xlconcat' of component 'Linux_bd_microblaze_0_xlconcat_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5747]
 INFO: [Synth 8-6157] synthesizing module 'Linux_bd_microblaze_0_xlconcat_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_xlconcat_0/synth/Linux_bd_microblaze_0_xlconcat_0.v:53]
@@ -112,21 +120,21 @@ WARNING: [Synth 8-5640] Port 'ui_addn_clk_4' is missing in component declaration
 WARNING: [Synth 8-5640] Port 'app_sr_active' is missing in component declaration [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3723]
 WARNING: [Synth 8-5640] Port 'app_ref_ack' is missing in component declaration [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3723]
 WARNING: [Synth 8-5640] Port 'app_zq_ack' is missing in component declaration [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3723]
-INFO: [Synth 8-3491] module 'Linux_bd_mig_7series_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_mig_7series_0_0_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'Linux_bd_mig_7series_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5757]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_mig_7series_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_mig_7series_0_0_stub.vhdl:78]
-INFO: [Synth 8-3491] module 'Linux_bd_rst_mig_7series_0_81M_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_rst_mig_7series_0_81M_0_stub.vhdl:5' bound to instance 'rst_mig_7series_0_81M' of component 'Linux_bd_rst_mig_7series_0_81M_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5820]
-INFO: [Synth 8-638] synthesizing module 'Linux_bd_rst_mig_7series_0_81M_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-13480-CN010/realtime/Linux_bd_rst_mig_7series_0_81M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'Linux_bd_mig_7series_0_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_mig_7series_0_0_stub.vhdl:5' bound to instance 'mig_7series_0' of component 'Linux_bd_mig_7series_0_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5757]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_mig_7series_0_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_mig_7series_0_0_stub.vhdl:78]
+INFO: [Synth 8-3491] module 'Linux_bd_rst_mig_7series_0_81M_0' declared at 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_rst_mig_7series_0_81M_0_stub.vhdl:5' bound to instance 'rst_mig_7series_0_81M' of component 'Linux_bd_rst_mig_7series_0_81M_0' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:5820]
+INFO: [Synth 8-638] synthesizing module 'Linux_bd_rst_mig_7series_0_81M_0' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/.Xil/Vivado-10456-CN010/realtime/Linux_bd_rst_mig_7series_0_81M_0_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'Linux_bd' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/synth/Linux_bd.vhd:3722]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io0_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:178]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io0_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:178]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io1_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:185]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io2_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:192]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io3_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:199]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_ss_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:206]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'temp_sensor_scl_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:213]
-INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'temp_sensor_sda_iobuf' of component 'IOBUF' [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:220]
-INFO: [Synth 8-256] done synthesizing module 'Linux_bd_wrapper' (0#1) [c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:50]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io1_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:185]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io2_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:192]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_io3_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:199]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'qspi_flash_ss_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:206]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'temp_sensor_scl_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:213]
+INFO: [Synth 8-3491] module 'IOBUF' declared at 'C:/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:75902' bound to instance 'temp_sensor_sda_iobuf' of component 'IOBUF' [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:220]
+INFO: [Synth 8-256] done synthesizing module 'Linux_bd_wrapper' (0#1) [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd:50]
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In7[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In8[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -229,18 +237,18 @@ WARNING: [Synth 8-7129] Port In104[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In105[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1403.695 ; gain = 521.527
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1444.906 ; gain = 522.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1403.695 ; gain = 521.527
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1444.906 ; gain = 522.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1403.695 ; gain = 521.527
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1444.906 ; gain = 522.184
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1403.695 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.093 . Memory (MB): peak = 1444.906 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -299,24 +307,26 @@ Parsing XDC File [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/
 Finished Parsing XDC File [C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1460.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1497.699 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 7 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 7 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1460.434 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1497.699 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Linux_bd_i/axi_quad_spi_0' at clock pin 'ext_spi_clk' is different from the actual clock period '12.308', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'Linux_bd_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '12.308', this can lead to different synthesis results.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Constraint Validation : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -441,10 +451,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for Linux_bd_i/axi_iic_temp. (constra
 Applied set_property KEEP_HIERARCHY = SOFT for Linux_bd_i/axi_uartlite_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for Linux_bd_i/axi_timer_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -467,25 +477,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -503,37 +513,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -598,27 +608,27 @@ Report Cell Usage:
 |25    |OBUF                                  |    39|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 27 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 1460.469 ; gain = 521.527
-Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1460.469 ; gain = 578.301
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:36 . Memory (MB): peak = 1498.043 ; gain = 522.184
+Synthesis Optimization Complete : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1498.043 ; gain = 575.320
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1460.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1498.043 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1460.469 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1498.043 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 7 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 7 instances
 
 Synth Design complete, checksum: de22f0d6
 INFO: [Common 17-83] Releasing license: Synthesis
-116 Infos, 110 Warnings, 0 Critical Warnings and 0 Errors encountered.
+122 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:43 . Memory (MB): peak = 1460.469 ; gain = 991.906
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 1498.043 ; gain = 973.363
 INFO: [Common 17-1381] The checkpoint 'C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.runs/synth_1/Linux_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Linux_bd_wrapper_utilization_synth.rpt -pb Linux_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec  4 10:57:06 2023...
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 24 20:35:04 2023...

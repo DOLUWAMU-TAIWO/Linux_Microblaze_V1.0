@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:46:20 2023
+// Date        : Mon Dec  4 10:46:19 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_axi_iic_0_0/Linux_bd_axi_iic_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_axi_iic_0_0 -prefix
+//               Linux_bd_axi_iic_0_0_ Linux_bd_axi_iic_0_0_sim_netlist.v
 // Design      : Linux_bd_axi_iic_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -178,7 +178,6 @@ module Linux_bd_axi_iic_0_0
         .sda_t(sda_t));
 endmodule
 
-(* ORIG_REF_NAME = "SRL_FIFO" *) 
 module Linux_bd_axi_iic_0_0_SRL_FIFO
    (Rc_Data_Exists,
     Rc_addr,
@@ -1194,7 +1193,6 @@ module Linux_bd_axi_iic_0_0_SRL_FIFO__parameterized0
         .O(\FIFO_RAM[1].SRL16E_I_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Linux_bd_axi_iic_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8]_0 ,
     Bus_RNW_reg_reg_0,
@@ -2292,7 +2290,7 @@ endmodule
 (* C_SDA_INERTIAL_DELAY = "0" *) (* C_SDA_LEVEL = "1" *) (* C_SMBUS_PMBUS_HOST = "0" *) 
 (* C_STATIC_TIMING_REG_WIDTH = "0" *) (* C_S_AXI_ACLK_FREQ_HZ = "81247969" *) (* C_S_AXI_ADDR_WIDTH = "9" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TEN_BIT_ADR = "0" *) (* C_TIMING_REG_WIDTH = "32" *) 
-(* ORIG_REF_NAME = "axi_iic" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Linux_bd_axi_iic_0_0_axi_iic
    (s_axi_aclk,
     s_axi_aresetn,
@@ -2432,7 +2430,6 @@ module Linux_bd_axi_iic_0_0_axi_iic
         .sda_t(sda_t));
 endmodule
 
-(* ORIG_REF_NAME = "axi_ipif_ssp1" *) 
 module Linux_bd_axi_iic_0_0_axi_ipif_ssp1
    (s_axi_rresp,
     Bus2IIC_Reset,
@@ -2788,7 +2785,6 @@ module Linux_bd_axi_iic_0_0_axi_ipif_ssp1
         .sw_rst_cond_d1(sw_rst_cond_d1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Linux_bd_axi_iic_0_0_axi_lite_ipif
    (p_26_in,
     s_axi_rresp,
@@ -3116,7 +3112,6 @@ module Linux_bd_axi_iic_0_0_axi_lite_ipif
         .sw_rst_cond_d1(sw_rst_cond_d1));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Linux_bd_axi_iic_0_0_cdc_sync
    (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4_0 ,
     scndry_out,
@@ -3286,7 +3281,6 @@ module Linux_bd_axi_iic_0_0_cdc_sync_4
         .O(scl_rising_edge0));
 endmodule
 
-(* ORIG_REF_NAME = "debounce" *) 
 module Linux_bd_axi_iic_0_0_debounce
    (scl_rising_edge0,
     \GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
@@ -3348,7 +3342,6 @@ module Linux_bd_axi_iic_0_0_debounce_3
         .sda_rin_d1(sda_rin_d1));
 endmodule
 
-(* ORIG_REF_NAME = "dynamic_master" *) 
 module Linux_bd_axi_iic_0_0_dynamic_master
    (callingReadAccess,
     rdCntrFrmTxFifo,
@@ -3667,7 +3660,6 @@ module Linux_bd_axi_iic_0_0_dynamic_master
         .R(Tx_fifo_rst));
 endmodule
 
-(* ORIG_REF_NAME = "filter" *) 
 module Linux_bd_axi_iic_0_0_filter
    (\GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4 ,
     scndry_out,
@@ -3720,7 +3712,6 @@ module Linux_bd_axi_iic_0_0_filter
         .sda_rin_d1(sda_rin_d1));
 endmodule
 
-(* ORIG_REF_NAME = "iic" *) 
 module Linux_bd_axi_iic_0_0_iic
    (s_axi_bresp,
     s_axi_rdata,
@@ -4295,7 +4286,6 @@ module Linux_bd_axi_iic_0_0_iic
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "iic_control" *) 
 module Linux_bd_axi_iic_0_0_iic_control
    (sda_t,
     scl_t,
@@ -6018,7 +6008,6 @@ module Linux_bd_axi_iic_0_0_iic_control
         .R(\q_int_reg[9] ));
 endmodule
 
-(* ORIG_REF_NAME = "interrupt_control" *) 
 module Linux_bd_axi_iic_0_0_interrupt_control
    (\GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ,
     p_1_in16_in,
@@ -6326,7 +6315,6 @@ module Linux_bd_axi_iic_0_0_interrupt_control
         .R(SR));
 endmodule
 
-(* ORIG_REF_NAME = "reg_interface" *) 
 module Linux_bd_axi_iic_0_0_reg_interface
    (IIC2Bus_IntrEvent,
     Q,
@@ -7935,7 +7923,6 @@ module Linux_bd_axi_iic_0_0_reg_interface
         .R(Bus2IIC_Reset));
 endmodule
 
-(* ORIG_REF_NAME = "shift8" *) 
 module Linux_bd_axi_iic_0_0_shift8
    (\data_int_reg[7]_0 ,
     Q,
@@ -8415,7 +8402,6 @@ module Linux_bd_axi_iic_0_0_shift8_1
         .O(\data_int_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Linux_bd_axi_iic_0_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[8].ce_out_i_reg[8] ,
     s_axi_rresp,
@@ -9859,7 +9845,6 @@ module Linux_bd_axi_iic_0_0_slave_attachment
         .R(rst));
 endmodule
 
-(* ORIG_REF_NAME = "soft_reset" *) 
 module Linux_bd_axi_iic_0_0_soft_reset
    (sw_rst_cond_d1,
     AXI_Bus2IP_Reset,
@@ -10016,7 +10001,6 @@ module Linux_bd_axi_iic_0_0_soft_reset
         .R(AXI_Bus2IP_Reset));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module Linux_bd_axi_iic_0_0_upcnt_n
    (Q,
     D,

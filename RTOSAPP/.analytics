@@ -1,0 +1,37 @@
+timestamp=[2023-12-24 00:53:58], mode=WORKBENCH_START, duration=0:00:05.594, duration_ms=5594, data={}
+timestamp=[2023-12-24 00:53:59], mode=WORKBENCH_UI_INIT, duration=0:00:00.494, duration_ms=494, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2023-12-24 00:54:01], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.794, duration_ms=1794, data={}
+timestamp=[2023-12-24 01:04:53], mode=APP_CREATION, duration=0:00:11.177, duration_ms=11177, data={name=rtosapp, project_type=sdk, os=freertos10_xilinx, processor=microblaze, runtime=cpp, platform=Linux_bd_wrapper, application_type=application}
+timestamp=[2023-12-24 01:05:10], mode=PLATFORM_GENERATION, duration=0:00:13.834, duration_ms=13834, data={name=Linux_bd_wrapper}
+timestamp=[2023-12-24 01:05:11], mode=BUILD, duration=0:00:01.289, duration_ms=1289, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:09:40], mode=BUILD, duration=0:00:00.753, duration_ms=753, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:13:31], mode=BUILD, duration=0:00:00.271, duration_ms=271, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:15:17], mode=BUILD, duration=0:00:00.269, duration_ms=269, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:15:26], mode=BUILD, duration=0:00:00.255, duration_ms=255, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:15:33], mode=BUILD, duration=0:00:00.254, duration_ms=254, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:21:25], mode=BUILD, duration=0:00:01.021, duration_ms=1021, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:23:42], mode=BUILD, duration=0:00:00.748, duration_ms=748, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:28:47], mode=WORKBENCH_START, duration=0:00:11.172, duration_ms=11172, data={}
+timestamp=[2023-12-24 01:28:48], mode=WORKBENCH_UI_INIT, duration=0:00:01.085, duration_ms=1085, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Linux_bd_wrapper,RemoteSystemsTempFiles,rtosapp,rtosapp_system}
+timestamp=[2023-12-24 01:28:48], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.180, duration_ms=180, data={}
+timestamp=[2023-12-24 01:37:58], mode=WORKBENCH_START, duration=0:00:10.669, duration_ms=10669, data={}
+timestamp=[2023-12-24 01:37:59], mode=WORKBENCH_UI_INIT, duration=0:00:01.027, duration_ms=1027, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Linux_bd_wrapper,RemoteSystemsTempFiles,rtosapp,rtosapp_system}
+timestamp=[2023-12-24 01:38:00], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.069, duration_ms=69, data={}
+timestamp=[2023-12-24 01:38:22], mode=PLATFORM_GENERATION, duration=0:00:07.173, duration_ms=7173, data={name=Linux_bd_wrapper}
+timestamp=[2023-12-24 01:38:23], mode=BUILD, duration=0:00:00.146, duration_ms=146, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:38:23], mode=BUILD, duration=0:00:00.166, duration_ms=166, data={name=rtosapp_system, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:44:25], mode=WORKBENCH_START, duration=0:00:12.176, duration_ms=12176, data={}
+timestamp=[2023-12-24 01:44:26], mode=WORKBENCH_UI_INIT, duration=0:00:00.904, duration_ms=904, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Linux_bd_wrapper,RemoteSystemsTempFiles,rtosapp,rtosapp_system}
+timestamp=[2023-12-24 01:44:26], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.078, duration_ms=78, data={}
+timestamp=[2023-12-24 01:47:39], mode=BUILD, duration=0:00:00.543, duration_ms=543, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:48:58], mode=BUILD, duration=0:00:00.347, duration_ms=347, data={name=rtosapp, configuration=Debug, clean_build=true}
+timestamp=[2023-12-24 01:50:04], mode=BUILD, duration=0:00:01.262, duration_ms=1262, data={name=rtosapp, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:50:04], mode=BUILD, duration=0:00:00.133, duration_ms=133, data={name=rtosapp_system, configuration=Debug, clean_build=false}
+timestamp=[2023-12-24 01:52:46], mode=WORKBENCH_START, duration=0:00:21.357, duration_ms=21357, data={}
+timestamp=[2023-12-24 01:52:48], mode=WORKBENCH_UI_INIT, duration=0:00:01.540, duration_ms=1540, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Linux_bd_wrapper,RemoteSystemsTempFiles,rtosapp,rtosapp_system}
+timestamp=[2023-12-24 01:52:59], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.164, duration_ms=164, data={}
+timestamp=[2023-12-24 21:33:35], mode=WORKBENCH_START, duration=0:00:12.735, duration_ms=12735, data={}
+timestamp=[2023-12-24 21:33:36], mode=WORKBENCH_UI_INIT, duration=0:00:00.792, duration_ms=792, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=Linux_bd_wrapper,RemoteSystemsTempFiles,rtosapp,rtosapp_system}
+timestamp=[2023-12-24 21:33:36], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.152, duration_ms=152, data={}
+timestamp=[2023-12-24 22:13:42], mode=PLATFORM_GENERATION, duration=0:00:08.576, duration_ms=8576, data={name=Linux_bd_wrapper}
+timestamp=[2023-12-24 22:13:42], mode=BUILD, duration=0:00:00.140, duration_ms=140, data={name=rtosapp, configuration=Debug, clean_build=false}

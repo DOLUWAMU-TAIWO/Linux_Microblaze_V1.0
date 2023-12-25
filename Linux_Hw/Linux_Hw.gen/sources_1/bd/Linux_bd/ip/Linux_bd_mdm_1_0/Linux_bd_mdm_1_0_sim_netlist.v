@@ -1,16 +1,1196 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:47:26 2023
+// Date        : Mon Dec  4 10:47:25 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mdm_1_0/Linux_bd_mdm_1_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_mdm_1_0 -prefix
+//               Linux_bd_mdm_1_0_ Linux_bd_mdm_1_0_sim_netlist.v
 // Design      : Linux_bd_mdm_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
 // Device      : xc7a100tcsg324-1
 // --------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
+
+module Linux_bd_mdm_1_0_JTAG_CONTROL
+   (\shift_Count_reg[0]_0 ,
+    Debug_SYS_Rst,
+    Dbg_Rst_0,
+    Dbg_Reg_En_0,
+    \Use_BSCAN.command_reg[6]_0 ,
+    \Use_Serial_Unified_Completion.mb_data_overrun1__0 ,
+    Dbg_Shift_0,
+    tdo,
+    \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ,
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ,
+    CLK,
+    \Use_unisim.MB_SRL16E_I1 ,
+    sel_n_reg_0,
+    Dbg_Shift_0_0,
+    Q,
+    SEL,
+    \Use_E2.BSCANE2_I ,
+    Dbg_TDO_0,
+    \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ,
+    Ext_JTAG_TDI,
+    \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ,
+    \Use_Serial_Unified_Completion.completion_status_reg[15]_0 ,
+    sel,
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ,
+    \shift_Count_reg[0]_1 );
+  output \shift_Count_reg[0]_0 ;
+  output Debug_SYS_Rst;
+  output Dbg_Rst_0;
+  output [0:7]Dbg_Reg_En_0;
+  output \Use_BSCAN.command_reg[6]_0 ;
+  output \Use_Serial_Unified_Completion.mb_data_overrun1__0 ;
+  output Dbg_Shift_0;
+  output tdo;
+  output \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ;
+  output \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ;
+  input CLK;
+  input \Use_unisim.MB_SRL16E_I1 ;
+  input sel_n_reg_0;
+  input Dbg_Shift_0_0;
+  input [3:0]Q;
+  input SEL;
+  input \Use_E2.BSCANE2_I ;
+  input Dbg_TDO_0;
+  input \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ;
+  input Ext_JTAG_TDI;
+  input \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
+  input [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
+  input sel;
+  input [0:0]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ;
+  input [0:0]\shift_Count_reg[0]_1 ;
+
+  wire A1;
+  wire A2;
+  wire A3;
+  wire CE;
+  wire CLK;
+  wire D;
+  wire [0:7]Dbg_Reg_En_0;
+  wire Dbg_Rst_0;
+  wire Dbg_Shift_0;
+  wire Dbg_Shift_0_0;
+  wire Dbg_Shift_0_INST_0_i_1_n_0;
+  wire Dbg_Shift_0_INST_0_i_3_n_0;
+  wire Dbg_Shift_0_INST_0_i_4_n_0;
+  wire Dbg_TDO_0;
+  wire Debug_SYS_Rst;
+  wire Debug_SYS_Rst_i_i_2_n_0;
+  wire Ext_JTAG_TDI;
+  wire Functional_Reset;
+  wire ID_TDO_2;
+  wire [3:0]Q;
+  wire SEL;
+  wire \Use_BSCAN.FDC_I_n_13 ;
+  wire \Use_BSCAN.FDC_I_n_26 ;
+  wire \Use_BSCAN.FDC_I_n_27 ;
+  wire \Use_BSCAN.FDC_I_n_28 ;
+  wire \Use_BSCAN.FDC_I_n_30 ;
+  wire \Use_BSCAN.FDC_I_n_31 ;
+  wire \Use_BSCAN.FDC_I_n_32 ;
+  wire \Use_BSCAN.FDC_I_n_33 ;
+  wire \Use_BSCAN.FDC_I_n_34 ;
+  wire \Use_BSCAN.FDC_I_n_35 ;
+  wire \Use_BSCAN.FDC_I_n_36 ;
+  wire \Use_BSCAN.FDC_I_n_9 ;
+  wire \Use_BSCAN.command[0]_i_1_n_0 ;
+  wire \Use_BSCAN.command_reg[6]_0 ;
+  wire \Use_E2.BSCANE2_I ;
+  wire \Use_E2.BSCANE2_I_i_10_n_0 ;
+  wire \Use_E2.BSCANE2_I_i_11_n_0 ;
+  wire \Use_E2.BSCANE2_I_i_3_n_0 ;
+  wire \Use_E2.BSCANE2_I_i_6_n_0 ;
+  wire \Use_E2.BSCANE2_I_i_7_n_0 ;
+  wire \Use_ID_SRL16E.SRL16E_ID_1_n_0 ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ;
+  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ;
+  wire \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ;
+  wire [0:4]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg ;
+  wire \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ;
+  wire [0:0]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ;
+  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ;
+  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ;
+  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ;
+  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ;
+  wire \Use_Serial_Unified_Completion.completion_block_i_3_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_block_i_4_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_block_reg_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ;
+  wire \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
+  wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
+  wire \Use_Serial_Unified_Completion.mb_data_overrun1__0 ;
+  wire \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ;
+  wire \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ;
+  wire \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ;
+  wire \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ;
+  wire \Use_Serial_Unified_Completion.mb_instr_overrun ;
+  wire \Use_Serial_Unified_Completion.mb_instr_overrun137_out ;
+  wire \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ;
+  wire \Use_unisim.MB_SRL16E_I1 ;
+  wire [0:7]command;
+  wire [0:7]command_1;
+  wire command_10;
+  wire completion_block0__10;
+  wire completion_ctrl;
+  wire [15:0]completion_status;
+  wire config_TDO_2;
+  wire [5:1]p_0_in;
+  wire p_0_in_1;
+  wire [4:1]p_0_in__0;
+  wire [14:0]p_1_in;
+  (* async_reg = "true" *) wire [15:13]sample;
+  wire sample_1;
+  wire sel;
+  wire sel_n;
+  wire sel_n0;
+  wire sel_n_reg_0;
+  wire [4:4]shift_Count_reg;
+  wire \shift_Count_reg[0]_0 ;
+  wire [0:0]\shift_Count_reg[0]_1 ;
+  wire sync;
+  wire tdi_shifter0;
+  wire \tdi_shifter_reg_n_0_[1] ;
+  wire \tdi_shifter_reg_n_0_[2] ;
+  wire \tdi_shifter_reg_n_0_[3] ;
+  wire \tdi_shifter_reg_n_0_[4] ;
+  wire \tdi_shifter_reg_n_0_[5] ;
+  wire \tdi_shifter_reg_n_0_[6] ;
+  wire \tdi_shifter_reg_n_0_[7] ;
+  wire tdo;
+
+  LUT3 #(
+    .INIT(8'h04)) 
+    Dbg_Shift_0_INST_0_i_1
+       (.I0(command[6]),
+        .I1(command[5]),
+        .I2(command[7]),
+        .O(Dbg_Shift_0_INST_0_i_1_n_0));
+  LUT2 #(
+    .INIT(4'hE)) 
+    Dbg_Shift_0_INST_0_i_3
+       (.I0(command[2]),
+        .I1(command[4]),
+        .O(Dbg_Shift_0_INST_0_i_3_n_0));
+  LUT3 #(
+    .INIT(8'h01)) 
+    Dbg_Shift_0_INST_0_i_4
+       (.I0(command[0]),
+        .I1(command[1]),
+        .I2(command[3]),
+        .O(Dbg_Shift_0_INST_0_i_4_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    Debug_Rst_i_reg
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_34 ),
+        .Q(Dbg_Rst_0),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000000000000004)) 
+    Debug_SYS_Rst_i_i_2
+       (.I0(command[7]),
+        .I1(command[4]),
+        .I2(command[5]),
+        .I3(command[3]),
+        .I4(command[1]),
+        .I5(command[0]),
+        .O(Debug_SYS_Rst_i_i_2_n_0));
+  FDRE #(
+    .INIT(1'b0)) 
+    Debug_SYS_Rst_i_reg
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_35 ),
+        .Q(Debug_SYS_Rst),
+        .R(1'b0));
+  Linux_bd_mdm_1_0_MB_FDC_1 \Use_BSCAN.FDC_I 
+       (.CE(CE),
+        .CLK(CLK),
+        .D(D),
+        .Dbg_Reg_En_0(Dbg_Reg_En_0),
+        .Dbg_Rst_0(Dbg_Rst_0),
+        .Dbg_TDO_0(Dbg_TDO_0),
+        .Dbg_TDO_0_0(\Use_BSCAN.FDC_I_n_32 ),
+        .Debug_Rst_i_reg(Debug_SYS_Rst_i_i_2_n_0),
+        .Debug_SYS_Rst(Debug_SYS_Rst),
+        .Debug_SYS_Rst_i_reg(\tdi_shifter_reg_n_0_[1] ),
+        .Q(Q),
+        .SEL(SEL),
+        .\Use_BSCAN.command_reg[6] (\Use_BSCAN.command_reg[6]_0 ),
+        .\Use_E2.BSCANE2_I (\Use_BSCAN.FDC_I_n_33 ),
+        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[13] (\Use_BSCAN.FDC_I_n_26 ),
+        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[14] (\Use_BSCAN.FDC_I_n_27 ),
+        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[15] (\Use_BSCAN.FDC_I_n_28 ),
+        .\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1] (\Use_BSCAN.FDC_I_n_30 ),
+        .\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1]_0 (\Use_BSCAN.FDC_I_n_31 ),
+        .\Use_Serial_Unified_Completion.completion_block_reg (\Use_BSCAN.FDC_I_n_9 ),
+        .\Use_Serial_Unified_Completion.completion_block_reg_0 (\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[0] (Dbg_Shift_0_0),
+        .\Use_Serial_Unified_Completion.completion_status_reg[3] (\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[4] (\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[5] (\Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[6] (\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ),
+        .\Use_Serial_Unified_Completion.completion_status_reg[8] (\Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ),
+        .\Use_Serial_Unified_Completion.mb_data_overrun1__0 (\Use_Serial_Unified_Completion.mb_data_overrun1__0 ),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg (sel_n_reg_0),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_0 (Dbg_Shift_0_INST_0_i_3_n_0),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_1 (Dbg_Shift_0_INST_0_i_4_n_0),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_2 (\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ),
+        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_3 (\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg (Dbg_Shift_0_INST_0_i_1_n_0),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg_0 (\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
+        .\Use_Serial_Unified_Completion.mb_instr_error_reg_1 (\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun (\Use_Serial_Unified_Completion.mb_instr_overrun ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun137_out (\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg (\Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ),
+        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 (\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
+        .\Using_FPGA.Native_0 (\Use_BSCAN.FDC_I_n_13 ),
+        .\Using_FPGA.Native_1 (\tdi_shifter_reg_n_0_[4] ),
+        .\Using_FPGA.Native_2 (\tdi_shifter_reg_n_0_[5] ),
+        .\Using_FPGA.Native_3 (\tdi_shifter_reg_n_0_[7] ),
+        .\Using_FPGA.Native_4 (\tdi_shifter_reg_n_0_[6] ),
+        .\Using_FPGA.Native_5 (\tdi_shifter_reg_n_0_[2] ),
+        .\Using_FPGA.Native_6 (\tdi_shifter_reg_n_0_[3] ),
+        .command(command),
+        .command_10(command_10),
+        .completion_block0__10(completion_block0__10),
+        .completion_ctrl(completion_ctrl),
+        .completion_status(completion_status[10:0]),
+        .out(sample),
+        .p_0_in_1(p_0_in_1),
+        .p_1_in(p_1_in[9:0]),
+        .sample_1(sample_1),
+        .sel_n(sel_n),
+        .sync(sync),
+        .\tdi_shifter_reg[0] (\Use_BSCAN.FDC_I_n_34 ),
+        .\tdi_shifter_reg[0]_0 (\Use_BSCAN.FDC_I_n_36 ),
+        .\tdi_shifter_reg[1] (\Use_BSCAN.FDC_I_n_35 ));
+  Linux_bd_mdm_1_0_MB_FDRE_1 \Use_BSCAN.SYNC_FDRE 
+       (.CE(CE),
+        .D(D),
+        .Dbg_Shift_0(Dbg_Shift_0),
+        .Dbg_Shift_0_0(Dbg_Shift_0_INST_0_i_1_n_0),
+        .Dbg_Shift_0_1(\Use_BSCAN.FDC_I_n_13 ),
+        .Dbg_Shift_0_2(Dbg_Shift_0_INST_0_i_3_n_0),
+        .Dbg_Shift_0_3(Dbg_Shift_0_INST_0_i_4_n_0),
+        .Dbg_Shift_0_4(Dbg_Shift_0_0),
+        .\Using_FPGA.Native_0 (\Use_unisim.MB_SRL16E_I1 ),
+        .sync(sync));
+  LUT5 #(
+    .INIT(32'h00000008)) 
+    \Use_BSCAN.command[0]_i_1 
+       (.I0(SEL),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[3]),
+        .I4(Q[2]),
+        .O(\Use_BSCAN.command[0]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[0] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[0]),
+        .Q(command[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[1] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[1]),
+        .Q(command[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[2] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[2]),
+        .Q(command[2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[3] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[3]),
+        .Q(command[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[4] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[4]),
+        .Q(command[4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[5] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[5]),
+        .Q(command[5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[6] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[6]),
+        .Q(command[6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0),
+    .IS_C_INVERTED(1'b1)) 
+    \Use_BSCAN.command_reg[7] 
+       (.C(CLK),
+        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
+        .D(command_1[7]),
+        .Q(command[7]),
+        .R(1'b0));
+  Linux_bd_mdm_1_0_MB_SRL16E \Use_Config_SRL16E.SRL16E_1 
+       (.A1(A1),
+        .A2(A2),
+        .A3(A3),
+        .Dbg_TDO_0(Dbg_TDO_0),
+        .Q(Q[0]),
+        .\Use_E2.BSCANE2_I (\Use_E2.BSCANE2_I ),
+        .\Use_E2.BSCANE2_I_0 (\Use_E2.BSCANE2_I_i_3_n_0 ),
+        .\Use_E2.BSCANE2_I_1 (\Use_ID_SRL16E.SRL16E_ID_1_n_0 ),
+        .\Use_E2.BSCANE2_I_2 (\Use_E2.BSCANE2_I_i_6_n_0 ),
+        .\Use_E2.BSCANE2_I_3 (\Use_E2.BSCANE2_I_i_7_n_0 ),
+        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
+        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
+        .command({command[4],command[5],command[7]}),
+        .completion_status(completion_status[0]),
+        .config_TDO_2(config_TDO_2),
+        .shift_Count_reg(shift_Count_reg),
+        .tdo(tdo));
+  Linux_bd_mdm_1_0_MB_SRL16E__parameterized1 \Use_Config_SRL16E.SRL16E_2 
+       (.A1(A1),
+        .A2(A2),
+        .A3(A3),
+        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
+        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
+        .config_TDO_2(config_TDO_2));
+  LUT6 #(
+    .INIT(64'hFEFCFEFFFFFFFFFF)) 
+    \Use_E2.BSCANE2_I_i_10 
+       (.I0(command[1]),
+        .I1(command[3]),
+        .I2(command[5]),
+        .I3(command[2]),
+        .I4(command[4]),
+        .I5(command[6]),
+        .O(\Use_E2.BSCANE2_I_i_10_n_0 ));
+  LUT6 #(
+    .INIT(64'h0001000010000001)) 
+    \Use_E2.BSCANE2_I_i_11 
+       (.I0(command[1]),
+        .I1(command[3]),
+        .I2(command[2]),
+        .I3(command[6]),
+        .I4(command[4]),
+        .I5(command[5]),
+        .O(\Use_E2.BSCANE2_I_i_11_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT3 #(
+    .INIT(8'hF8)) 
+    \Use_E2.BSCANE2_I_i_3 
+       (.I0(command[0]),
+        .I1(Dbg_TDO_0),
+        .I2(Q[1]),
+        .O(\Use_E2.BSCANE2_I_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  LUT4 #(
+    .INIT(16'h00F8)) 
+    \Use_E2.BSCANE2_I_i_6 
+       (.I0(\Use_E2.BSCANE2_I_i_10_n_0 ),
+        .I1(Dbg_TDO_0),
+        .I2(\Use_E2.BSCANE2_I_i_11_n_0 ),
+        .I3(command[0]),
+        .O(\Use_E2.BSCANE2_I_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'h88BC88FFAABEAABE)) 
+    \Use_E2.BSCANE2_I_i_7 
+       (.I0(command[3]),
+        .I1(command[4]),
+        .I2(command[5]),
+        .I3(command[6]),
+        .I4(command[1]),
+        .I5(command[2]),
+        .O(\Use_E2.BSCANE2_I_i_7_n_0 ));
+  Linux_bd_mdm_1_0_MB_SRL16E__parameterized3 \Use_ID_SRL16E.SRL16E_ID_1 
+       (.A1(A1),
+        .A2(A2),
+        .A3(A3),
+        .ID_TDO_2(ID_TDO_2),
+        .\Use_BSCAN.command_reg[5] (\Use_ID_SRL16E.SRL16E_ID_1_n_0 ),
+        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
+        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
+        .command({command[1],command[2],command[4],command[5],command[6],command[7]}),
+        .shift_Count_reg(shift_Count_reg));
+  Linux_bd_mdm_1_0_MB_SRL16E__parameterized5 \Use_ID_SRL16E.SRL16E_ID_2 
+       (.A1(A1),
+        .A2(A2),
+        .A3(A3),
+        .ID_TDO_2(ID_TDO_2),
+        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
+        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[10] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(\Use_Serial_Unified_Completion.mb_instr_overrun ),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
+        .R(1'b0));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[11] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
+        .R(1'b0));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[12] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
+        .R(1'b0));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[13] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(sample[13]),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
+        .R(1'b0));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[14] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(sample[14]),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
+        .R(1'b0));
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sample_1),
+        .D(sample[15]),
+        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[13] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_26 ),
+        .Q(sample[13]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[14] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_27 ),
+        .Q(sample[14]),
+        .R(1'b0));
+  (* ASYNC_REG *) 
+  (* KEEP = "yes" *) 
+  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[15] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_28 ),
+        .Q(sample[15]),
+        .R(1'b0));
+  LUT4 #(
+    .INIT(16'h0078)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_2 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
+        .I3(sel_n_reg_0),
+        .O(p_0_in[5]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .O(\Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ));
+  LUT6 #(
+    .INIT(64'h000000007FFF8000)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[1]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .I4(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
+        .I5(sel_n_reg_0),
+        .O(p_0_in[4]));
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  LUT5 #(
+    .INIT(32'h00007F80)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[2]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
+        .I4(sel_n_reg_0),
+        .O(p_0_in[3]));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h0078)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[3]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .I3(sel_n_reg_0),
+        .O(p_0_in[2]));
+  LUT3 #(
+    .INIT(8'h06)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count[4]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I2(sel_n_reg_0),
+        .O(p_0_in[1]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[0] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(p_0_in[5]),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[1] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(p_0_in[4]),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[2] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(p_0_in[3]),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[3] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(p_0_in[2]),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[4] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(p_0_in[1]),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel),
+        .D(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ),
+        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0000FF80FF00FF00)) 
+    \Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
+        .I1(Dbg_Shift_0_0),
+        .I2(sync),
+        .I3(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
+        .I4(sel_n_reg_0),
+        .I5(\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
+        .O(\Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00F7FFFF00080000)) 
+    \Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1 
+       (.I0(Dbg_Shift_0_0),
+        .I1(sync),
+        .I2(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
+        .I3(sel_n_reg_0),
+        .I4(\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
+        .I5(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
+        .O(\Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[0] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ),
+        .Q(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ),
+        .Q(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFBAFFBABA)) 
+    \Use_Serial_Unified_Completion.completion_block_i_2 
+       (.I0(\Use_Serial_Unified_Completion.completion_block_i_3_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
+        .I2(sample[13]),
+        .I3(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
+        .I4(sample[14]),
+        .I5(\Use_Serial_Unified_Completion.completion_block_i_4_n_0 ),
+        .O(completion_block0__10));
+  LUT4 #(
+    .INIT(16'h4F44)) 
+    \Use_Serial_Unified_Completion.completion_block_i_3 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ),
+        .I1(sample[15]),
+        .I2(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
+        .I3(\Use_Serial_Unified_Completion.mb_instr_overrun ),
+        .O(\Use_Serial_Unified_Completion.completion_block_i_3_n_0 ));
+  LUT4 #(
+    .INIT(16'h4F44)) 
+    \Use_Serial_Unified_Completion.completion_block_i_4 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
+        .I1(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
+        .I2(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
+        .I3(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
+        .O(\Use_Serial_Unified_Completion.completion_block_i_4_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_block_reg 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_33 ),
+        .Q(\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
+        .R(1'b0));
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Use_Serial_Unified_Completion.completion_status[10]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
+        .I1(sel_n_reg_0),
+        .I2(completion_status[11]),
+        .O(p_1_in[10]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Use_Serial_Unified_Completion.completion_status[11]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
+        .I1(sel_n_reg_0),
+        .I2(completion_status[12]),
+        .O(p_1_in[11]));
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Use_Serial_Unified_Completion.completion_status[12]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
+        .I1(sel_n_reg_0),
+        .I2(completion_status[13]),
+        .O(p_1_in[12]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Use_Serial_Unified_Completion.completion_status[13]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
+        .I1(sel_n_reg_0),
+        .I2(completion_status[14]),
+        .O(p_1_in[13]));
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  LUT3 #(
+    .INIT(8'hB8)) 
+    \Use_Serial_Unified_Completion.completion_status[14]_i_1 
+       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
+        .I1(sel_n_reg_0),
+        .I2(completion_status[15]),
+        .O(p_1_in[14]));
+  LUT3 #(
+    .INIT(8'h80)) 
+    \Use_Serial_Unified_Completion.completion_status[3]_i_2 
+       (.I0(completion_status[2]),
+        .I1(completion_status[0]),
+        .I2(completion_status[1]),
+        .O(\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT4 #(
+    .INIT(16'h8000)) 
+    \Use_Serial_Unified_Completion.completion_status[4]_i_2 
+       (.I0(completion_status[3]),
+        .I1(completion_status[1]),
+        .I2(completion_status[0]),
+        .I3(completion_status[2]),
+        .O(\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  LUT5 #(
+    .INIT(32'h80000000)) 
+    \Use_Serial_Unified_Completion.completion_status[5]_i_2 
+       (.I0(completion_status[4]),
+        .I1(completion_status[2]),
+        .I2(completion_status[0]),
+        .I3(completion_status[1]),
+        .I4(completion_status[3]),
+        .O(\Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h8000000000000000)) 
+    \Use_Serial_Unified_Completion.completion_status[7]_i_2 
+       (.I0(completion_status[5]),
+        .I1(completion_status[3]),
+        .I2(completion_status[1]),
+        .I3(completion_status[0]),
+        .I4(completion_status[2]),
+        .I5(completion_status[4]),
+        .O(\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ));
+  LUT3 #(
+    .INIT(8'h80)) 
+    \Use_Serial_Unified_Completion.completion_status[9]_i_4 
+       (.I0(completion_status[7]),
+        .I1(\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ),
+        .I2(completion_status[6]),
+        .O(\Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[0] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[0]),
+        .Q(completion_status[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[10] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(p_1_in[10]),
+        .Q(completion_status[10]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[11] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(p_1_in[11]),
+        .Q(completion_status[11]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[12] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(p_1_in[12]),
+        .Q(completion_status[12]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[13] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(p_1_in[13]),
+        .Q(completion_status[13]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[14] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(p_1_in[14]),
+        .Q(completion_status[14]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[15] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
+        .D(\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ),
+        .Q(completion_status[15]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[1] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[1]),
+        .Q(completion_status[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[2] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[2]),
+        .Q(completion_status[2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[3] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[3]),
+        .Q(completion_status[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[4] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[4]),
+        .Q(completion_status[4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[5] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[5]),
+        .Q(completion_status[5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[6] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[6]),
+        .Q(completion_status[6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[7] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[7]),
+        .Q(completion_status[7]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[8] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[8]),
+        .Q(completion_status[8]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.completion_status_reg[9] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(\Use_BSCAN.FDC_I_n_9 ),
+        .D(p_1_in[9]),
+        .Q(completion_status[9]),
+        .R(1'b0));
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  LUT4 #(
+    .INIT(16'h0002)) 
+    \Use_Serial_Unified_Completion.mb_data_overrun_i_2 
+       (.I0(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
+        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
+        .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ));
+  LUT4 #(
+    .INIT(16'h0008)) 
+    \Use_Serial_Unified_Completion.mb_data_overrun_i_3 
+       (.I0(Dbg_Shift_0_0),
+        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
+        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
+        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
+        .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.mb_data_overrun_reg 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_32 ),
+        .Q(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.mb_instr_error_reg 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_31 ),
+        .Q(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \Use_Serial_Unified_Completion.mb_instr_overrun_reg 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_30 ),
+        .Q(\Use_Serial_Unified_Completion.mb_instr_overrun ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[0] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(p_0_in_1),
+        .Q(command_1[0]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[1] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[1] ),
+        .Q(command_1[1]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[2] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[2] ),
+        .Q(command_1[2]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[3] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[3] ),
+        .Q(command_1[3]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[4] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[4] ),
+        .Q(command_1[4]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[5] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[5] ),
+        .Q(command_1[5]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[6] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[6] ),
+        .Q(command_1[6]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \command_1_reg[7] 
+       (.C(CLK),
+        .CE(command_10),
+        .D(\tdi_shifter_reg_n_0_[7] ),
+        .Q(command_1[7]),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \completion_ctrl_reg[0] 
+       (.C(CLK),
+        .CE(1'b1),
+        .D(\Use_BSCAN.FDC_I_n_36 ),
+        .Q(completion_ctrl),
+        .R(1'b0));
+  LUT5 #(
+    .INIT(32'hFEFFFFFF)) 
+    sel_n_i_1
+       (.I0(Q[2]),
+        .I1(Q[3]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(SEL),
+        .O(sel_n0));
+  LUT6 #(
+    .INIT(64'hAAA8AAAAAAAAAAAA)) 
+    sel_n_i_2
+       (.I0(CLK),
+        .I1(Q[2]),
+        .I2(Q[3]),
+        .I3(Q[1]),
+        .I4(Q[0]),
+        .I5(SEL),
+        .O(Functional_Reset));
+  FDPE #(
+    .INIT(1'b1)) 
+    sel_n_reg
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(sel_n_reg_0),
+        .D(sel_n0),
+        .PRE(Functional_Reset),
+        .Q(sel_n));
+  LUT3 #(
+    .INIT(8'h48)) 
+    \shift_Count[1]_i_1 
+       (.I0(\shift_Count_reg[0]_0 ),
+        .I1(Dbg_Shift_0_0),
+        .I2(A1),
+        .O(p_0_in__0[1]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT4 #(
+    .INIT(16'h7080)) 
+    \shift_Count[2]_i_1 
+       (.I0(A1),
+        .I1(\shift_Count_reg[0]_0 ),
+        .I2(Dbg_Shift_0_0),
+        .I3(A2),
+        .O(p_0_in__0[2]));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT5 #(
+    .INIT(32'h7F008000)) 
+    \shift_Count[3]_i_1 
+       (.I0(A2),
+        .I1(\shift_Count_reg[0]_0 ),
+        .I2(A1),
+        .I3(Dbg_Shift_0_0),
+        .I4(A3),
+        .O(p_0_in__0[3]));
+  LUT6 #(
+    .INIT(64'h7FFF000080000000)) 
+    \shift_Count[4]_i_1 
+       (.I0(A3),
+        .I1(A1),
+        .I2(\shift_Count_reg[0]_0 ),
+        .I3(A2),
+        .I4(Dbg_Shift_0_0),
+        .I5(shift_Count_reg),
+        .O(p_0_in__0[4]));
+  FDRE #(
+    .INIT(1'b0)) 
+    \shift_Count_reg[0] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(\shift_Count_reg[0]_1 ),
+        .Q(\shift_Count_reg[0]_0 ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \shift_Count_reg[1] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(p_0_in__0[1]),
+        .Q(A1),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \shift_Count_reg[2] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(p_0_in__0[2]),
+        .Q(A2),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \shift_Count_reg[3] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(p_0_in__0[3]),
+        .Q(A3),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \shift_Count_reg[4] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(1'b1),
+        .D(p_0_in__0[4]),
+        .Q(shift_Count_reg),
+        .R(1'b0));
+  LUT6 #(
+    .INIT(64'h0100000000000000)) 
+    \tdi_shifter[0]_i_1 
+       (.I0(Q[2]),
+        .I1(Q[3]),
+        .I2(Q[1]),
+        .I3(Q[0]),
+        .I4(SEL),
+        .I5(Dbg_Shift_0_0),
+        .O(tdi_shifter0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[0] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(Ext_JTAG_TDI),
+        .Q(p_0_in_1),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[1] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(p_0_in_1),
+        .Q(\tdi_shifter_reg_n_0_[1] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[2] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[1] ),
+        .Q(\tdi_shifter_reg_n_0_[2] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[3] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[2] ),
+        .Q(\tdi_shifter_reg_n_0_[3] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[4] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[3] ),
+        .Q(\tdi_shifter_reg_n_0_[4] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[5] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[4] ),
+        .Q(\tdi_shifter_reg_n_0_[5] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[6] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[5] ),
+        .Q(\tdi_shifter_reg_n_0_[6] ),
+        .R(1'b0));
+  FDRE #(
+    .INIT(1'b0)) 
+    \tdi_shifter_reg[7] 
+       (.C(\Use_unisim.MB_SRL16E_I1 ),
+        .CE(tdi_shifter0),
+        .D(\tdi_shifter_reg_n_0_[6] ),
+        .Q(\tdi_shifter_reg_n_0_[7] ),
+        .R(1'b0));
+endmodule
 
 (* CHECK_LICENSE_TYPE = "Linux_bd_mdm_1_0,MDM,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* x_core_info = "MDM,Vivado 2022.2" *) 
 (* NotValidForBitStream *)
@@ -2487,1188 +3667,6 @@ module Linux_bd_mdm_1_0
         .bscan_ext_update(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "JTAG_CONTROL" *) 
-module Linux_bd_mdm_1_0_JTAG_CONTROL
-   (\shift_Count_reg[0]_0 ,
-    Debug_SYS_Rst,
-    Dbg_Rst_0,
-    Dbg_Reg_En_0,
-    \Use_BSCAN.command_reg[6]_0 ,
-    \Use_Serial_Unified_Completion.mb_data_overrun1__0 ,
-    Dbg_Shift_0,
-    tdo,
-    \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ,
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ,
-    CLK,
-    \Use_unisim.MB_SRL16E_I1 ,
-    sel_n_reg_0,
-    Dbg_Shift_0_0,
-    Q,
-    SEL,
-    \Use_E2.BSCANE2_I ,
-    Dbg_TDO_0,
-    \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ,
-    Ext_JTAG_TDI,
-    \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ,
-    \Use_Serial_Unified_Completion.completion_status_reg[15]_0 ,
-    sel,
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ,
-    \shift_Count_reg[0]_1 );
-  output \shift_Count_reg[0]_0 ;
-  output Debug_SYS_Rst;
-  output Dbg_Rst_0;
-  output [0:7]Dbg_Reg_En_0;
-  output \Use_BSCAN.command_reg[6]_0 ;
-  output \Use_Serial_Unified_Completion.mb_data_overrun1__0 ;
-  output Dbg_Shift_0;
-  output tdo;
-  output \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ;
-  output \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ;
-  input CLK;
-  input \Use_unisim.MB_SRL16E_I1 ;
-  input sel_n_reg_0;
-  input Dbg_Shift_0_0;
-  input [3:0]Q;
-  input SEL;
-  input \Use_E2.BSCANE2_I ;
-  input Dbg_TDO_0;
-  input \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ;
-  input Ext_JTAG_TDI;
-  input \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
-  input [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
-  input sel;
-  input [0:0]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ;
-  input [0:0]\shift_Count_reg[0]_1 ;
-
-  wire A1;
-  wire A2;
-  wire A3;
-  wire CE;
-  wire CLK;
-  wire D;
-  wire [0:7]Dbg_Reg_En_0;
-  wire Dbg_Rst_0;
-  wire Dbg_Shift_0;
-  wire Dbg_Shift_0_0;
-  wire Dbg_Shift_0_INST_0_i_1_n_0;
-  wire Dbg_Shift_0_INST_0_i_3_n_0;
-  wire Dbg_Shift_0_INST_0_i_4_n_0;
-  wire Dbg_TDO_0;
-  wire Debug_SYS_Rst;
-  wire Debug_SYS_Rst_i_i_2_n_0;
-  wire Ext_JTAG_TDI;
-  wire Functional_Reset;
-  wire ID_TDO_2;
-  wire [3:0]Q;
-  wire SEL;
-  wire \Use_BSCAN.FDC_I_n_13 ;
-  wire \Use_BSCAN.FDC_I_n_26 ;
-  wire \Use_BSCAN.FDC_I_n_27 ;
-  wire \Use_BSCAN.FDC_I_n_28 ;
-  wire \Use_BSCAN.FDC_I_n_30 ;
-  wire \Use_BSCAN.FDC_I_n_31 ;
-  wire \Use_BSCAN.FDC_I_n_32 ;
-  wire \Use_BSCAN.FDC_I_n_33 ;
-  wire \Use_BSCAN.FDC_I_n_34 ;
-  wire \Use_BSCAN.FDC_I_n_35 ;
-  wire \Use_BSCAN.FDC_I_n_36 ;
-  wire \Use_BSCAN.FDC_I_n_9 ;
-  wire \Use_BSCAN.command[0]_i_1_n_0 ;
-  wire \Use_BSCAN.command_reg[6]_0 ;
-  wire \Use_E2.BSCANE2_I ;
-  wire \Use_E2.BSCANE2_I_i_10_n_0 ;
-  wire \Use_E2.BSCANE2_I_i_11_n_0 ;
-  wire \Use_E2.BSCANE2_I_i_3_n_0 ;
-  wire \Use_E2.BSCANE2_I_i_6_n_0 ;
-  wire \Use_E2.BSCANE2_I_i_7_n_0 ;
-  wire \Use_ID_SRL16E.SRL16E_ID_1_n_0 ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ;
-  wire \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ;
-  wire \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ;
-  wire [0:4]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg ;
-  wire \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ;
-  wire [0:0]\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ;
-  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ;
-  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ;
-  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ;
-  wire \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ;
-  wire \Use_Serial_Unified_Completion.completion_block_i_3_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_block_i_4_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_block_reg_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ;
-  wire \Use_Serial_Unified_Completion.completion_status_reg[10]_0 ;
-  wire [0:0]\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ;
-  wire \Use_Serial_Unified_Completion.mb_data_overrun1__0 ;
-  wire \Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ;
-  wire \Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ;
-  wire \Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ;
-  wire \Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ;
-  wire \Use_Serial_Unified_Completion.mb_instr_overrun ;
-  wire \Use_Serial_Unified_Completion.mb_instr_overrun137_out ;
-  wire \Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ;
-  wire \Use_unisim.MB_SRL16E_I1 ;
-  wire [0:7]command;
-  wire [0:7]command_1;
-  wire command_10;
-  wire completion_block0__10;
-  wire completion_ctrl;
-  wire [15:0]completion_status;
-  wire config_TDO_2;
-  wire [5:1]p_0_in;
-  wire p_0_in_1;
-  wire [4:1]p_0_in__0;
-  wire [14:0]p_1_in;
-  (* async_reg = "true" *) wire [15:13]sample;
-  wire sample_1;
-  wire sel;
-  wire sel_n;
-  wire sel_n0;
-  wire sel_n_reg_0;
-  wire [4:4]shift_Count_reg;
-  wire \shift_Count_reg[0]_0 ;
-  wire [0:0]\shift_Count_reg[0]_1 ;
-  wire sync;
-  wire tdi_shifter0;
-  wire \tdi_shifter_reg_n_0_[1] ;
-  wire \tdi_shifter_reg_n_0_[2] ;
-  wire \tdi_shifter_reg_n_0_[3] ;
-  wire \tdi_shifter_reg_n_0_[4] ;
-  wire \tdi_shifter_reg_n_0_[5] ;
-  wire \tdi_shifter_reg_n_0_[6] ;
-  wire \tdi_shifter_reg_n_0_[7] ;
-  wire tdo;
-
-  LUT3 #(
-    .INIT(8'h04)) 
-    Dbg_Shift_0_INST_0_i_1
-       (.I0(command[6]),
-        .I1(command[5]),
-        .I2(command[7]),
-        .O(Dbg_Shift_0_INST_0_i_1_n_0));
-  LUT2 #(
-    .INIT(4'hE)) 
-    Dbg_Shift_0_INST_0_i_3
-       (.I0(command[2]),
-        .I1(command[4]),
-        .O(Dbg_Shift_0_INST_0_i_3_n_0));
-  LUT3 #(
-    .INIT(8'h01)) 
-    Dbg_Shift_0_INST_0_i_4
-       (.I0(command[0]),
-        .I1(command[1]),
-        .I2(command[3]),
-        .O(Dbg_Shift_0_INST_0_i_4_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    Debug_Rst_i_reg
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_34 ),
-        .Q(Dbg_Rst_0),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000000000000004)) 
-    Debug_SYS_Rst_i_i_2
-       (.I0(command[7]),
-        .I1(command[4]),
-        .I2(command[5]),
-        .I3(command[3]),
-        .I4(command[1]),
-        .I5(command[0]),
-        .O(Debug_SYS_Rst_i_i_2_n_0));
-  FDRE #(
-    .INIT(1'b0)) 
-    Debug_SYS_Rst_i_reg
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_35 ),
-        .Q(Debug_SYS_Rst),
-        .R(1'b0));
-  Linux_bd_mdm_1_0_MB_FDC_1 \Use_BSCAN.FDC_I 
-       (.CE(CE),
-        .CLK(CLK),
-        .D(D),
-        .Dbg_Reg_En_0(Dbg_Reg_En_0),
-        .Dbg_Rst_0(Dbg_Rst_0),
-        .Dbg_TDO_0(Dbg_TDO_0),
-        .Dbg_TDO_0_0(\Use_BSCAN.FDC_I_n_32 ),
-        .Debug_Rst_i_reg(Debug_SYS_Rst_i_i_2_n_0),
-        .Debug_SYS_Rst(Debug_SYS_Rst),
-        .Debug_SYS_Rst_i_reg(\tdi_shifter_reg_n_0_[1] ),
-        .Q(Q),
-        .SEL(SEL),
-        .\Use_BSCAN.command_reg[6] (\Use_BSCAN.command_reg[6]_0 ),
-        .\Use_E2.BSCANE2_I (\Use_BSCAN.FDC_I_n_33 ),
-        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[13] (\Use_BSCAN.FDC_I_n_26 ),
-        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[14] (\Use_BSCAN.FDC_I_n_27 ),
-        .\Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[15] (\Use_BSCAN.FDC_I_n_28 ),
-        .\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1] (\Use_BSCAN.FDC_I_n_30 ),
-        .\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1]_0 (\Use_BSCAN.FDC_I_n_31 ),
-        .\Use_Serial_Unified_Completion.completion_block_reg (\Use_BSCAN.FDC_I_n_9 ),
-        .\Use_Serial_Unified_Completion.completion_block_reg_0 (\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[0] (Dbg_Shift_0_0),
-        .\Use_Serial_Unified_Completion.completion_status_reg[3] (\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[4] (\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[5] (\Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[6] (\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.completion_status_reg[8] (\Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ),
-        .\Use_Serial_Unified_Completion.mb_data_overrun1__0 (\Use_Serial_Unified_Completion.mb_data_overrun1__0 ),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg (sel_n_reg_0),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_0 (Dbg_Shift_0_INST_0_i_3_n_0),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_1 (Dbg_Shift_0_INST_0_i_4_n_0),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_2 (\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ),
-        .\Use_Serial_Unified_Completion.mb_data_overrun_reg_3 (\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
-        .\Use_Serial_Unified_Completion.mb_instr_error_reg (Dbg_Shift_0_INST_0_i_1_n_0),
-        .\Use_Serial_Unified_Completion.mb_instr_error_reg_0 (\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
-        .\Use_Serial_Unified_Completion.mb_instr_error_reg_1 (\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
-        .\Use_Serial_Unified_Completion.mb_instr_overrun (\Use_Serial_Unified_Completion.mb_instr_overrun ),
-        .\Use_Serial_Unified_Completion.mb_instr_overrun137_out (\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
-        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg (\Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 ),
-        .\Use_Serial_Unified_Completion.mb_instr_overrun_reg_0 (\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
-        .\Using_FPGA.Native_0 (\Use_BSCAN.FDC_I_n_13 ),
-        .\Using_FPGA.Native_1 (\tdi_shifter_reg_n_0_[4] ),
-        .\Using_FPGA.Native_2 (\tdi_shifter_reg_n_0_[5] ),
-        .\Using_FPGA.Native_3 (\tdi_shifter_reg_n_0_[7] ),
-        .\Using_FPGA.Native_4 (\tdi_shifter_reg_n_0_[6] ),
-        .\Using_FPGA.Native_5 (\tdi_shifter_reg_n_0_[2] ),
-        .\Using_FPGA.Native_6 (\tdi_shifter_reg_n_0_[3] ),
-        .command(command),
-        .command_10(command_10),
-        .completion_block0__10(completion_block0__10),
-        .completion_ctrl(completion_ctrl),
-        .completion_status(completion_status[10:0]),
-        .out(sample),
-        .p_0_in_1(p_0_in_1),
-        .p_1_in(p_1_in[9:0]),
-        .sample_1(sample_1),
-        .sel_n(sel_n),
-        .sync(sync),
-        .\tdi_shifter_reg[0] (\Use_BSCAN.FDC_I_n_34 ),
-        .\tdi_shifter_reg[0]_0 (\Use_BSCAN.FDC_I_n_36 ),
-        .\tdi_shifter_reg[1] (\Use_BSCAN.FDC_I_n_35 ));
-  Linux_bd_mdm_1_0_MB_FDRE_1 \Use_BSCAN.SYNC_FDRE 
-       (.CE(CE),
-        .D(D),
-        .Dbg_Shift_0(Dbg_Shift_0),
-        .Dbg_Shift_0_0(Dbg_Shift_0_INST_0_i_1_n_0),
-        .Dbg_Shift_0_1(\Use_BSCAN.FDC_I_n_13 ),
-        .Dbg_Shift_0_2(Dbg_Shift_0_INST_0_i_3_n_0),
-        .Dbg_Shift_0_3(Dbg_Shift_0_INST_0_i_4_n_0),
-        .Dbg_Shift_0_4(Dbg_Shift_0_0),
-        .\Using_FPGA.Native_0 (\Use_unisim.MB_SRL16E_I1 ),
-        .sync(sync));
-  LUT5 #(
-    .INIT(32'h00000008)) 
-    \Use_BSCAN.command[0]_i_1 
-       (.I0(SEL),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[2]),
-        .O(\Use_BSCAN.command[0]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[0] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[0]),
-        .Q(command[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[1] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[1]),
-        .Q(command[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[2] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[2]),
-        .Q(command[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[3] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[3]),
-        .Q(command[3]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[4] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[4]),
-        .Q(command[4]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[5] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[5]),
-        .Q(command[5]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[6] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[6]),
-        .Q(command[6]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0),
-    .IS_C_INVERTED(1'b1)) 
-    \Use_BSCAN.command_reg[7] 
-       (.C(CLK),
-        .CE(\Use_BSCAN.command[0]_i_1_n_0 ),
-        .D(command_1[7]),
-        .Q(command[7]),
-        .R(1'b0));
-  Linux_bd_mdm_1_0_MB_SRL16E \Use_Config_SRL16E.SRL16E_1 
-       (.A1(A1),
-        .A2(A2),
-        .A3(A3),
-        .Dbg_TDO_0(Dbg_TDO_0),
-        .Q(Q[0]),
-        .\Use_E2.BSCANE2_I (\Use_E2.BSCANE2_I ),
-        .\Use_E2.BSCANE2_I_0 (\Use_E2.BSCANE2_I_i_3_n_0 ),
-        .\Use_E2.BSCANE2_I_1 (\Use_ID_SRL16E.SRL16E_ID_1_n_0 ),
-        .\Use_E2.BSCANE2_I_2 (\Use_E2.BSCANE2_I_i_6_n_0 ),
-        .\Use_E2.BSCANE2_I_3 (\Use_E2.BSCANE2_I_i_7_n_0 ),
-        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
-        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
-        .command({command[4],command[5],command[7]}),
-        .completion_status(completion_status[0]),
-        .config_TDO_2(config_TDO_2),
-        .shift_Count_reg(shift_Count_reg),
-        .tdo(tdo));
-  Linux_bd_mdm_1_0_MB_SRL16E__parameterized1 \Use_Config_SRL16E.SRL16E_2 
-       (.A1(A1),
-        .A2(A2),
-        .A3(A3),
-        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
-        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
-        .config_TDO_2(config_TDO_2));
-  LUT6 #(
-    .INIT(64'hFEFCFEFFFFFFFFFF)) 
-    \Use_E2.BSCANE2_I_i_10 
-       (.I0(command[1]),
-        .I1(command[3]),
-        .I2(command[5]),
-        .I3(command[2]),
-        .I4(command[4]),
-        .I5(command[6]),
-        .O(\Use_E2.BSCANE2_I_i_10_n_0 ));
-  LUT6 #(
-    .INIT(64'h0001000010000001)) 
-    \Use_E2.BSCANE2_I_i_11 
-       (.I0(command[1]),
-        .I1(command[3]),
-        .I2(command[2]),
-        .I3(command[6]),
-        .I4(command[4]),
-        .I5(command[5]),
-        .O(\Use_E2.BSCANE2_I_i_11_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT3 #(
-    .INIT(8'hF8)) 
-    \Use_E2.BSCANE2_I_i_3 
-       (.I0(command[0]),
-        .I1(Dbg_TDO_0),
-        .I2(Q[1]),
-        .O(\Use_E2.BSCANE2_I_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
-  LUT4 #(
-    .INIT(16'h00F8)) 
-    \Use_E2.BSCANE2_I_i_6 
-       (.I0(\Use_E2.BSCANE2_I_i_10_n_0 ),
-        .I1(Dbg_TDO_0),
-        .I2(\Use_E2.BSCANE2_I_i_11_n_0 ),
-        .I3(command[0]),
-        .O(\Use_E2.BSCANE2_I_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'h88BC88FFAABEAABE)) 
-    \Use_E2.BSCANE2_I_i_7 
-       (.I0(command[3]),
-        .I1(command[4]),
-        .I2(command[5]),
-        .I3(command[6]),
-        .I4(command[1]),
-        .I5(command[2]),
-        .O(\Use_E2.BSCANE2_I_i_7_n_0 ));
-  Linux_bd_mdm_1_0_MB_SRL16E__parameterized3 \Use_ID_SRL16E.SRL16E_ID_1 
-       (.A1(A1),
-        .A2(A2),
-        .A3(A3),
-        .ID_TDO_2(ID_TDO_2),
-        .\Use_BSCAN.command_reg[5] (\Use_ID_SRL16E.SRL16E_ID_1_n_0 ),
-        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
-        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ),
-        .command({command[1],command[2],command[4],command[5],command[6],command[7]}),
-        .shift_Count_reg(shift_Count_reg));
-  Linux_bd_mdm_1_0_MB_SRL16E__parameterized5 \Use_ID_SRL16E.SRL16E_ID_2 
-       (.A1(A1),
-        .A2(A2),
-        .A3(A3),
-        .ID_TDO_2(ID_TDO_2),
-        .\Use_unisim.MB_SRL16E_I1_0 (\shift_Count_reg[0]_0 ),
-        .\Use_unisim.MB_SRL16E_I1_1 (\Use_unisim.MB_SRL16E_I1 ));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[10] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(\Use_Serial_Unified_Completion.mb_instr_overrun ),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
-        .R(1'b0));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[11] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
-        .R(1'b0));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[12] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
-        .R(1'b0));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[13] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(sample[13]),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
-        .R(1'b0));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[14] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(sample[14]),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
-        .R(1'b0));
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sample_1),
-        .D(sample[15]),
-        .Q(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[13] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_26 ),
-        .Q(sample[13]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[14] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_27 ),
-        .Q(sample[14]),
-        .R(1'b0));
-  (* ASYNC_REG *) 
-  (* KEEP = "yes" *) 
-  FDRE \Use_Serial_Unified_Completion.Completion_Status_Register.sample_reg[15] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_28 ),
-        .Q(sample[15]),
-        .R(1'b0));
-  LUT4 #(
-    .INIT(16'h0078)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_2 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
-        .I3(sel_n_reg_0),
-        .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .O(\Use_Serial_Unified_Completion.Data_Read_Status.count[0]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h000000007FFF8000)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[1]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .I4(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
-        .I5(sel_n_reg_0),
-        .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT5 #(
-    .INIT(32'h00007F80)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[2]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
-        .I4(sel_n_reg_0),
-        .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0078)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[3]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .I3(sel_n_reg_0),
-        .O(p_0_in[2]));
-  LUT3 #(
-    .INIT(8'h06)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count[4]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I2(sel_n_reg_0),
-        .O(p_0_in[1]));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[0] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(p_0_in[5]),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[1] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(p_0_in[4]),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[2] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(p_0_in[3]),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[3] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(p_0_in[2]),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[4] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(p_0_in[1]),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel),
-        .D(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_1 ),
-        .Q(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0000FF80FF00FF00)) 
-    \Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
-        .I1(Dbg_Shift_0_0),
-        .I2(sync),
-        .I3(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
-        .I4(sel_n_reg_0),
-        .I5(\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
-        .O(\Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00F7FFFF00080000)) 
-    \Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1 
-       (.I0(Dbg_Shift_0_0),
-        .I1(sync),
-        .I2(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
-        .I3(sel_n_reg_0),
-        .I4(\Use_Serial_Unified_Completion.mb_instr_overrun137_out ),
-        .I5(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
-        .O(\Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[0] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_Serial_Unified_Completion.Write_Instr_Status.count[0]_i_1_n_0 ),
-        .Q(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[0] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.Write_Instr_Status.count_reg[1] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_Serial_Unified_Completion.Write_Instr_Status.count[1]_i_1_n_0 ),
-        .Q(\Use_Serial_Unified_Completion.Write_Instr_Status.count_reg_n_0_[1] ),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFFBAFFBABA)) 
-    \Use_Serial_Unified_Completion.completion_block_i_2 
-       (.I0(\Use_Serial_Unified_Completion.completion_block_i_3_n_0 ),
-        .I1(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
-        .I2(sample[13]),
-        .I3(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
-        .I4(sample[14]),
-        .I5(\Use_Serial_Unified_Completion.completion_block_i_4_n_0 ),
-        .O(completion_block0__10));
-  LUT4 #(
-    .INIT(16'h4F44)) 
-    \Use_Serial_Unified_Completion.completion_block_i_3 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg[15]_0 ),
-        .I1(sample[15]),
-        .I2(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
-        .I3(\Use_Serial_Unified_Completion.mb_instr_overrun ),
-        .O(\Use_Serial_Unified_Completion.completion_block_i_3_n_0 ));
-  LUT4 #(
-    .INIT(16'h4F44)) 
-    \Use_Serial_Unified_Completion.completion_block_i_4 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
-        .I1(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
-        .I2(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
-        .I3(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
-        .O(\Use_Serial_Unified_Completion.completion_block_i_4_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_block_reg 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_33 ),
-        .Q(\Use_Serial_Unified_Completion.completion_block_reg_n_0 ),
-        .R(1'b0));
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Use_Serial_Unified_Completion.completion_status[10]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[10] ),
-        .I1(sel_n_reg_0),
-        .I2(completion_status[11]),
-        .O(p_1_in[10]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Use_Serial_Unified_Completion.completion_status[11]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[11] ),
-        .I1(sel_n_reg_0),
-        .I2(completion_status[12]),
-        .O(p_1_in[11]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Use_Serial_Unified_Completion.completion_status[12]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[12] ),
-        .I1(sel_n_reg_0),
-        .I2(completion_status[13]),
-        .O(p_1_in[12]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Use_Serial_Unified_Completion.completion_status[13]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[13] ),
-        .I1(sel_n_reg_0),
-        .I2(completion_status[14]),
-        .O(p_1_in[13]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
-  LUT3 #(
-    .INIT(8'hB8)) 
-    \Use_Serial_Unified_Completion.completion_status[14]_i_1 
-       (.I0(\Use_Serial_Unified_Completion.Completion_Status_Register.sample_1_reg_n_0_[14] ),
-        .I1(sel_n_reg_0),
-        .I2(completion_status[15]),
-        .O(p_1_in[14]));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \Use_Serial_Unified_Completion.completion_status[3]_i_2 
-       (.I0(completion_status[2]),
-        .I1(completion_status[0]),
-        .I2(completion_status[1]),
-        .O(\Use_Serial_Unified_Completion.completion_status[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT4 #(
-    .INIT(16'h8000)) 
-    \Use_Serial_Unified_Completion.completion_status[4]_i_2 
-       (.I0(completion_status[3]),
-        .I1(completion_status[1]),
-        .I2(completion_status[0]),
-        .I3(completion_status[2]),
-        .O(\Use_Serial_Unified_Completion.completion_status[4]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
-  LUT5 #(
-    .INIT(32'h80000000)) 
-    \Use_Serial_Unified_Completion.completion_status[5]_i_2 
-       (.I0(completion_status[4]),
-        .I1(completion_status[2]),
-        .I2(completion_status[0]),
-        .I3(completion_status[1]),
-        .I4(completion_status[3]),
-        .O(\Use_Serial_Unified_Completion.completion_status[5]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h8000000000000000)) 
-    \Use_Serial_Unified_Completion.completion_status[7]_i_2 
-       (.I0(completion_status[5]),
-        .I1(completion_status[3]),
-        .I2(completion_status[1]),
-        .I3(completion_status[0]),
-        .I4(completion_status[2]),
-        .I5(completion_status[4]),
-        .O(\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ));
-  LUT3 #(
-    .INIT(8'h80)) 
-    \Use_Serial_Unified_Completion.completion_status[9]_i_4 
-       (.I0(completion_status[7]),
-        .I1(\Use_Serial_Unified_Completion.completion_status[7]_i_2_n_0 ),
-        .I2(completion_status[6]),
-        .O(\Use_Serial_Unified_Completion.completion_status[9]_i_4_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[0] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[0]),
-        .Q(completion_status[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[10] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(p_1_in[10]),
-        .Q(completion_status[10]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[11] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(p_1_in[11]),
-        .Q(completion_status[11]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[12] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(p_1_in[12]),
-        .Q(completion_status[12]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[13] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(p_1_in[13]),
-        .Q(completion_status[13]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[14] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(p_1_in[14]),
-        .Q(completion_status[14]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[15] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_Serial_Unified_Completion.completion_status_reg[10]_0 ),
-        .D(\Use_Serial_Unified_Completion.completion_status_reg[15]_0 ),
-        .Q(completion_status[15]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[1] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[1]),
-        .Q(completion_status[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[2] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[2]),
-        .Q(completion_status[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[3] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[3]),
-        .Q(completion_status[3]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[4] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[4]),
-        .Q(completion_status[4]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[5] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[5]),
-        .Q(completion_status[5]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[6] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[6]),
-        .Q(completion_status[6]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[7] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[7]),
-        .Q(completion_status[7]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[8] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[8]),
-        .Q(completion_status[8]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.completion_status_reg[9] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(\Use_BSCAN.FDC_I_n_9 ),
-        .D(p_1_in[9]),
-        .Q(completion_status[9]),
-        .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
-  LUT4 #(
-    .INIT(16'h0002)) 
-    \Use_Serial_Unified_Completion.mb_data_overrun_i_2 
-       (.I0(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg[5]_0 ),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [4]),
-        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [3]),
-        .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_2_n_0 ));
-  LUT4 #(
-    .INIT(16'h0008)) 
-    \Use_Serial_Unified_Completion.mb_data_overrun_i_3 
-       (.I0(Dbg_Shift_0_0),
-        .I1(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [0]),
-        .I2(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [1]),
-        .I3(\Use_Serial_Unified_Completion.Data_Read_Status.count_reg [2]),
-        .O(\Use_Serial_Unified_Completion.mb_data_overrun_i_3_n_0 ));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.mb_data_overrun_reg 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_32 ),
-        .Q(\Use_Serial_Unified_Completion.mb_data_overrun_reg_n_0 ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.mb_instr_error_reg 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_31 ),
-        .Q(\Use_Serial_Unified_Completion.mb_instr_error_reg_n_0 ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \Use_Serial_Unified_Completion.mb_instr_overrun_reg 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_30 ),
-        .Q(\Use_Serial_Unified_Completion.mb_instr_overrun ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[0] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(p_0_in_1),
-        .Q(command_1[0]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[1] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[1] ),
-        .Q(command_1[1]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[2] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[2] ),
-        .Q(command_1[2]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[3] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[3] ),
-        .Q(command_1[3]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[4] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[4] ),
-        .Q(command_1[4]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[5] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[5] ),
-        .Q(command_1[5]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[6] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[6] ),
-        .Q(command_1[6]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \command_1_reg[7] 
-       (.C(CLK),
-        .CE(command_10),
-        .D(\tdi_shifter_reg_n_0_[7] ),
-        .Q(command_1[7]),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \completion_ctrl_reg[0] 
-       (.C(CLK),
-        .CE(1'b1),
-        .D(\Use_BSCAN.FDC_I_n_36 ),
-        .Q(completion_ctrl),
-        .R(1'b0));
-  LUT5 #(
-    .INIT(32'hFEFFFFFF)) 
-    sel_n_i_1
-       (.I0(Q[2]),
-        .I1(Q[3]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(SEL),
-        .O(sel_n0));
-  LUT6 #(
-    .INIT(64'hAAA8AAAAAAAAAAAA)) 
-    sel_n_i_2
-       (.I0(CLK),
-        .I1(Q[2]),
-        .I2(Q[3]),
-        .I3(Q[1]),
-        .I4(Q[0]),
-        .I5(SEL),
-        .O(Functional_Reset));
-  FDPE #(
-    .INIT(1'b1)) 
-    sel_n_reg
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(sel_n_reg_0),
-        .D(sel_n0),
-        .PRE(Functional_Reset),
-        .Q(sel_n));
-  LUT3 #(
-    .INIT(8'h48)) 
-    \shift_Count[1]_i_1 
-       (.I0(\shift_Count_reg[0]_0 ),
-        .I1(Dbg_Shift_0_0),
-        .I2(A1),
-        .O(p_0_in__0[1]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT4 #(
-    .INIT(16'h7080)) 
-    \shift_Count[2]_i_1 
-       (.I0(A1),
-        .I1(\shift_Count_reg[0]_0 ),
-        .I2(Dbg_Shift_0_0),
-        .I3(A2),
-        .O(p_0_in__0[2]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT5 #(
-    .INIT(32'h7F008000)) 
-    \shift_Count[3]_i_1 
-       (.I0(A2),
-        .I1(\shift_Count_reg[0]_0 ),
-        .I2(A1),
-        .I3(Dbg_Shift_0_0),
-        .I4(A3),
-        .O(p_0_in__0[3]));
-  LUT6 #(
-    .INIT(64'h7FFF000080000000)) 
-    \shift_Count[4]_i_1 
-       (.I0(A3),
-        .I1(A1),
-        .I2(\shift_Count_reg[0]_0 ),
-        .I3(A2),
-        .I4(Dbg_Shift_0_0),
-        .I5(shift_Count_reg),
-        .O(p_0_in__0[4]));
-  FDRE #(
-    .INIT(1'b0)) 
-    \shift_Count_reg[0] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(\shift_Count_reg[0]_1 ),
-        .Q(\shift_Count_reg[0]_0 ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \shift_Count_reg[1] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(p_0_in__0[1]),
-        .Q(A1),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \shift_Count_reg[2] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(p_0_in__0[2]),
-        .Q(A2),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \shift_Count_reg[3] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(p_0_in__0[3]),
-        .Q(A3),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \shift_Count_reg[4] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(1'b1),
-        .D(p_0_in__0[4]),
-        .Q(shift_Count_reg),
-        .R(1'b0));
-  LUT6 #(
-    .INIT(64'h0100000000000000)) 
-    \tdi_shifter[0]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[3]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(SEL),
-        .I5(Dbg_Shift_0_0),
-        .O(tdi_shifter0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[0] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(Ext_JTAG_TDI),
-        .Q(p_0_in_1),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[1] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(p_0_in_1),
-        .Q(\tdi_shifter_reg_n_0_[1] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[2] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[1] ),
-        .Q(\tdi_shifter_reg_n_0_[2] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[3] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[2] ),
-        .Q(\tdi_shifter_reg_n_0_[3] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[4] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[3] ),
-        .Q(\tdi_shifter_reg_n_0_[4] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[5] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[4] ),
-        .Q(\tdi_shifter_reg_n_0_[5] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[6] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[5] ),
-        .Q(\tdi_shifter_reg_n_0_[6] ),
-        .R(1'b0));
-  FDRE #(
-    .INIT(1'b0)) 
-    \tdi_shifter_reg[7] 
-       (.C(\Use_unisim.MB_SRL16E_I1 ),
-        .CE(tdi_shifter0),
-        .D(\tdi_shifter_reg_n_0_[6] ),
-        .Q(\tdi_shifter_reg_n_0_[7] ),
-        .R(1'b0));
-endmodule
-
-(* ORIG_REF_NAME = "MB_BSCANE2" *) 
 module Linux_bd_mdm_1_0_MB_BSCANE2
    (\Use_E2.BSCANE2_I_0 ,
     DRCK,
@@ -3811,7 +3809,6 @@ module Linux_bd_mdm_1_0_MB_BSCANE2
         .O(\Use_E2.BSCANE2_I_5 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_BUFGCE_1" *) 
 module Linux_bd_mdm_1_0_MB_BUFGCE_1
    (Dbg_Clk_0,
     DRCK);
@@ -3841,7 +3838,6 @@ module Linux_bd_mdm_1_0_MB_BUFGCE_1
         .S1(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDC_1" *) 
 module Linux_bd_mdm_1_0_MB_FDC_1
    (D,
     Dbg_Reg_En_0,
@@ -4449,7 +4445,6 @@ module Linux_bd_mdm_1_0_MB_FDC_1
         .O(\tdi_shifter_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_FDRE_1" *) 
 module Linux_bd_mdm_1_0_MB_FDRE_1
    (sync,
     Dbg_Shift_0,
@@ -4506,7 +4501,6 @@ module Linux_bd_mdm_1_0_MB_FDRE_1
         .R(D));
 endmodule
 
-(* ORIG_REF_NAME = "MB_LUT1" *) 
 module Linux_bd_mdm_1_0_MB_LUT1
    (Ext_JTAG_TDI,
     I0);
@@ -4525,7 +4519,6 @@ module Linux_bd_mdm_1_0_MB_LUT1
         .O(\Using_FPGA.lut1_o ));
 endmodule
 
-(* ORIG_REF_NAME = "MB_SRL16E" *) 
 module Linux_bd_mdm_1_0_MB_SRL16E
    (tdo,
     \Use_unisim.MB_SRL16E_I1_0 ,
@@ -4783,8 +4776,7 @@ endmodule
 (* C_TRACE_CLK_FREQ_HZ = "200000000" *) (* C_TRACE_CLK_OUT_PHASE = "90" *) (* C_TRACE_DATA_WIDTH = "32" *) 
 (* C_TRACE_ID = "110" *) (* C_TRACE_OUTPUT = "0" *) (* C_TRACE_PROTOCOL = "1" *) 
 (* C_USE_BSCAN = "0" *) (* C_USE_CONFIG_RESET = "0" *) (* C_USE_CROSS_TRIGGER = "0" *) 
-(* C_USE_UART = "0" *) (* ORIG_REF_NAME = "MDM" *) (* bscan_debug_core = "FALSE" *) 
-(* dont_touch = "false" *) 
+(* C_USE_UART = "0" *) (* bscan_debug_core = "FALSE" *) (* dont_touch = "false" *) 
 module Linux_bd_mdm_1_0_MDM
    (Config_Reset,
     Scan_Reset_Sel,
@@ -13535,7 +13527,6 @@ module Linux_bd_mdm_1_0_MDM
         .I0(TDI));
 endmodule
 
-(* ORIG_REF_NAME = "MDM_Core" *) 
 module Linux_bd_mdm_1_0_MDM_Core
    (\shift_Count_reg[0] ,
     Debug_SYS_Rst,

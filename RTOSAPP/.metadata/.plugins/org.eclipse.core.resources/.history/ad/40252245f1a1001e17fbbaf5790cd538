@@ -1,0 +1,219 @@
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+
+// Hardware parameters
+#define LED_DEVICE_ID XPAR_AXI_GPIO_LEDS_DEVICE_ID
+#define SWITCH_DEVICE_ID XPAR_AXI_GPIO_SWITCH_DEVICE_ID
+#define RGB_DEVICE_ID XPAR_AXI_GPIO_RGB_DEVICE_ID
+#define BUTTONS_DEVICE_ID XPAR_AXI_GPIO_BUTTONS_DEVICE_ID
+#define UART_DEVICE_ID XPAR_AXI_UARTLITE_0_DEVICE_ID
+
+#define LED_CHANNEL 1
+#define RGB_CHANNEL 1
+#define BUTTONS_CHANNEL 1
+
+// Define task priorities
+#define LED_TASK_PRIORITY  (tskIDLE_PRIORITY + 1)
+#define RGB_TASK_PRIORITY  (tskIDLE_PRIORITY + 2)
+#define UART_TASK_PRIORITY (tskIDLE_PRIORITY + 3)
+#define SYSTEM_TASK_PRIORITY (tskIDLE_PRIORITY)
+
+// Task handles
+TaskHandle_t xLEDTaskHandle = NULL;
+TaskHandle_t xRGBTaskHandle = NULL;
+TaskHandle_t xUARTTaskHandle = NULL;
+TaskHandle_t xSystemTaskHandle = NULL;
+
+// Queue handles
+QueueHandle_t xLEDQueue = NULL;
+QueueHandle_t xRGBQueue = NULL;
+QueueHandle_t xUARTQueue = NULL;
+
+// Semaphore handle for system control
+SemaphoreHandle_t xSystemSemaphore = NULL;
+
+// Function prototypes
+void vLEDTask(void *pvParameters);
+void vRGBTask(void *pvParameters);
+void vUARTTask(void *pvParameters);
+void vSystemTask(void *pvParameters);
+
+int main(void) {
+    BaseType_t xReturned;
+
+    // Initialize hardware and peripherals
+    XGpio LEDInst, SwitchInst, RGBInst, ButtonsInst;
+    XUartLite UartInst;
+    XStatus status;
+
+    // Initialize LEDs
+    status = XGpio_Initialize(&LEDInst, LED_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("LED initialization failed\n");
+        return XST_FAILURE;
+    }
+
+    // Set LEDs as outputs
+    XGpio_SetDataDirection(&LEDInst, LED_CHANNEL, 0x0);
+
+    // Initialize switches
+    status = XGpio_Initialize(&SwitchInst, SWITCH_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("Switch initialization failed\n");
+        return XST_FAILURE;
+    }
+
+    // Set switches as inputs
+    XGpio_SetDataDirection(&SwitchInst, SWITCH_CHANNEL, 0xFFFFFFFF);
+
+    // Initialize RGB LEDs
+    status = XGpio_Initialize(&RGBInst, RGB_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("RGB initialization failed\n");
+        return XST_FAILURE;
+    }
+
+    // Set RGB LEDs as outputs
+    XGpio_SetDataDirection(&RGBInst, RGB_CHANNEL, 0x0);
+
+    // Initialize buttons
+    status = XGpio_Initialize(&ButtonsInst, BUTTONS_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("Buttons initialization failed\n");
+        return XST_FAILURE;
+    }
+
+    // Set buttons as inputs
+    XGpio_SetDataDirection(&ButtonsInst, BUTTONS_CHANNEL, 0xFFFFFFFF);
+
+    // Initialize UART
+    status = XUartLite_Initialize(&UartInst, UART_DEVICE_ID);
+    if (status != XST_SUCCESS) {
+        xil_printf("UART initialization failed\n");
+        return XST_FAILURE;
+    }
+
+    // Create queues
+    xLEDQueue = xQueueCreate(10, sizeof(uint8_t));
+    xRGBQueue = xQueueCreate(10, sizeof(uint8_t));
+    xUARTQueue = xQueueCreate(10, sizeof(char));
+
+    // Create semaphore for system control
+    xSystemSemaphore = xSemaphoreCreateBinary();
+
+    // Check if queues and semaphore were created successfully
+    if (xLEDQueue == NULL || xRGBQueue == NULL || xUARTQueue == NULL || xSystemSemaphore == NULL) {
+        xil_printf("Queue or semaphore creation failed\n");
+        return XST_FAILURE;
+    }
+
+    // Create and start tasks
+    xReturned = xTaskCreate(vLEDTask, "LED Task", configMINIMAL_STACK_SIZE, NULL, LED_TASK_PRIORITY, &xLEDTaskHandle);
+    if (xReturned != pdPASS) {
+        xil_printf("LED task creation failed\n");
+        return XST_FAILURE;
+    }
+
+    xReturned = xTaskCreate(vRGBTask, "RGB Task", configMINIMAL_STACK_SIZE, NULL, RGB_TASK_PRIORITY, &xRGBTaskHandle);
+    if (xReturned != pdPASS) {
+        xil_printf("RGB task creation failed\n");
+        return XST_FAILURE;
+    }
+
+    xReturned = xTaskCreate(vUARTTask, "UART Task", configMINIMAL_STACK_SIZE, NULL, UART_TASK_PRIORITY, &xUARTTaskHandle);
+    if (xReturned != pdPASS) {
+        xil_printf("UART task creation failed\n");
+        return XST_FAILURE;
+    }
+
+    xReturned = xTaskCreate(vSystemTask, "System Task", configMINIMAL_STACK_SIZE, NULL, SYSTEM_TASK_PRIORITY, &xSystemTaskHandle);
+    if (xReturned != pdPASS) {
+        xil_printf("System task creation failed\n");
+        return XST_FAILURE;
+    }
+
+    // Start the FreeRTOS scheduler
+    vTaskStartScheduler();
+
+    // Should not reach here
+    for (;;);
+
+    return 0;
+}
+
+void vLEDTask(void *pvParameters) {
+    uint8_t ledState = 0;
+
+    for (;;) {
+        // Read switch states
+        uint8_t switchState = XGpio_DiscreteRead(&SwitchInst, SWITCH_CHANNEL);
+
+        // Update LED states based on switch states
+        ledState = switchState;
+        XGpio_DiscreteWrite(&LEDInst, LED_CHANNEL, ledState);
+
+        // Send LED state to the RGB task
+        xQueueSend(xRGBQueue, &ledState, portMAX_DELAY);
+
+        vTaskDelay(pdMS_TO_TICKS(100)); // Periodic task
+    }
+}
+
+void vRGBTask(void *pvParameters) {
+    uint8_t ledState = 0;
+
+    for (;;) {
+        // Receive LED state from the LED task
+        xQueueReceive(xRGBQueue, &ledState, portMAX_DELAY);
+
+        // Control RGB LEDs based on LED state
+        // Implement your RGB control logic here
+
+        vTaskDelay(pdMS_TO_TICKS(50)); // Periodic task
+    }
+}
+
+void vUARTTask(void *pvParameters) {
+    char command;
+
+    for (;;) {
+        // Receive UART command
+        XUartLite_Recv(&UartInst, (u8*)&command, sizeof(char));
+
+        // Process UART command
+        if (command == 'S') {
+            // Stop all tasks
+            xSemaphoreTake(xSystemSemaphore, portMAX_DELAY);
+        } else if (command == 'R') {
+            // Resume all tasks
+            xSemaphoreGive(xSystemSemaphore);
+        }
+
+        // Forward UART command to the system control task
+        xQueueSend(xUARTQueue, &command, portMAX_DELAY);
+    }
+}
+
+void vSystemTask(void *pvParameters) {
+    char command;
+
+    for (;;) {
+        // Receive UART command from UART task
+        xQueueReceive(xUARTQueue, &command, portMAX_DELAY);
+
+        // Process system control commands
+        if (command == 'S') {
+            // Stop all tasks
+            vTaskSuspendAll();
+        } else if (command == 'R') {
+            // Resume all tasks
+            xTaskResumeAll();
+        }
+    }
+}

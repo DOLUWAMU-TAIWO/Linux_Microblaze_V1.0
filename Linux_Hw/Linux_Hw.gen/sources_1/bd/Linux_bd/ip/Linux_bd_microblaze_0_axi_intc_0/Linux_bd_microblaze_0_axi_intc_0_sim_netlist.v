@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:52:54 2023
+// Date        : Mon Dec  4 10:52:53 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_axi_intc_0/Linux_bd_microblaze_0_axi_intc_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_microblaze_0_axi_intc_0 -prefix
+//               Linux_bd_microblaze_0_axi_intc_0_ Linux_bd_microblaze_0_axi_intc_0_sim_netlist.v
 // Design      : Linux_bd_microblaze_0_axi_intc_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -163,7 +163,6 @@ module Linux_bd_microblaze_0_axi_intc_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Linux_bd_microblaze_0_axi_intc_0_address_decoder
    (Bus_RNW_reg_reg_0,
     Bus_RNW_reg_reg_1,
@@ -1393,9 +1392,9 @@ endmodule
 (* C_IRQ_IS_LEVEL = "1" *) (* C_IVAR_RESET_VALUE = "64'b0000000000000000000000000000000000000000000000000000000000010000" *) (* C_KIND_OF_EDGE = "32'b11111111111111111111111111111111" *) 
 (* C_KIND_OF_INTR = "32'b11111111111111111111111111001010" *) (* C_KIND_OF_LVL = "32'b11111111111111111111111111111111" *) (* C_MB_CLK_NOT_CONNECTED = "1" *) 
 (* C_NUM_INTR_INPUTS = "6" *) (* C_NUM_SW_INTR = "0" *) (* C_NUM_SYNC_FF = "2" *) 
-(* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* ORIG_REF_NAME = "axi_intc" *) 
-(* hdl = "VHDL" *) (* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) 
-(* iptype = "PERIPHERAL" *) (* run_ngcbuild = "TRUE" *) (* style = "HDL" *) 
+(* C_S_AXI_ADDR_WIDTH = "9" *) (* C_S_AXI_DATA_WIDTH = "32" *) (* hdl = "VHDL" *) 
+(* imp_netlist = "TRUE" *) (* ip_group = "LOGICORE" *) (* iptype = "PERIPHERAL" *) 
+(* run_ngcbuild = "TRUE" *) (* style = "HDL" *) 
 module Linux_bd_microblaze_0_axi_intc_0_axi_intc
    (s_axi_aclk,
     s_axi_aresetn,
@@ -1724,7 +1723,6 @@ module Linux_bd_microblaze_0_axi_intc_0_axi_intc
         .R(INTC_CORE_I_n_1));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif
    (s_axi_rresp,
     s_axi_rvalid_i_reg,
@@ -2061,7 +2059,6 @@ module Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "intc_core" *) 
 module Linux_bd_microblaze_0_axi_intc_0_intc_core
    (\REG_GEN[0].IMR_FAST_MODE_GEN.imr_reg[0]_0 ,
     SR,
@@ -3427,7 +3424,6 @@ module Linux_bd_microblaze_0_axi_intc_0_intc_core
         .O(\IPR_GEN.ipr_reg[5]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "shared_ram_ivar" *) 
 module Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar
    (Douta,
     interrupt_address,
@@ -4736,7 +4732,6 @@ module Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar
         .WE(\ram_i[0].Doutb_reg[0]_0 ));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Linux_bd_microblaze_0_axi_intc_0_slave_attachment
    (s_axi_rresp,
     s_axi_rvalid_i_reg_0,

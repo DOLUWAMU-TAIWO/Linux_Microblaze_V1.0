@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Dec  4 10:52:54 2023
+-- Date        : Mon Dec  4 10:52:53 2023
 -- Host        : CN010 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_axi_intc_0/Linux_bd_microblaze_0_axi_intc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Linux_bd_microblaze_0_axi_intc_0 -prefix
+--               Linux_bd_microblaze_0_axi_intc_0_ Linux_bd_microblaze_0_axi_intc_0_sim_netlist.vhdl
 -- Design      : Linux_bd_microblaze_0_axi_intc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -92,8 +92,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_address_decoder is
     p_0_in5_in : in STD_LOGIC;
     Bus_RNW_reg_reg_12 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_address_decoder : entity is "address_decoder";
 end Linux_bd_microblaze_0_axi_intc_0_address_decoder;
 
 architecture STRUCTURE of Linux_bd_microblaze_0_axi_intc_0_address_decoder is
@@ -1434,8 +1432,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar is
     \ram_i[0].Doutb_reg[31]_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     ivar_index_axi_clk : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar : entity is "shared_ram_ivar";
 end Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar;
 
 architecture STRUCTURE of Linux_bd_microblaze_0_axi_intc_0_shared_ram_ivar is
@@ -3027,8 +3023,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_intc_core is
     \s_axi_rdata_i_reg[0]\ : in STD_LOGIC;
     \ram_i[0].Doutb_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_intc_core : entity is "intc_core";
 end Linux_bd_microblaze_0_axi_intc_0_intc_core;
 
 architecture STRUCTURE of Linux_bd_microblaze_0_axi_intc_0_intc_core is
@@ -4703,8 +4697,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_slave_attachment is
     p_0_in3_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_slave_attachment : entity is "slave_attachment";
 end Linux_bd_microblaze_0_axi_intc_0_slave_attachment;
 
 architecture STRUCTURE of Linux_bd_microblaze_0_axi_intc_0_slave_attachment is
@@ -6030,8 +6022,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif is
     p_0_in3_in : in STD_LOGIC;
     \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif;
 
 architecture STRUCTURE of Linux_bd_microblaze_0_axi_intc_0_axi_lite_ipif is
@@ -6213,8 +6203,6 @@ entity Linux_bd_microblaze_0_axi_intc_0_axi_intc is
   attribute C_S_AXI_ADDR_WIDTH of Linux_bd_microblaze_0_axi_intc_0_axi_intc : entity is 9;
   attribute C_S_AXI_DATA_WIDTH : integer;
   attribute C_S_AXI_DATA_WIDTH of Linux_bd_microblaze_0_axi_intc_0_axi_intc : entity is 32;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_microblaze_0_axi_intc_0_axi_intc : entity is "axi_intc";
   attribute hdl : string;
   attribute hdl of Linux_bd_microblaze_0_axi_intc_0_axi_intc : entity is "VHDL";
   attribute imp_netlist : string;

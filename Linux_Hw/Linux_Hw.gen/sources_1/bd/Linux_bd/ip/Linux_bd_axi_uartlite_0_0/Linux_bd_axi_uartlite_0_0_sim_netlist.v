@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:51:45 2023
+// Date        : Mon Dec  4 10:51:44 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_axi_uartlite_0_0/Linux_bd_axi_uartlite_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_axi_uartlite_0_0 -prefix
+//               Linux_bd_axi_uartlite_0_0_ Linux_bd_axi_uartlite_0_0_sim_netlist.v
 // Design      : Linux_bd_axi_uartlite_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -151,7 +151,6 @@ module Linux_bd_axi_uartlite_0_0
         .tx(tx));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Linux_bd_axi_uartlite_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]_0 ,
@@ -590,7 +589,6 @@ module Linux_bd_axi_uartlite_0_0_address_decoder
         .O(\INFERRED_GEN.cnt_i_reg[4] ));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Linux_bd_axi_uartlite_0_0_axi_lite_ipif
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg ,
@@ -743,8 +741,7 @@ endmodule
 
 (* C_BAUDRATE = "9600" *) (* C_DATA_BITS = "8" *) (* C_FAMILY = "artix7" *) 
 (* C_ODD_PARITY = "0" *) (* C_S_AXI_ACLK_FREQ_HZ = "81247969" *) (* C_S_AXI_ADDR_WIDTH = "4" *) 
-(* C_S_AXI_DATA_WIDTH = "32" *) (* C_USE_PARITY = "0" *) (* ORIG_REF_NAME = "axi_uartlite" *) 
-(* downgradeipidentifiedwarnings = "yes" *) 
+(* C_S_AXI_DATA_WIDTH = "32" *) (* C_USE_PARITY = "0" *) (* downgradeipidentifiedwarnings = "yes" *) 
 module Linux_bd_axi_uartlite_0_0_axi_uartlite
    (s_axi_aclk,
     s_axi_aresetn,
@@ -929,7 +926,6 @@ module Linux_bd_axi_uartlite_0_0_axi_uartlite
         .tx_Buffer_Full(tx_Buffer_Full));
 endmodule
 
-(* ORIG_REF_NAME = "baudrate" *) 
 module Linux_bd_axi_uartlite_0_0_baudrate
    (en_16x_Baud,
     EN_16x_Baud_reg_0,
@@ -1177,7 +1173,6 @@ module Linux_bd_axi_uartlite_0_0_baudrate
         .R(EN_16x_Baud_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Linux_bd_axi_uartlite_0_0_cdc_sync
    (\status_reg_reg[1] ,
     scndry_out,
@@ -1328,7 +1323,6 @@ module Linux_bd_axi_uartlite_0_0_cdc_sync
         .O(rx_Frame_Error));
 endmodule
 
-(* ORIG_REF_NAME = "cntr_incr_decr_addn_f" *) 
 module Linux_bd_axi_uartlite_0_0_cntr_incr_decr_addn_f
    (fifo_full_p1,
     Q,
@@ -1712,7 +1706,6 @@ module Linux_bd_axi_uartlite_0_0_cntr_incr_decr_addn_f_2
         .S(SS));
 endmodule
 
-(* ORIG_REF_NAME = "dynshreg_f" *) 
 module Linux_bd_axi_uartlite_0_0_dynshreg_f
    (mux_Out,
     serial_Data_reg,
@@ -2015,7 +2008,6 @@ module Linux_bd_axi_uartlite_0_0_dynshreg_f_3
         .O(fifo_wr));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
 module Linux_bd_axi_uartlite_0_0_pselect_f
    (ce_expnd_i_3,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
@@ -2057,7 +2049,6 @@ module Linux_bd_axi_uartlite_0_0_pselect_f__parameterized1
         .O(ce_expnd_i_1));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Linux_bd_axi_uartlite_0_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] ,
@@ -2478,7 +2469,6 @@ module Linux_bd_axi_uartlite_0_0_slave_attachment
         .R(rst));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_f" *) 
 module Linux_bd_axi_uartlite_0_0_srl_fifo_f
    (FIFO_Full_reg,
     Q,
@@ -2644,7 +2634,6 @@ module Linux_bd_axi_uartlite_0_0_srl_fifo_f_0
         .valid_rx(valid_rx));
 endmodule
 
-(* ORIG_REF_NAME = "srl_fifo_rbu_f" *) 
 module Linux_bd_axi_uartlite_0_0_srl_fifo_rbu_f
    (FIFO_Full_reg_0,
     Q,
@@ -2857,7 +2846,6 @@ module Linux_bd_axi_uartlite_0_0_srl_fifo_rbu_f_1
         .O(\status_reg_reg[2] ));
 endmodule
 
-(* ORIG_REF_NAME = "uartlite_core" *) 
 module Linux_bd_axi_uartlite_0_0_uartlite_core
    (bus2ip_reset,
     tx,
@@ -3047,7 +3035,6 @@ module Linux_bd_axi_uartlite_0_0_uartlite_core
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "uartlite_rx" *) 
 module Linux_bd_axi_uartlite_0_0_uartlite_rx
    (s_axi_aresetn_0,
     FIFO_Full_reg,
@@ -3567,7 +3554,6 @@ module Linux_bd_axi_uartlite_0_0_uartlite_rx
         .R(s_axi_aresetn_0));
 endmodule
 
-(* ORIG_REF_NAME = "uartlite_tx" *) 
 module Linux_bd_axi_uartlite_0_0_uartlite_tx
    (tx,
     FIFO_Full_reg,

@@ -1,0 +1,170 @@
+#include <stdio.h>
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+#include "xil_printf.h"
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "semphr.h"
+
+#define LED_CHANNEL 1
+#define SWITCH_CHANNEL 2
+#define RGB_CHANNEL 3
+
+#define TIMER_ID 1
+#define DELAY_10_SECONDS 10000UL
+#define DELAY_1_SECOND 1000UL
+#define TIMER_CHECK_THRESHOLD 9
+
+#define LEDInst XPAR_AXI_GPIO_LEDS_DEVICE_ID
+#define SWITCHInst XPAR_AXI_GPIO_SWITCH_DEVICE_ID
+#define RGBInst XPAR_AXI_GPIO_RGB_DEVICE_ID
+#define UartInst XPAR_AXI_UARTLITE_0_DEVICE_ID
+
+static XGpio GpioLED;
+static XGpio GpioSwitch;
+static XGpio GpioRGB;
+static XUartLite UartInst;
+
+xSemaphoreHandle xSystemSemaphore;
+xQueueHandle xUARTQueue;
+xQueueHandle xRGBQueue;
+
+static void prvTxTask(void *pvParameters);
+static void prvRxTask(void *pvParameters);
+static void vTimerCallback(TimerHandle_t pxTimer);
+static void vLEDTask(void *pvParameters);
+static void vRGBTask(void *pvParameters);
+static void vUARTTask(void *pvParameters);
+static void vSystemTask(void *pvParameters);
+
+int main(void) {
+    XGpio_Initialize(&GpioLED, LEDInst);
+    XGpio_Initialize(&GpioSwitch, SWITCHInst);
+    XGpio_Initialize(&GpioRGB, RGBInst);
+
+    vSemaphoreCreateBinary(xSystemSemaphore);
+
+    XUartLite_Initialize(&UartInst, UartInst);
+
+    // Create queues
+    xUARTQueue = xQueueCreate(10, sizeof(char));
+    xRGBQueue = xQueueCreate(10, sizeof(uint8_t));
+
+    xil_printf("Hello from FreeRTOS example main\r\n");
+
+    // Create tasks
+    xTaskCreate(prvTxTask, (const char *)"Tx", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(prvRxTask, (const char *)"GB", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY + 1, NULL);
+    xTaskCreate(vLEDTask, (const char *)"LED", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(vRGBTask, (const char *)"RGB", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(vUARTTask, (const char *)"UART", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+    xTaskCreate(vSystemTask, (const char *)"System", configMINIMAL_STACK_SIZE, NULL, tskIDLE_PRIORITY, NULL);
+
+    // Create timer
+    const TickType_t x10seconds = pdMS_TO_TICKS(DELAY_10_SECONDS);
+    xTimerCreate((const char *)"Timer", x10seconds, pdFALSE, (void *)TIMER_ID, vTimerCallback);
+
+    if (xTimerStart(xTimer, 0) != pdPASS) {
+        xil_printf("Failed to start the timer\r\n");
+    }
+
+    vTaskStartScheduler();
+
+    for (;;) ;
+}
+
+static void prvTxTask(void *pvParameters) {
+    const TickType_t x1second = pdMS_TO_TICKS(DELAY_1_SECOND);
+
+    for (;;) {
+        vTaskDelay(x1second);
+        uint8_t switchState = XGpio_DiscreteRead(&GpioSwitch, SWITCH_CHANNEL);
+        xQueueSend(xRGBQueue, &switchState, portMAX_DELAY);
+    }
+}
+
+static void prvRxTask(void *pvParameters) {
+    char Recdstring[15] = "";
+
+    for (;;) {
+        xQueueReceive(xUARTQueue, Recdstring, portMAX_DELAY);
+        xil_printf("Rx task received string from Tx task: %s\r\n", Recdstring);
+    }
+}
+
+static void vLEDTask(void *pvParameters) {
+    uint8_t switchState = 0;
+
+    for (;;) {
+        xQueueReceive(xRGBQueue, &switchState, portMAX_DELAY);
+        XGpio_DiscreteWrite(&GpioLED, LED_CHANNEL, switchState);
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+}
+
+static void vRGBTask(void *pvParameters) {
+    // Implement your RGB control logic here
+    // This task should control RGB LEDs based on the switch state
+    for (;;) {
+        // Placeholder logic - implement your RGB control here
+        uint8_t switchState = 0;
+        xQueueReceive(xRGBQueue, &switchState, portMAX_DELAY);
+
+        // Implement RGB control logic based on switch state
+        // For example, you can set the RGB LEDs based on different switch values
+
+        vTaskDelay(pdMS_TO_TICKS(50)); // Periodic task
+    }
+}
+
+static void vUARTTask(void *pvParameters) {
+    char command;
+
+    for (;;) {
+        XUartLite_Recv(&UartInst, (u8 *)&command, sizeof(char));
+
+        if (command == 'S') {
+            xSemaphoreTake(xSystemSemaphore, portMAX_DELAY);
+        } else if (command == 'R') {
+            xSemaphoreGive(xSystemSemaphore);
+        }
+
+        xQueueSend(xUARTQueue, &command, portMAX_DELAY);
+    }
+}
+
+static void vSystemTask(void *pvParameters) {
+    char command;
+
+    for (;;) {
+        xQueueReceive(xUARTQueue, &command, portMAX_DELAY);
+
+        if (command == 'S') {
+            vTaskSuspendAll();
+        } else if (command == 'R') {
+            xTaskResumeAll();
+        }
+    }
+}
+
+static void vTimerCallback(TimerHandle_t pxTimer) {
+    long lTimerId;
+
+    lTimerId = (long)pvTimerGetTimerID(pxTimer);
+
+    if (lTimerId != TIMER_ID) {
+        xil_printf("FreeRTOS Hello World Example FAILED\r\n");
+    }
+
+    int RxtaskCntr = uxTaskGetNumberOfTasks();
+    if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
+        xil_printf("Successfully ran FreeRTOS Hello World Example\r\n");
+    } else {
+        xil_printf("FreeRTOS Hello World Example FAILED\r\n");
+    }
+
+    vTaskDelete(NULL);
+}

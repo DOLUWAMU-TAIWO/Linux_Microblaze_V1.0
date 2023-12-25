@@ -84,11 +84,13 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/doluwamu.kaye/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.2 [current_project]
+set_property ip_repo_paths c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0 [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd
+read_vhdl -library xil_defaultlib C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/hdl/Linux_bd_wrapper.vhd
 add_files C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/sources_1/bd/Linux_bd/Linux_bd.bd
 set_property used_in_implementation false [get_files -all c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/constraints/Linux_bd_mig_7series_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_mig_7series_0_0/Linux_bd_mig_7series_0_0/user_design/constraints/Linux_bd_mig_7series_0_0_ooc.xdc]
@@ -180,6 +182,8 @@ set_property used_in_implementation false [get_files C:/Users/doluwamu.kaye/Down
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/utils_1/imports/synth_1/Linux_bd_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

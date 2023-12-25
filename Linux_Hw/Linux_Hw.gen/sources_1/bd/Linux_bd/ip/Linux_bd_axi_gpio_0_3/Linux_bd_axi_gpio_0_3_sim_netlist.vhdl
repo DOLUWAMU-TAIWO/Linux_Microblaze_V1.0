@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Dec  4 10:49:37 2023
+-- Date        : Mon Dec  4 10:49:36 2023
 -- Host        : CN010 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_axi_gpio_0_3/Linux_bd_axi_gpio_0_3_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Linux_bd_axi_gpio_0_3 -prefix
+--               Linux_bd_axi_gpio_0_3_ Linux_bd_axi_gpio_0_3_sim_netlist.vhdl
 -- Design      : Linux_bd_axi_gpio_0_3
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -53,8 +53,6 @@ entity Linux_bd_axi_gpio_0_3_address_decoder is
     ip2bus_wrack_i_D1 : in STD_LOGIC;
     s_axi_awready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_address_decoder : entity is "address_decoder";
 end Linux_bd_axi_gpio_0_3_address_decoder;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_address_decoder is
@@ -956,8 +954,6 @@ entity Linux_bd_axi_gpio_0_3_cdc_sync is
     gpio_io_i : in STD_LOGIC_VECTOR ( 4 downto 0 );
     s_axi_aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_cdc_sync : entity is "cdc_sync";
 end Linux_bd_axi_gpio_0_3_cdc_sync;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_cdc_sync is
@@ -1347,8 +1343,6 @@ entity Linux_bd_axi_gpio_0_3_interrupt_control is
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0\ : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_interrupt_control : entity is "interrupt_control";
 end Linux_bd_axi_gpio_0_3_interrupt_control;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_interrupt_control is
@@ -1480,8 +1474,6 @@ entity Linux_bd_axi_gpio_0_3_GPIO_Core is
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 4 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_GPIO_Core : entity is "GPIO_Core";
 end Linux_bd_axi_gpio_0_3_GPIO_Core;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_GPIO_Core is
@@ -1818,8 +1810,6 @@ entity Linux_bd_axi_gpio_0_3_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_slave_attachment : entity is "slave_attachment";
 end Linux_bd_axi_gpio_0_3_slave_attachment;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_slave_attachment is
@@ -2659,8 +2649,6 @@ entity Linux_bd_axi_gpio_0_3_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 6 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_axi_lite_ipif : entity is "axi_lite_ipif";
 end Linux_bd_axi_gpio_0_3_axi_lite_ipif;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_3_axi_lite_ipif is
@@ -2784,8 +2772,6 @@ entity Linux_bd_axi_gpio_0_3_axi_gpio is
   attribute C_TRI_DEFAULT of Linux_bd_axi_gpio_0_3_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of Linux_bd_axi_gpio_0_3_axi_gpio : entity is "32'b11111111111111111111111111111111";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_3_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Linux_bd_axi_gpio_0_3_axi_gpio : entity is "yes";
   attribute ip_group : string;

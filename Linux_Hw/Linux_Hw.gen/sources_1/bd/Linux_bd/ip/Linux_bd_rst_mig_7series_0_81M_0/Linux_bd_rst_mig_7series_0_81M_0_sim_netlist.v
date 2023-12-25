@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:46:10 2023
+// Date        : Mon Dec  4 10:46:09 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_rst_mig_7series_0_81M_0/Linux_bd_rst_mig_7series_0_81M_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_rst_mig_7series_0_81M_0 -prefix
+//               Linux_bd_rst_mig_7series_0_81M_0_ Linux_bd_rst_mig_7series_0_81M_0_sim_netlist.v
 // Design      : Linux_bd_rst_mig_7series_0_81M_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -69,7 +69,6 @@ module Linux_bd_rst_mig_7series_0_81M_0
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "cdc_sync" *) 
 module Linux_bd_rst_mig_7series_0_81M_0_cdc_sync
    (lpf_exr_reg,
     scndry_out,
@@ -265,7 +264,6 @@ module Linux_bd_rst_mig_7series_0_81M_0_cdc_sync_0
         .O(lpf_asr_reg));
 endmodule
 
-(* ORIG_REF_NAME = "lpf" *) 
 module Linux_bd_rst_mig_7series_0_81M_0_lpf
    (lpf_int,
     slowest_sync_clk,
@@ -420,7 +418,6 @@ endmodule
 (* C_AUX_RESET_HIGH = "1'b0" *) (* C_AUX_RST_WIDTH = "4" *) (* C_EXT_RESET_HIGH = "1'b1" *) 
 (* C_EXT_RST_WIDTH = "4" *) (* C_FAMILY = "artix7" *) (* C_NUM_BUS_RST = "1" *) 
 (* C_NUM_INTERCONNECT_ARESETN = "1" *) (* C_NUM_PERP_ARESETN = "1" *) (* C_NUM_PERP_RST = "1" *) 
-(* ORIG_REF_NAME = "proc_sys_reset" *) 
 module Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset
    (slowest_sync_clk,
     ext_reset_in,
@@ -537,7 +534,6 @@ module Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset
         .slowest_sync_clk(slowest_sync_clk));
 endmodule
 
-(* ORIG_REF_NAME = "sequence_psr" *) 
 module Linux_bd_rst_mig_7series_0_81M_0_sequence_psr
    (MB_out,
     Bsr_out,
@@ -778,7 +774,6 @@ module Linux_bd_rst_mig_7series_0_81M_0_sequence_psr
         .R(lpf_int));
 endmodule
 
-(* ORIG_REF_NAME = "upcnt_n" *) 
 module Linux_bd_rst_mig_7series_0_81M_0_upcnt_n
    (Q,
     seq_clr,

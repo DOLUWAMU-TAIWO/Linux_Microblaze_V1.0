@@ -86,11 +86,13 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part_repo_paths {C:/Users/doluwamu.kaye/AppData/Roaming/Xilinx/Vivado/2022.2/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys-a7-100t:part0:1.2 [current_project]
+set_property ip_repo_paths c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/ip_repo/PMW_1_0 [current_project]
+update_ip_catalog
 set_property ip_output_repo c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_0/Linux_bd_microblaze_0_0.xci
+read_ip -quiet C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.srcs/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_0/Linux_bd_microblaze_0_0.xci
 set_property used_in_implementation false [get_files -all c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_0/Linux_bd_microblaze_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_0/Linux_bd_microblaze_0_0_ooc_debug.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_microblaze_0_0/Linux_bd_microblaze_0_0_ooc.xdc]

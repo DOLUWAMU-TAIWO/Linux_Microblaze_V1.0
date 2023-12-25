@@ -1,0 +1,571 @@
+!SESSION 2023-12-24 21:31:43.076 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_GB
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\RTOSAPP\.metadata\.bak_0.log
+Created Time: 2023-12-24 22:13:02.364
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.365
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.382
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0], Result: [null, {"axi_gpio_seven_S_AXI": {"name": "axi_gpio_seven",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_anodes_S_AXI": {"name": "axi_gpio_anodes",
+"base": "0x40010000",
+"high": "0x4001FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_rgb_S_AXI": {"name": "axi_gpio_rgb",
+"base": "0x40020000",
+"high": "0x4002FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_buttons_S_AXI": {"name": "axi_gpio_buttons",
+"base": "0x40030000",
+"high": "0x4003FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_leds_S_AXI": {"name": "axi_gpio_leds",
+"base": "0x40040000",
+"high": "0x4004FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_switch_S_AXI": {"name": "axi_gpio_switch",
+"base": "0x40050000",
+"high": "0x4005FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_iic_temp_S_AXI": {"name": "axi_iic_temp",
+"base": "0x40800000",
+"high": "0x4080FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_axi_intc_s_axi": {"name": "microblaze_0_axi_intc",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_timer_0_S_AXI": {"name": "axi_timer_0",
+"base": "0x41C00000",
+"high": "0x41C0FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_quad_spi_0_AXI_LITE": {"name": "axi_quad_spi_0",
+"base": "0x44A00000",
+"high": "0x44A0FFFF",
+"size": "65536",
+"slaveintf": "AXI_LITE",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x0000FFFF",
+"size": "65536",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+"mig_7series_0_S_AXI_memaddr": {"name": "mig_7series_0",
+"base": "0x80000000",
+"high": "0x87FFFFFF",
+"size": "134217728",
+"slaveintf": "S_AXI",
+"type": "MEMORY",
+"flags": "7",
+"segment": "memaddr",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.383
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.386
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.403
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.406
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.407
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.410
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, 1]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.410
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.413
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.414
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_FREQ], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.416
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_FREQ], Result: [null, 81247969]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.417
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.452
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_CPU_CLK_FREQ_HZ], Result: [null, ]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.453
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.458
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.461
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.464
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Result: [null, {}]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.465
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.468
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.469
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.472
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa mdm_1], Result: [null, microblaze_0]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:02.474
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:04.849
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:04.851
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.267
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.268
+!MESSAGE XSCT Command: [version -server], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.275
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.276
+!MESSAGE XSCT Command: [version], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.277
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.283
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.303
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.304
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.323
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.328
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.350
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.351
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.370
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.371
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.378
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.379
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.397
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.399
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.405
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.406
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.424
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.432
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.439
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.440
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.459
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.460
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.480
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level == 0}], Result: [null, ]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.481
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.484
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.485
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.506
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0], Result: [null, {"Clk": "81247969",
+"Dbg_Clk": "",
+}]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.539
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.545
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.546
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.564
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.581
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.669
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:05.670
+!MESSAGE XSCT Command: [fpga -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/rtosapp/_ide/bitstream/Linux_bd_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:08.035
+!MESSAGE XSCT command with result: [fpga -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/rtosapp/_ide/bitstream/Linux_bd_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:08.075
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:11.233
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [{Format=no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+     2  RISC-V
+        3  Hart #0 (Debug Transport Module: data corruption (ID)), Time=1703452391232, Code=1}, ]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.353
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss ], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.367
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.368
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.374
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "freertos10_xilinx",
+"osver": "1.12",
+}]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2023-12-24 22:13:42.375
+!MESSAGE Generating MD5 hash for file: C:\Users\doluwamu.kaye\Documents\GitHub\Linux_Microblaze_V1.0\RTOSAPP\Linux_bd_wrapper\export\Linux_bd_wrapper\sw\Linux_bd_wrapper\freertos10_xilinx_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.381
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss], Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:13:42.384
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/sw/Linux_bd_wrapper/freertos10_xilinx_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-9: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:00.209
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_tag_info -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:00.214
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_tag_info -json C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Result: [null, {"microblaze_0": "Linux_bd_i/microblaze_0:Linux_bd_i/microblaze_0",
+}]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.731
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_ENDIANNESS], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.734
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_ENDIANNESS], Result: [null, 1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.759
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.762
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.763
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_BASE_VECTORS], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:12.766
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa microblaze_0 C_BASE_VECTORS], Result: [null, 0x0000000000000000]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:32.621
+!MESSAGE XSCT Command: [::hsi::utils::get_bram_blocks C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:32.624
+!MESSAGE XSCT command with result: [::hsi::utils::get_bram_blocks C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/Linux_bd_wrapper/export/Linux_bd_wrapper/hw/Linux_bd_wrapper.xsa ], Result: [null, microblaze_0_local_memory_dlmb_bram_if_cntlr microblaze_0_local_memory_ilmb_bram_if_cntlr]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.580
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.582
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.583
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.590
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.591
+!MESSAGE XSCT Command: [version -server], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.593
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.594
+!MESSAGE XSCT Command: [version], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.595
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.596
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.602
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.603
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.622
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.623
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.630
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.630
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.650
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.651
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.658
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.659
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.677
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.678
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.685
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.686
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.705
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.706
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.714
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.715
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.733
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.734
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level == 0}], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.754
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level == 0}], Result: [null, ]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.755
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.757
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.779
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.786
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.787
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.806
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.808
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.844
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==0 && jtag_device_ctx=="jsn-Nexys A7 -100T-210292B61CF1A-13631093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:45.845
+!MESSAGE XSCT Command: [fpga -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/rtosapp/_ide/bitstream/Linux_bd_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:48.046
+!MESSAGE XSCT command with result: [fpga -file C:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/RTOSAPP/rtosapp/_ide/bitstream/Linux_bd_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:48.071
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:14:51.090
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [{Format=no targets found with "name =~ "*microblaze*#0" && bscan=="USER2" ". available targets:
+  1* xc7a100t
+     2  RISC-V
+        3  Hart #0 (Debug Transport Module: data corruption (ID)), Time=1703452491089, Code=1}, ]. Thread: Worker-6: Launching Debugger_rtosapp-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.846
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.848
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.850
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.856
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.857
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.863
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Nexys A7 -100T 210292B61CF1A]. Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.865
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Thread: main
+
+!ENTRY com.xilinx.sdk.utils 0 0 2023-12-24 22:15:12.883
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Nexys A7 -100T 210292B61CF1A" && level==1}], Result: [null,      2  xc7a100t (idcode 13631093 irlen 6 fpga)]. Thread: main

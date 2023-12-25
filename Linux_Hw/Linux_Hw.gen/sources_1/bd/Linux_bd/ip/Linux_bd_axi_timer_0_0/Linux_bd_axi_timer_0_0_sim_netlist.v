@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Mon Dec  4 10:54:36 2023
+// Date        : Mon Dec  4 10:54:35 2023
 // Host        : CN010 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_axi_timer_0_0/Linux_bd_axi_timer_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top Linux_bd_axi_timer_0_0 -prefix
+//               Linux_bd_axi_timer_0_0_ Linux_bd_axi_timer_0_0_sim_netlist.v
 // Design      : Linux_bd_axi_timer_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -140,7 +140,6 @@ module Linux_bd_axi_timer_0_0
         .s_axi_wvalid(s_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "address_decoder" *) 
 module Linux_bd_axi_timer_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5]_0 ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1]_0 ,
@@ -1611,7 +1610,6 @@ module Linux_bd_axi_timer_0_0_address_decoder
         .O(D[1]));
 endmodule
 
-(* ORIG_REF_NAME = "axi_lite_ipif" *) 
 module Linux_bd_axi_timer_0_0_axi_lite_ipif
    (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg ,
@@ -2156,7 +2154,7 @@ endmodule
 (* C_COUNT_WIDTH = "32" *) (* C_FAMILY = "artix7" *) (* C_GEN0_ASSERT = "1'b1" *) 
 (* C_GEN1_ASSERT = "1'b1" *) (* C_ONE_TIMER_ONLY = "0" *) (* C_S_AXI_ADDR_WIDTH = "5" *) 
 (* C_S_AXI_DATA_WIDTH = "32" *) (* C_TRIG0_ASSERT = "1'b1" *) (* C_TRIG1_ASSERT = "1'b1" *) 
-(* ORIG_REF_NAME = "axi_timer" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Linux_bd_axi_timer_0_0_axi_timer
    (capturetrig0,
     capturetrig1,
@@ -2606,7 +2604,7 @@ endmodule
 
 (* C_CDC_TYPE = "1" *) (* C_FLOP_INPUT = "0" *) (* C_MTBF_STAGES = "4" *) 
 (* C_RESET_STATE = "0" *) (* C_SINGLE_BIT = "1" *) (* C_VECTOR_WIDTH = "32" *) 
-(* ORIG_REF_NAME = "cdc_sync" *) (* downgradeipidentifiedwarnings = "yes" *) 
+(* downgradeipidentifiedwarnings = "yes" *) 
 module Linux_bd_axi_timer_0_0_cdc_sync
    (prmry_aclk,
     prmry_resetn,
@@ -2952,7 +2950,6 @@ module Linux_bd_axi_timer_0_0_cdc_sync__2
        (.G(\<const0> ));
 endmodule
 
-(* ORIG_REF_NAME = "count_module" *) 
 module Linux_bd_axi_timer_0_0_count_module
    (\LOAD_REG_GEN[0].LOAD_REG_I_0 ,
     loadReg_DBus_32,
@@ -4260,7 +4257,6 @@ module Linux_bd_axi_timer_0_0_count_module_0
         .R(s_axi_aresetn_0));
 endmodule
 
-(* ORIG_REF_NAME = "counter_f" *) 
 module Linux_bd_axi_timer_0_0_counter_f
    (\INFERRED_GEN.icount_out_reg[31]_0 ,
     s_axi_aresetn_0,
@@ -6583,7 +6579,6 @@ module Linux_bd_axi_timer_0_0_counter_f_1
         .O(generateOutPre00));
 endmodule
 
-(* ORIG_REF_NAME = "mux_onehot_f" *) 
 module Linux_bd_axi_timer_0_0_mux_onehot_f
    (D,
     \GEN.DATA_WIDTH_GEN[0].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 ,
@@ -7264,7 +7259,6 @@ module Linux_bd_axi_timer_0_0_mux_onehot_f
         .S({\NLW_GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_CARRY4_S_UNCONNECTED [3:2],\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[1].MUXCY_GEN.MUXCY_I_0 ,\GEN.DATA_WIDTH_GEN[9].NUM_BUSES_GEN[0].MUXCY_GEN.MUXCY_I_0 }));
 endmodule
 
-(* ORIG_REF_NAME = "pselect_f" *) 
 module Linux_bd_axi_timer_0_0_pselect_f
    (ce_expnd_i_7,
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0] );
@@ -7378,7 +7372,6 @@ module Linux_bd_axi_timer_0_0_pselect_f__parameterized6
         .O(ce_expnd_i_0));
 endmodule
 
-(* ORIG_REF_NAME = "slave_attachment" *) 
 module Linux_bd_axi_timer_0_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[5].ce_out_i_reg[5] ,
     \GEN_BKEND_CE_REGISTERS[1].ce_out_i_reg[1] ,
@@ -8521,7 +8514,6 @@ module Linux_bd_axi_timer_0_0_slave_attachment
         .R(rst));
 endmodule
 
-(* ORIG_REF_NAME = "tc_core" *) 
 module Linux_bd_axi_timer_0_0_tc_core
    (D,
     \LOAD_REG_GEN[0].LOAD_REG_I ,
@@ -9230,7 +9222,6 @@ module Linux_bd_axi_timer_0_0_tc_core
         .s_axi_wdata(s_axi_wdata));
 endmodule
 
-(* ORIG_REF_NAME = "timer_control" *) 
 module Linux_bd_axi_timer_0_0_timer_control
    (generateout0,
     generateout1,

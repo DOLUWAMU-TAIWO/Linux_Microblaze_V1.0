@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Dec  4 10:47:25 2023
+-- Date        : Mon Dec  4 10:47:24 2023
 -- Host        : CN010 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_axi_gpio_0_0/Linux_bd_axi_gpio_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Linux_bd_axi_gpio_0_0 -prefix
+--               Linux_bd_axi_gpio_0_0_ Linux_bd_axi_gpio_0_0_sim_netlist.vhdl
 -- Design      : Linux_bd_axi_gpio_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -32,8 +32,6 @@ entity Linux_bd_axi_gpio_0_0_GPIO_Core is
     Bus_RNW_reg : in STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[3].ce_out_i_reg\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_GPIO_Core : entity is "GPIO_Core";
 end Linux_bd_axi_gpio_0_0_GPIO_Core;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_0_GPIO_Core is
@@ -392,8 +390,6 @@ entity Linux_bd_axi_gpio_0_0_pselect_f is
     ce_expnd_i_3 : out STD_LOGIC;
     \GEN_BKEND_CE_REGISTERS[0].ce_out_i_reg[0]\ : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_pselect_f : entity is "pselect_f";
 end Linux_bd_axi_gpio_0_0_pselect_f;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_0_pselect_f is
@@ -461,8 +457,6 @@ entity Linux_bd_axi_gpio_0_0_address_decoder is
     s_axi_awready : in STD_LOGIC;
     s_axi_wdata : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_address_decoder : entity is "address_decoder";
 end Linux_bd_axi_gpio_0_0_address_decoder;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_0_address_decoder is
@@ -757,8 +751,6 @@ entity Linux_bd_axi_gpio_0_0_slave_attachment is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_slave_attachment : entity is "slave_attachment";
 end Linux_bd_axi_gpio_0_0_slave_attachment;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_0_slave_attachment is
@@ -1430,8 +1422,6 @@ entity Linux_bd_axi_gpio_0_0_axi_lite_ipif is
     s_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_axi_lite_ipif : entity is "axi_lite_ipif";
 end Linux_bd_axi_gpio_0_0_axi_lite_ipif;
 
 architecture STRUCTURE of Linux_bd_axi_gpio_0_0_axi_lite_ipif is
@@ -1531,8 +1521,6 @@ entity Linux_bd_axi_gpio_0_0_axi_gpio is
   attribute C_TRI_DEFAULT of Linux_bd_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
   attribute C_TRI_DEFAULT_2 : string;
   attribute C_TRI_DEFAULT_2 of Linux_bd_axi_gpio_0_0_axi_gpio : entity is "32'b11111111111111111111111111111111";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_axi_gpio_0_0_axi_gpio : entity is "axi_gpio";
   attribute downgradeipidentifiedwarnings : string;
   attribute downgradeipidentifiedwarnings of Linux_bd_axi_gpio_0_0_axi_gpio : entity is "yes";
   attribute ip_group : string;

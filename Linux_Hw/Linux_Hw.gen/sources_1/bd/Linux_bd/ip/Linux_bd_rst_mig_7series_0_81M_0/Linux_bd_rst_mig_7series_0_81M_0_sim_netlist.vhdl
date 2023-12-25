@@ -1,10 +1,10 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Mon Dec  4 10:46:10 2023
+-- Date        : Mon Dec  4 10:46:09 2023
 -- Host        : CN010 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               c:/Users/doluwamu.kaye/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw/Linux_Hw.gen/sources_1/bd/Linux_bd/ip/Linux_bd_rst_mig_7series_0_81M_0/Linux_bd_rst_mig_7series_0_81M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top Linux_bd_rst_mig_7series_0_81M_0 -prefix
+--               Linux_bd_rst_mig_7series_0_81M_0_ Linux_bd_rst_mig_7series_0_81M_0_sim_netlist.vhdl
 -- Design      : Linux_bd_rst_mig_7series_0_81M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity Linux_bd_rst_mig_7series_0_81M_0_cdc_sync is
     mb_debug_sys_rst : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_rst_mig_7series_0_81M_0_cdc_sync : entity is "cdc_sync";
 end Linux_bd_rst_mig_7series_0_81M_0_cdc_sync;
 
 architecture STRUCTURE of Linux_bd_rst_mig_7series_0_81M_0_cdc_sync is
@@ -247,8 +245,6 @@ entity Linux_bd_rst_mig_7series_0_81M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_rst_mig_7series_0_81M_0_upcnt_n : entity is "upcnt_n";
 end Linux_bd_rst_mig_7series_0_81M_0_upcnt_n;
 
 architecture STRUCTURE of Linux_bd_rst_mig_7series_0_81M_0_upcnt_n is
@@ -413,8 +409,6 @@ entity Linux_bd_rst_mig_7series_0_81M_0_lpf is
     mb_debug_sys_rst : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_rst_mig_7series_0_81M_0_lpf : entity is "lpf";
 end Linux_bd_rst_mig_7series_0_81M_0_lpf;
 
 architecture STRUCTURE of Linux_bd_rst_mig_7series_0_81M_0_lpf is
@@ -603,8 +597,6 @@ entity Linux_bd_rst_mig_7series_0_81M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_rst_mig_7series_0_81M_0_sequence_psr : entity is "sequence_psr";
 end Linux_bd_rst_mig_7series_0_81M_0_sequence_psr;
 
 architecture STRUCTURE of Linux_bd_rst_mig_7series_0_81M_0_sequence_psr is
@@ -943,8 +935,6 @@ entity Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset : entity is "proc_sys_reset";
 end Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset;
 
 architecture STRUCTURE of Linux_bd_rst_mig_7series_0_81M_0_proc_sys_reset is
