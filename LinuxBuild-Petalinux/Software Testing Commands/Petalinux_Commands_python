@@ -1,0 +1,282 @@
+source /tools/Petalinux/settings.sh
+
+
+
+
+petalinux-create --type project --name linux_mb2 --template microblaze
+
+petalinux-config --get-hw-description=/home/dolu/Documents/GitHub/Linux_Microblaze_V1.0/Linux_Hw
+
+
+sudo dpkg-reconfigure ncurses-term
+
+sudo apt-get install rlwrap
+
+export TCLLIBPATH="/tools/Xilinx/SDK/2019.1/scripts/xsdb"
+
+source ~/.bashrc
+
+cd ./images/linux/
+petalinux-boot --jtag --fpga
+petalinux-boot --jtag --kernel
+
+
+cat /proc/cpuinfo
+cat /proc/version
+
+
+
+-----------------PYTHON COMMANDS-----------------------------------------
+
+------GPIO BASH SETUP AND CONTROL---------------
+
+
+vi control_gpio.sh
+
+enter "i" for input 
+
+copy and paste 
+--------BASH SCRIPT-------------
+
+
+#!/bin/bash
+
+# Function to setup GPIO
+setup_gpio() {
+    if [ ! -e /sys/class/gpio/gpio$1 ]; then
+        echo $1 > /sys/class/gpio/export
+    fi
+    echo out > /sys/class/gpio/gpio$1/direction
+}
+
+# Function to control GPIO
+control_gpio() {
+    if [ "$2" -eq 0 ] || [ "$2" -eq 1 ]; then
+        echo $2 > /sys/class/gpio/gpio$1/value
+    else
+        echo "Invalid argument for GPIO $1. Use 0 or 1."
+        exit 1
+    fi
+}
+
+# Setup GPIO for LED (GPIO 483) and RGB LED (GPIO 477)
+setup_gpio 483
+setup_gpio 477
+
+# Check arguments and control GPIOs
+if [ "$#" -eq 2 ]; then
+    gpio_number=$1
+    state=$2
+    control_gpio $gpio_number $state
+else
+    echo "Usage: $0 <GPIO number> <0 or 1>"
+    echo "Example to turn on LED: $0 483 1"
+    echo "Example to turn off RGB LED: $0 477 0"
+fi
+
+
+press escape
+Press: :wq to save 
+
+chmod +x control_gpio.sh
+
+to LED on : ./control_gpio.sh 483 1
+to RGB on :  ./control_gpio.sh 477 1
+
+
+To turn both GPIOs (483 and 453) on, follow these steps:
+
+Export the GPIOs:
+
+su -c 'echo 463 > /sys/class/gpio/export' 
+
+For GPIO 483: echo 483 > /sys/class/gpio/export
+For GPIO 453: echo 453 > /sys/class/gpio/export
+Set the direction to "out" for both GPIOs:
+
+For GPIO 483: echo out > /sys/class/gpio/gpio483/direction
+For GPIO 453: echo out > /sys/class/gpio/gpio453/direction
+Set both GPIOs to "on":
+
+For GPIO 483: echo 1 > /sys/class/gpio/gpio483/value     --------------LED:wq
+For GPIO 453: echo 1 > /sys/class/gpio/gpio453/value
+This will turn both GPIOs on (high).
+
+
+creating file
+{
+Type vi filename to open or create a file named "filename."
+Press "i" to enter insert mode.
+Type or paste your code.
+Press "Esc" to exit insert mode.
+To save changes, type :w and press Enter.
+To exit vi, type :q and press Enter.
+To save and exit, type :wq and press Enter.
+
+}
+ start by 
+vi rgb.gpio
+
+ then press i , escape then :wq enter to save script
+-------------RGB-----------------
+rgb.gpio
+{
+#!/bin/bash
+
+if [ "$#" -ne 1 ]; then
+  echo "Usage: $0 <0 or 1>"
+  exit 1
+fi
+
+if [ "$1" -eq 0 ]; then
+  echo 0 > /sys/class/gpio/gpio477/value
+elif [ "$1" -eq 1 ]; then
+  echo 1 > /sys/class/gpio/gpio477/value
+else
+  echo "Invalid argument. Use 0 or 1."
+  exit 1
+fi
+}
+
+make script executable
+chmod +x rgb.gpio
+./rgb.gpio 1  ---turn on
+./rgb.gpio 0 ---- turn off
+
+
+
+-----------Python RGB Automation----------
+Steps 
+vi gpio_control.py
+press i to enter
+
+copy and paste ------------------
+def set_gpio_value(gpio_number, value):
+    gpio_path = '/sys/class/gpio/gpio{}/value'.format(gpio_number)
+    with open(gpio_path, 'w') as gpio_file:
+        gpio_file.write(value)
+
+def control_device(gpio_number):
+    while True:
+        print("\nControl Options:")
+        print("1. Turn ON")
+        print("2. Turn OFF")
+        print("3. Go Back")
+        choice = raw_input("Enter your choice (1-3): ")
+
+        if choice == '1':
+            set_gpio_value(gpio_number, '1')
+            print("Device is ON")
+        elif choice == '2':
+            set_gpio_value(gpio_number, '0')
+            print("Device is OFF")
+        elif choice == '3':
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+def main():
+    while True:
+        print("\nChoose Device to Control:")
+        print("1. LED")
+        print("2. RGB")
+        print("3. Exit")
+        choice = raw_input("Enter your choice (1-3): ")
+
+        if choice == '1':
+            control_device(483)  # GPIO number for LED
+        elif choice == '2':
+            control_device(477)  # GPIO number for RGB LED
+        elif choice == '3':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
+
+---------------------------
+
+press escape 
+save with :wq enter 
+
+chmod +x gpio_control.py ----make executable 
+
+run with : python led_control.py
+
+
+
+
+
+---------- ENcryption Ceasar-Cipher Based--------------
+
+Steps 
+vi ceasar_cipher.py
+press i to enter
+
+copy and paste ------------------
+
+
+
+
+
+def caesar_cipher(text, shift, mode='encrypt'):
+    result = ""
+
+    for char in text:
+        if char.isalpha():  # Check if character is an alphabet
+            shift_amount = shift if mode == 'encrypt' else -shift
+            char_code = ord(char.lower()) + shift_amount
+
+            if char.islower():
+                if char_code > ord('z'):
+                    char_code -= 26
+                elif char_code < ord('a'):
+                    char_code += 26
+            elif char.isupper():
+                if char_code > ord('Z'):
+                    char_code -= 26
+                elif char_code < ord('A'):
+                    char_code += 26
+
+            result += chr(char_code)
+        else:
+            result += char  # Non-alphabetical characters remain unchanged
+
+    return result
+
+def main():
+    while True:
+        print("\nCaesar Cipher Tool")
+        print("1. Encrypt")
+        print("2. Decrypt")
+        print("3. Exit")
+        choice = raw_input("Enter your choice (1-3): ")
+
+        if choice in ['1', '2']:
+            text = raw_input("Enter text: ")
+            shift = int(raw_input("Enter shift number: "))
+            mode = 'encrypt' if choice == '1' else 'decrypt'
+            result = caesar_cipher(text, shift, mode)
+            print("Result: " + result)
+        elif choice == '3':
+            print("Exiting...")
+            break
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
+
+if __name__ == "__main__":
+    main()
+
+
+-----------------------
+press escape 
+save with :wq enter 
+
+chmod +x ceasar_cipher.py ----make executable 
+
+run with : python ceasar_cipher.py
+
+
+
