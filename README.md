@@ -6,8 +6,8 @@ In the realm of embedded systems, the fusion of adaptable hardware and sophistic
 
 ## Features
 
-- **Adaptable Hardware:** Linux Based MIcroblaze Processor 
-- **Sophisticated Software:**  Custom distrubution of Linux called petalinux completely customizable to user requirement 
+- **Python 2 with Gpio control Application and Encryption Decryption Application
+- **Sophisticated Software:**  Custom distribution of Linux called petalinux completely customizable to user requirement.
 - **MicroBlaze Soft Processor:** A key component in our embedded system design.
 - **Nexys A7 FPGA Board:** The backbone of our project, providing a robust platform for development.
 
